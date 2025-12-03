@@ -43,7 +43,11 @@ class EstimateValidationCrew:
         return state
 
     def _make_structurer_agent(self) -> Agent:
-        llm = LLM(model="ollama/qwen3:30b", temperature=0.0)
+        llm = LLM(
+            model="ollama/qwen3:30b",
+            temperature=0.0,
+            response_format=RawInput,
+        )
         return Agent(
             role="Structurer",
             goal="Transform raw Tabula JSON into the normalized RowState.raw_input.",
@@ -54,7 +58,11 @@ class EstimateValidationCrew:
         )
 
     def _make_auditor_agent(self) -> Agent:
-        llm = Ollama(model="qwen3:30b", temperature=0.0)
+        llm = LLM(
+            model="ollama/qwen3:30b",
+            temperature=0.0,
+            response_format=ReferenceData,
+        )
         return Agent(
             role="Auditor",
             goal="Fetch SCP reference constants and coefficients via tools.",
