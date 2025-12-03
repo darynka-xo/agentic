@@ -1,7 +1,7 @@
 from __future__ import annotations
 from typing import Any, Dict
 import litserve as ls
-from pydantic import BaseModel  # <--- Import this
+from pydantic import BaseModel
 from agents import build_crew
 from config import get_db
 from core.calculator import run_deterministic_calculator
@@ -22,12 +22,15 @@ class EstimateValidatorAPI(ls.LitAPI):
         self.db = get_db()
         self.crew = build_crew(self.db)
 
-    def decode_request(self, request: RequestBody) -> Dict[str, Any]:
+    def decode_request(self, request: Dict[str, Any]) -> Dict[str, Any]:
         """
-        LitServe requires the argument be named 'request'.
-        The Pydantic type hint forces FastAPI to parse it as a JSON body.
+        LitServe passes the JSON body as a dict here. 
+        We manually validate it against RequestBody to enforce the schema
+        without confusing the route generator.
         """
-        return request.tabula_json
+        # Validate the incoming dictionary using the Pydantic model
+        validated_data = RequestBody(**request)
+        return validated_data.tabula_json
 
     def predict(self, tabula_json: Dict[str, Any]) -> Dict[str, Any]:
         """
@@ -50,4 +53,3 @@ if __name__ == "__main__":
     api = EstimateValidatorAPI()
     server = ls.LitServer(api, timeout=30)
     server.run(port=8000)
-
