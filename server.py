@@ -15,7 +15,8 @@ class EstimateValidatorAPI(LitAPI):
     decode_request -> predict -> encode_response for every inbound HTTP call.
     """
 
-    def setup(self):
+    def setup(self, device: str | None = None):
+        # LitServe passes the worker/device identifier even if it is unused here.
         self.db = get_db()
         self.crew = build_crew(self.db)
 
