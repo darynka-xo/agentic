@@ -18,7 +18,7 @@ class EstimateValidationCrew:
 
     def __init__(self, db):
         self.db_tool = DBSearchTool(db)
-        self.ollama_model = os.getenv("OLLAMA_MODEL", "qwen3:30b")
+        self.ollama_model = os.getenv("OLLAMA_MODEL", "ollama/qwen3:30b")
         self.ollama_base_url = os.getenv("OLLAMA_BASE_URL", "http://127.0.0.1:11434")
         self.structurer_agent = self._make_structurer_agent()
         self.auditor_agent = self._make_auditor_agent()
