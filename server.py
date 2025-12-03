@@ -20,16 +20,14 @@ class EstimateValidatorAPI(ls.LitAPI):
         self.db = get_db()
         self.crew = build_crew(self.db)
 
-    def decode_request(self, request: Dict[str, Any]) -> Dict[str, Any]:
+    def decode_request(self, payload: Dict[str, Any]) -> Dict[str, Any]:
         """
-        Extract the Tabula row JSON from the incoming request body. We allow
-        users to send the payload either as `tabula_json` or directly as the
-        body for convenience.
+        Extract the Tabula row JSON from the incoming request body.
         """
-        if isinstance(request, dict) and "tabula_json" in request:
-            return request["tabula_json"]
-        if isinstance(request, dict):
-            return request
+        if isinstance(payload, dict) and "tabula_json" in payload:
+            return payload["tabula_json"]
+        if isinstance(payload, dict):
+            return payload
         raise ValueError("Request body must be a JSON object describing the row.")
 
     def predict(self, tabula_json: Dict[str, Any]) -> Dict[str, Any]:
