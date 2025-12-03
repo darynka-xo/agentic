@@ -1,9 +1,11 @@
 from __future__ import annotations
 
-from typing import Any, Dict
+import os
+from typing import Any, Dict, Type
 from uuid import uuid4
 
-from crewai import Agent, Crew, Process, Task, LLM
+from crewai import Agent, Crew, LLM, Process, Task
+from pydantic import BaseModel
 
 from core.state import RawInput, ReferenceData, RowState
 from tools.db_search import DBSearchTool
@@ -17,6 +19,8 @@ class EstimateValidationCrew:
 
     def __init__(self, db):
         self.db_tool = DBSearchTool(db)
+        self.ollama_model = os.getenv("OLLAMA_MODEL", "qwen3:30b")
+        self.ollama_base_url = os.getenv("OLLAMA_BASE_URL", "http://127.0.0.1:11434")
         self.structurer_agent = self._make_structurer_agent()
         self.auditor_agent = self._make_auditor_agent()
 
@@ -43,11 +47,7 @@ class EstimateValidationCrew:
         return state
 
     def _make_structurer_agent(self) -> Agent:
-        llm = LLM(
-            model="ollama/qwen3:30b",
-            temperature=0.0,
-            response_format=RawInput,
-        )
+        llm = self._build_llm(RawInput)
         return Agent(
             role="Structurer",
             goal="Transform raw Tabula JSON into the normalized RowState.raw_input.",
@@ -58,11 +58,7 @@ class EstimateValidationCrew:
         )
 
     def _make_auditor_agent(self) -> Agent:
-        llm = LLM(
-            model="ollama/qwen3:30b",
-            temperature=0.0,
-            response_format=ReferenceData,
-        )
+        llm = self._build_llm(ReferenceData)
         return Agent(
             role="Auditor",
             goal="Fetch SCP reference constants and coefficients via tools.",
@@ -70,6 +66,17 @@ class EstimateValidationCrew:
             llm=llm,
             tools=[self.db_tool],
             verbose=False,
+        )
+
+    def _build_llm(self, response_model: Type[BaseModel]):
+        base_url = self.ollama_base_url.rstrip("/") + "/v1"
+        return LLM(
+            model=self.ollama_model,
+            provider="ollama",
+            base_url=base_url,
+            api_key="ollama",
+            temperature=0.0,
+            response_format=response_model,
         )
 
     def _make_structurer_task(self) -> Task:
