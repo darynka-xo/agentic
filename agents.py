@@ -78,12 +78,13 @@ class EstimateValidationCrew:
     def _make_structurer_agent(self) -> Agent:
         llm = self._build_llm()
         return Agent(
-            role="Structurer",
-            goal="Transform raw Tabula JSON into the normalized RowState.raw_input.",
-            backstory="You specialize in interpreting disorganized construction rows.",
+            role="JSON Extractor",
+            goal="Extract structured data from construction cost estimates into valid JSON.",
+            backstory="You are an expert at extracting table codes, numeric values, and descriptions from text.",
             llm=llm,
             tools=[],
-            verbose=False,
+            verbose=True,  # Enable verbose for debugging
+            allow_delegation=False,  # Don't delegate
         )
 
     def _make_auditor_agent(self) -> Agent:
@@ -108,30 +109,40 @@ class EstimateValidationCrew:
                 model=self.ollama_model,
                 base_url=base_url,
                 api_key=os.getenv("OLLAMA_API_KEY", "ollama"),
-                temperature=0.0,
+                temperature=0.0,  # Deterministic
                 timeout=timeout,
-                max_tokens=4096,  # Ensure we have enough tokens for response
+                max_tokens=2048,  # Reduced for faster responses
             )
-            logger.info("LLM instance created successfully")
+            logger.info("LLM instance created successfully with JSON mode")
             return llm
         except Exception as e:
             logger.error(f"Failed to create LLM instance: {str(e)}", exc_info=True)
             raise
 
     def _make_structurer_task(self) -> Task:
-        schema_hint = RawInput.model_json_schema()
         description = (
-            "Use the provided Tabula payload ({{tabula_payload}}) to extract exactly "
-            "five fields: text_description, table_code_claimed, X_claimed (float), "
-            "total_claimed (float), and extracted_tags (list of strings). "
-            "Always respond with valid JSON that matches this schema: "
-            f"{schema_hint}. No prose."
+            "Extract these fields from the text in {{tabula_payload}}:\n"
+            "1. text_description: main description of the work\n"
+            "2. table_code_claimed: code like '1706-0201-01'\n"
+            "3. X_claimed: numeric value (площадь, длина, etc.)\n"
+            "4. total_claimed: final cost in tenge\n"
+            "5. extracted_tags: relevant tags like ['монолитное', 'сейсмичность', etc.]\n\n"
+            "Example input: '1 Жилой дом Секция 1 12 этажей м2 4 675,08 табл. 1706-0201-01 52 690 700'\n"
+            "Example output:\n"
+            "{\n"
+            '  "text_description": "Жилой дом Секция 1 12 этажей",\n'
+            '  "table_code_claimed": "1706-0201-01",\n'
+            '  "X_claimed": 4675.08,\n'
+            '  "total_claimed": 52690700,\n'
+            '  "extracted_tags": ["жилой дом", "12 этажей", "монолитное", "сейсмичность"]\n'
+            "}\n\n"
+            "Return ONLY valid JSON, no other text."
         )
 
         return Task(
             description=description,
             agent=self.structurer_agent,
-            expected_output="Valid JSON for RowState.raw_input.",
+            expected_output="Valid JSON with extracted fields.",
             output_pydantic=RawInput,
         )
 
