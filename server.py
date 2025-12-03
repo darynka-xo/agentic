@@ -1,28 +1,15 @@
 from __future__ import annotations
-import litserve.mcp
-
-# --- MONKEY PATCH START ---
-# This fixes the "NameError: MCPServer" bug by disabling the broken integration
-class MockMCPConnector:
-    def __init__(self, *args, **kwargs):
-        pass
-
-# We overwrite the broken class with a dummy one that does nothing
-litserve.mcp._LitMCPServerConnector = MockMCPConnector
-# --- MONKEY PATCH END ---
-
-
 
 from typing import Any, Dict
 
-from litserve import LitAPI, LitServer
+import litserve as ls
 
 from agents import build_crew
 from config import get_db
 from core.calculator import run_deterministic_calculator
 
 
-class EstimateValidatorAPI(LitAPI):
+class EstimateValidatorAPI(ls.LitAPI):
     """
     LitServe entry point. LitServe automatically executes methods in order:
     decode_request -> predict -> encode_response for every inbound HTTP call.
@@ -64,6 +51,6 @@ class EstimateValidatorAPI(LitAPI):
 
 if __name__ == "__main__":
     api = EstimateValidatorAPI()
-    server = LitServer(api, timeout=30)
+    server = ls.LitServer(api, timeout=30)
     server.run(port=8000)
 
