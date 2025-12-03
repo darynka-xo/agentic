@@ -53,11 +53,14 @@ class DBSearchTool(BaseTool):
             table_code_claimed, extracted_tags or []
         )
 
+        # Extract values from MongoDB structure
+        range_obj = matching_row.get("range", {})
+        
         return {
-            "ref_A": float(matching_row.get("a")),
-            "ref_B": float(matching_row.get("b")),
-            "range_min": float(matching_row.get("min_value", 0)),
-            "range_max": float(matching_row.get("max_value", 0)),
+            "ref_A": float(matching_row.get("param_a", 0)),
+            "ref_B": float(matching_row.get("param_b", 0)),
+            "range_min": float(range_obj.get("min", 0)),
+            "range_max": float(range_obj.get("max", 0)),
             "formula_strategy": strategy,
             "valid_coefficients": coefficients,
             "source_position_id": matching_row.get("position_id"),
@@ -67,38 +70,80 @@ class DBSearchTool(BaseTool):
     async def _arun(self, *args, **kwargs):  # pragma: no cover - crewai hook
         return self._run(*args, **kwargs)
 
-    def _find_section(self, code: str) -> Dict[str, Any]:
-        section = self._db["sections"].find_one({"code": code})
-        if not section:
-            raise ValueError(f"No section found in SCP reference for code {code}.")
-        rows = section.get("rows") or []
-        if not rows:
-            raise ValueError(f"Section {code} has no configured rows.")
-        return section
+    def _find_section(self, table_code: str) -> Dict[str, Any]:
+        """
+        Find a table by table_code in the nested MongoDB structure.
+        Structure: sections -> subsections -> chapters -> tables
+        """
+        # Query for a section document that contains the table_code in its nested structure
+        # Use MongoDB's dot notation to search within nested arrays
+        result = self._db["sections"].find_one(
+            {"subsections.chapters.tables.table_code": table_code}
+        )
+        
+        if not result:
+            raise ValueError(f"No section found in SCP reference for code {table_code}.")
+        
+        # Now navigate the nested structure to find the specific table
+        for subsection in result.get("subsections", []):
+            for chapter in subsection.get("chapters", []):
+                for table in chapter.get("tables", []):
+                    if table.get("table_code") == table_code:
+                        # Found the table! Return it with rows
+                        rows = table.get("positions", [])
+                        if not rows:
+                            raise ValueError(f"Table {table_code} has no configured positions.")
+                        # Return a dict with table info and rows
+                        return {
+                            "code": table_code,
+                            "name_ru": table.get("name_ru"),
+                            "rows": rows,
+                            "table": table
+                        }
+        
+        raise ValueError(f"Table {table_code} found in section but could not extract positions.")
 
     def _match_row(self, section: Dict[str, Any], x_value: float):
         rows = section.get("rows") or []
         matching_row = None
         strategy = "standard"
 
-        for row in rows:
-            min_value = float(row.get("min_value", float("-inf")))
-            max_value = float(row.get("max_value", float("inf")))
+        # Filter out subtitle rows
+        data_rows = [r for r in rows if not r.get("is_subtitle", False)]
+        
+        if not data_rows:
+            raise ValueError(f"No data rows found for code {section.get('code')}.")
+
+        for row in data_rows:
+            # MongoDB structure has range.min and range.max
+            range_obj = row.get("range", {})
+            min_value = float(range_obj.get("min", float("-inf")))
+            max_value = float(range_obj.get("max", float("inf")))
+            
             if min_value <= x_value <= max_value:
                 matching_row = row
                 break
 
         if not matching_row:
-            max_row = max(rows, key=lambda r: float(r.get("max_value", "-inf")))
-            max_range = float(max_row.get("max_value", 0))
+            # Find row with highest max value for extrapolation
+            max_row = max(data_rows, key=lambda r: float(r.get("range", {}).get("max", float("-inf"))))
+            max_range = float(max_row.get("range", {}).get("max", 0))
+            
             if x_value > max_range:
                 matching_row = max_row
                 strategy = "extrapolation_above"
             else:
-                raise ValueError(
-                    f"Value X={x_value} is below the minimum reference range for "
-                    f"code {section.get('code')}."
-                )
+                # Check if it's below minimum
+                min_row = min(data_rows, key=lambda r: float(r.get("range", {}).get("min", float("inf"))))
+                min_range = float(min_row.get("range", {}).get("min", float("inf")))
+                
+                if x_value < min_range:
+                    matching_row = min_row
+                    strategy = "extrapolation_below"
+                else:
+                    raise ValueError(
+                        f"Value X={x_value} is out of range for code {section.get('code')}."
+                    )
 
         return matching_row, strategy
 
@@ -120,8 +165,8 @@ class DBSearchTool(BaseTool):
             if self._condition_matches(condition, lowered_tags):
                 matched.append(
                     {
-                        "id": coef.get("id"),
-                        "value": float(coef.get("value", 1.0)),
+                        "id": coef.get("_id"),
+                        "value": float(coef.get("coefficient_value", 1.0)),
                         "reason": coef.get("condition_full"),
                     }
                 )
