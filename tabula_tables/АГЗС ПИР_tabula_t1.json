@@ -1,0 +1,20 @@
+{
+  "file": "/Users/darynka/ge-completeness-SCP-PIR/ИРД.СМЕТАПИР/АГЗС ПИР.pdf",
+  "relative_path": "АГЗС ПИР.pdf",
+  "generated_at": "2025-12-03T08:00:56.317785+00:00",
+  "engine": "tabula-py",
+  "options": {
+    "pages": "all",
+    "lattice": true,
+    "stream": false
+  },
+  "table_index": 1,
+  "rows": [],
+  "shape": [
+    0,
+    1
+  ],
+  "columns": [
+    "Форма 2П"
+  ]
+}

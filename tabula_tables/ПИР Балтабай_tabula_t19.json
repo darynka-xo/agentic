@@ -1,0 +1,33 @@
+{
+  "file": "/Users/darynka/ge-completeness-SCP-PIR/ИРД.СМЕТАПИР/ПИР Балтабай.pdf",
+  "relative_path": "ПИР Балтабай.pdf",
+  "generated_at": "2025-12-03T08:01:37.348072+00:00",
+  "engine": "tabula-py",
+  "options": {
+    "pages": "all",
+    "lattice": true,
+    "stream": false
+  },
+  "table_index": 19,
+  "rows": [
+    [
+      "Воздушная линия"
+    ],
+    [
+      "напряжением до 1"
+    ],
+    [
+      "кВ, длиной: до 1 км,"
+    ],
+    [
+      "Хзад=0,017км"
+    ]
+  ],
+  "shape": [
+    4,
+    1
+  ],
+  "columns": [
+    "Воздушная линия\rнапряжением до 1\rкВ, длиной: до 1 км,\rХзад=0,017км"
+  ]
+}

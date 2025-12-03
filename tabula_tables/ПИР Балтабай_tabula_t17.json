@@ -1,0 +1,33 @@
+{
+  "file": "/Users/darynka/ge-completeness-SCP-PIR/ИРД.СМЕТАПИР/ПИР Балтабай.pdf",
+  "relative_path": "ПИР Балтабай.pdf",
+  "generated_at": "2025-12-03T08:01:37.347450+00:00",
+  "engine": "tabula-py",
+  "options": {
+    "pages": "all",
+    "lattice": true,
+    "stream": false
+  },
+  "table_index": 17,
+  "rows": [
+    [
+      "Трубчатый переезд"
+    ],
+    [
+      "на расход свыше 1"
+    ],
+    [
+      "о 10  м3/сек, Хзад=2"
+    ],
+    [
+      "м3 (1шт)"
+    ]
+  ],
+  "shape": [
+    4,
+    1
+  ],
+  "columns": [
+    "Трубчатый переезд\rна расход свыше 1\rдо 10  м3/сек, Хзад=2\rм3 (1шт)"
+  ]
+}

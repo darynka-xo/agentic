@@ -1,0 +1,20 @@
+{
+  "file": "/Users/darynka/ge-completeness-SCP-PIR/ИРД.СМЕТАПИР/ПИР АГЗС Жанаозен уч. 25В.pdf",
+  "relative_path": "ПИР АГЗС Жанаозен уч. 25В.pdf",
+  "generated_at": "2025-12-03T08:01:26.870047+00:00",
+  "engine": "tabula-py",
+  "options": {
+    "pages": "all",
+    "lattice": true,
+    "stream": false
+  },
+  "table_index": 1,
+  "rows": [],
+  "shape": [
+    0,
+    1
+  ],
+  "columns": [
+    "Форма 2П"
+  ]
+}

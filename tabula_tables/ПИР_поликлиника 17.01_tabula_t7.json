@@ -1,0 +1,26 @@
+{
+  "file": "/Users/darynka/ge-completeness-SCP-PIR/ИРД.СМЕТАПИР/ПИР_поликлиника 17.01.pdf",
+  "relative_path": "ПИР_поликлиника 17.01.pdf",
+  "generated_at": "2025-12-03T08:02:45.377991+00:00",
+  "engine": "tabula-py",
+  "options": {
+    "pages": "all",
+    "lattice": true,
+    "stream": false
+  },
+  "table_index": 7,
+  "rows": [
+    [
+      "",
+      "(сумма прописью)"
+    ]
+  ],
+  "shape": [
+    1,
+    2
+  ],
+  "columns": [
+    "Итого по смете",
+    "745 280 тенге ( семьсот сорок пять тысяч  двести восемьдеся тенге)"
+  ]
+}

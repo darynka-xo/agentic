@@ -1,0 +1,33 @@
+{
+  "file": "/Users/darynka/ge-completeness-SCP-PIR/ИРД.СМЕТАПИР/ПИР вынос 110 кВ по замеч..pdf",
+  "relative_path": "ПИР вынос 110 кВ по замеч..pdf",
+  "generated_at": "2025-12-03T08:02:14.426455+00:00",
+  "engine": "tabula-py",
+  "options": {
+    "pages": "all",
+    "lattice": true,
+    "stream": false
+  },
+  "table_index": 17,
+  "rows": [
+    [
+      "НДС (12%)",
+      "267,9918",
+      ""
+    ],
+    [
+      "ВСЕГО:",
+      "2 501,2568",
+      ""
+    ]
+  ],
+  "shape": [
+    2,
+    3
+  ],
+  "columns": [
+    "Unnamed: 0",
+    "ИТОГО:",
+    "2 233,265"
+  ]
+}

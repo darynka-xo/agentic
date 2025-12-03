@@ -1,0 +1,20 @@
+{
+  "file": "/Users/darynka/ge-completeness-SCP-PIR/ИРД.СМЕТАПИР/ПИР-Газ.pdf",
+  "relative_path": "ПИР-Газ.pdf",
+  "generated_at": "2025-12-03T08:02:29.710495+00:00",
+  "engine": "tabula-py",
+  "options": {
+    "pages": "all",
+    "lattice": true,
+    "stream": false
+  },
+  "table_index": 4,
+  "rows": [],
+  "shape": [
+    0,
+    1
+  ],
+  "columns": [
+    "Unnamed: 0"
+  ]
+}

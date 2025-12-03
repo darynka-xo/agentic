@@ -1,0 +1,66 @@
+{
+  "file": "/Users/darynka/ge-completeness-SCP-PIR/ИРД.СМЕТАПИР/ПИР изм.pdf",
+  "relative_path": "ПИР изм.pdf",
+  "generated_at": "2025-12-03T08:02:19.616145+00:00",
+  "engine": "tabula-py",
+  "options": {
+    "pages": "all",
+    "lattice": true,
+    "stream": false
+  },
+  "table_index": 4,
+  "rows": [
+    [
+      "",
+      "",
+      "",
+      "",
+      "ТОО «Altyn Group Qazaqstan»",
+      ""
+    ],
+    [
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    [
+      "",
+      "",
+      "",
+      "",
+      "(наименование организации)",
+      ""
+    ],
+    [
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    [
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  ],
+  "shape": [
+    5,
+    6
+  ],
+  "columns": [
+    "Unnamed: 0",
+    "Заказчик",
+    "Unnamed: 1",
+    "Unnamed: 2",
+    "Unnamed: 3",
+    "Unnamed: 4"
+  ]
+}

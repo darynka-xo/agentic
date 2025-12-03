@@ -1,0 +1,24 @@
+{
+  "file": "/Users/darynka/ge-completeness-SCP-PIR/ИРД.СМЕТАПИР/ПИР (9).pdf",
+  "relative_path": "ПИР (9).pdf",
+  "generated_at": "2025-12-03T08:01:20.707872+00:00",
+  "engine": "tabula-py",
+  "options": {
+    "pages": "all",
+    "lattice": true,
+    "stream": false
+  },
+  "table_index": 1,
+  "rows": [],
+  "shape": [
+    0,
+    5
+  ],
+  "columns": [
+    "РП",
+    "58*0,5=29",
+    "5",
+    "2",
+    "36"
+  ]
+}

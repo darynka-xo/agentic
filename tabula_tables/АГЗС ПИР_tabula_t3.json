@@ -1,0 +1,26 @@
+{
+  "file": "/Users/darynka/ge-completeness-SCP-PIR/ИРД.СМЕТАПИР/АГЗС ПИР.pdf",
+  "relative_path": "АГЗС ПИР.pdf",
+  "generated_at": "2025-12-03T08:00:56.320141+00:00",
+  "engine": "tabula-py",
+  "options": {
+    "pages": "all",
+    "lattice": true,
+    "stream": false
+  },
+  "table_index": 3,
+  "rows": [
+    [
+      "",
+      ""
+    ]
+  ],
+  "shape": [
+    1,
+    2
+  ],
+  "columns": [
+    "Куангалиева У.\rСоставил\r(подпись, инициалы, фамилия)\rЫхсанов К.\rПроверил",
+    "Unnamed: 0"
+  ]
+}

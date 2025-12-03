@@ -1,0 +1,38 @@
+{
+  "file": "/Users/darynka/ge-completeness-SCP-PIR/ИРД.СМЕТАПИР/ПИР_казпан.pdf",
+  "relative_path": "ПИР_казпан.pdf",
+  "generated_at": "2025-12-03T08:02:43.175886+00:00",
+  "engine": "tabula-py",
+  "options": {
+    "pages": "all",
+    "lattice": true,
+    "stream": false
+  },
+  "table_index": 7,
+  "rows": [
+    [
+      "Наименование изыскательской",
+      ""
+    ],
+    [
+      "организации:",
+      ""
+    ],
+    [
+      "",
+      ""
+    ],
+    [
+      "Наименование организации заказчика:",
+      ""
+    ]
+  ],
+  "shape": [
+    4,
+    2
+  ],
+  "columns": [
+    "Наименование проектной организации:",
+    "Unnamed: 0"
+  ]
+}

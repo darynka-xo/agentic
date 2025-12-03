@@ -1,0 +1,24 @@
+{
+  "file": "/Users/darynka/ge-completeness-SCP-PIR/ИРД.СМЕТАПИР/ПИР_поликлиника 17.01.pdf",
+  "relative_path": "ПИР_поликлиника 17.01.pdf",
+  "generated_at": "2025-12-03T08:02:45.379799+00:00",
+  "engine": "tabula-py",
+  "options": {
+    "pages": "all",
+    "lattice": true,
+    "stream": false
+  },
+  "table_index": 10,
+  "rows": [
+    [
+      ""
+    ]
+  ],
+  "shape": [
+    1,
+    1
+  ],
+  "columns": [
+    "1"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "file": "/Users/darynka/ge-completeness-SCP-PIR/ИРД.СМЕТАПИР/пир от 09.09.pdf",
+  "relative_path": "пир от 09.09.pdf",
+  "generated_at": "2025-12-03T08:03:57.578869+00:00",
+  "engine": "tabula-py",
+  "options": {
+    "pages": "all",
+    "lattice": true,
+    "stream": false
+  },
+  "table_index": 4,
+  "rows": [],
+  "shape": [
+    0,
+    2
+  ],
+  "columns": [
+    "Составил\r(подпись, инициалы, фамилия)",
+    "Unnamed: 0"
+  ]
+}

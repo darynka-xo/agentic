@@ -1,0 +1,38 @@
+{
+  "file": "/Users/darynka/ge-completeness-SCP-PIR/ИРД.СМЕТАПИР/ПИР изм.pdf",
+  "relative_path": "ПИР изм.pdf",
+  "generated_at": "2025-12-03T08:02:19.624118+00:00",
+  "engine": "tabula-py",
+  "options": {
+    "pages": "all",
+    "lattice": true,
+    "stream": false
+  },
+  "table_index": 12,
+  "rows": [
+    [
+      "",
+      "280 398 769,00 тенге (двести восемьдесят миллионовтристо девяносто восемь тысяч семьсот"
+    ],
+    [
+      "Итого по смете",
+      "шестьдесят девять тенге)"
+    ],
+    [
+      "",
+      "(сумма прописью)"
+    ],
+    [
+      "",
+      ""
+    ]
+  ],
+  "shape": [
+    4,
+    2
+  ],
+  "columns": [
+    "Unnamed: 0",
+    "Unnamed: 1"
+  ]
+}

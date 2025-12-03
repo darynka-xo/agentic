@@ -1,0 +1,27 @@
+{
+  "file": "/Users/darynka/ge-completeness-SCP-PIR/ИРД.СМЕТАПИР/ПИР_ПОЖ.депо_2024__БЕЗ__ГП__3 (1).pdf",
+  "relative_path": "ПИР_ПОЖ.депо_2024__БЕЗ__ГП__3 (1).pdf",
+  "generated_at": "2025-12-03T08:02:37.025523+00:00",
+  "engine": "tabula-py",
+  "options": {
+    "pages": "all",
+    "lattice": true,
+    "stream": false
+  },
+  "table_index": 5,
+  "rows": [
+    [
+      "тоимост"
+    ],
+    [
+      "ыс. тенг"
+    ]
+  ],
+  "shape": [
+    2,
+    1
+  ],
+  "columns": [
+    "Стоимость,\rтыс. тенге"
+  ]
+}

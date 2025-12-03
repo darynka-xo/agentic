@@ -1,0 +1,33 @@
+{
+  "file": "/Users/darynka/ge-completeness-SCP-PIR/ИРД.СМЕТАПИР/ПИР Балтабай.pdf",
+  "relative_path": "ПИР Балтабай.pdf",
+  "generated_at": "2025-12-03T08:01:37.343721+00:00",
+  "engine": "tabula-py",
+  "options": {
+    "pages": "all",
+    "lattice": true,
+    "stream": false
+  },
+  "table_index": 7,
+  "rows": [
+    [
+      "Водопыпуски на"
+    ],
+    [
+      "расход свыше 1 до"
+    ],
+    [
+      "10  м3/сек, Хзад=1"
+    ],
+    [
+      "м3 (1шт)"
+    ]
+  ],
+  "shape": [
+    4,
+    1
+  ],
+  "columns": [
+    "Водопыпуски на\rрасход свыше 1 до\r10  м3/сек, Хзад=1\rм3 (1шт)"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "file": "/Users/darynka/ge-completeness-SCP-PIR/ИРД.СМЕТАПИР/ПИР Местная7, 2025г.pdf",
+  "relative_path": "ПИР Местная7, 2025г.pdf",
+  "generated_at": "2025-12-03T08:01:51.192478+00:00",
+  "engine": "tabula-py",
+  "options": {
+    "pages": "all",
+    "lattice": true,
+    "stream": false
+  },
+  "table_index": 21,
+  "rows": [
+    [
+      "",
+      "(наименование организации)"
+    ],
+    [
+      "",
+      ""
+    ]
+  ],
+  "shape": [
+    2,
+    2
+  ],
+  "columns": [
+    "Заказчик",
+    "Unnamed: 0"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "file": "/Users/darynka/ge-completeness-SCP-PIR/ИРД.СМЕТАПИР/ПИР .pdf",
+  "relative_path": "ПИР .pdf",
+  "generated_at": "2025-12-03T08:01:23.011310+00:00",
+  "engine": "tabula-py",
+  "options": {
+    "pages": "all",
+    "lattice": true,
+    "stream": false
+  },
+  "table_index": 14,
+  "rows": [
+    [
+      "1701-0502-02"
+    ]
+  ],
+  "shape": [
+    1,
+    1
+  ],
+  "columns": [
+    "в=2074\rх=1,1\rк1= 1,2\rк2= 0,7\rК3= 0,14 (к табл. 1701-0502-02)\rСМ-10,0%\rПОС-4,0%"
+  ]
+}

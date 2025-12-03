@@ -1,0 +1,33 @@
+{
+  "file": "/Users/darynka/ge-completeness-SCP-PIR/ИРД.СМЕТАПИР/ПИР Местная7, 2025г.pdf",
+  "relative_path": "ПИР Местная7, 2025г.pdf",
+  "generated_at": "2025-12-03T08:01:51.190609+00:00",
+  "engine": "tabula-py",
+  "options": {
+    "pages": "all",
+    "lattice": true,
+    "stream": false
+  },
+  "table_index": 13,
+  "rows": [
+    [
+      "Руководитель организации",
+      "",
+      ""
+    ],
+    [
+      "",
+      "(подпись, инициалы, фамилия)",
+      ""
+    ]
+  ],
+  "shape": [
+    2,
+    3
+  ],
+  "columns": [
+    "Unnamed: 0",
+    "Unnamed: 1",
+    "Unnamed: 2"
+  ]
+}

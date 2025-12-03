@@ -1,0 +1,22 @@
+{
+  "file": "/Users/darynka/ge-completeness-SCP-PIR/ИРД.СМЕТАПИР/стоимость ПИР 03.05.24.pdf",
+  "relative_path": "стоимость ПИР 03.05.24.pdf",
+  "generated_at": "2025-12-03T08:03:59.122599+00:00",
+  "engine": "tabula-py",
+  "options": {
+    "pages": "all",
+    "lattice": true,
+    "stream": false
+  },
+  "table_index": 1,
+  "rows": [],
+  "shape": [
+    0,
+    3
+  ],
+  "columns": [
+    "ВСЕГО",
+    "45 983,761",
+    "Unnamed: 0"
+  ]
+}

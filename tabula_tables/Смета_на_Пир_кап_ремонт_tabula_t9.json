@@ -1,0 +1,27 @@
+{
+  "file": "/Users/darynka/ge-completeness-SCP-PIR/ИРД.СМЕТАПИР/Смета_на_Пир_кап_ремонт.pdf",
+  "relative_path": "Смета_на_Пир_кап_ремонт.pdf",
+  "generated_at": "2025-12-03T08:03:47.450494+00:00",
+  "engine": "tabula-py",
+  "options": {
+    "pages": "all",
+    "lattice": true,
+    "stream": false
+  },
+  "table_index": 9,
+  "rows": [
+    [
+      "де Хзад= 0,3 га"
+    ],
+    [
+      "-1,15"
+    ]
+  ],
+  "shape": [
+    2,
+    1
+  ],
+  "columns": [
+    "Коэффициенты:\rгде Хзад= 0,3 га\rК-1,15"
+  ]
+}

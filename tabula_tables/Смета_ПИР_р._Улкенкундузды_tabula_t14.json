@@ -1,0 +1,20 @@
+{
+  "file": "/Users/darynka/ge-completeness-SCP-PIR/ИРД.СМЕТАПИР/Смета_ПИР_р._Улкенкундузды.pdf",
+  "relative_path": "Смета_ПИР_р._Улкенкундузды.pdf",
+  "generated_at": "2025-12-03T08:03:45.156284+00:00",
+  "engine": "tabula-py",
+  "options": {
+    "pages": "all",
+    "lattice": true,
+    "stream": false
+  },
+  "table_index": 14,
+  "rows": [],
+  "shape": [
+    0,
+    1
+  ],
+  "columns": [
+    "Unnamed: 0"
+  ]
+}

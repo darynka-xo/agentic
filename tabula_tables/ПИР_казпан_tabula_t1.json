@@ -1,0 +1,20 @@
+{
+  "file": "/Users/darynka/ge-completeness-SCP-PIR/ИРД.СМЕТАПИР/ПИР_казпан.pdf",
+  "relative_path": "ПИР_казпан.pdf",
+  "generated_at": "2025-12-03T08:02:43.173751+00:00",
+  "engine": "tabula-py",
+  "options": {
+    "pages": "all",
+    "lattice": true,
+    "stream": false
+  },
+  "table_index": 1,
+  "rows": [],
+  "shape": [
+    0,
+    1
+  ],
+  "columns": [
+    "\"СМЕТА ПИР РК\" версия 2.2.4 S/N:551"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "file": "/Users/darynka/ge-completeness-SCP-PIR/ИРД.СМЕТАПИР/ПЦ.Смета_ПИР-04.09.24.pdf",
+  "relative_path": "ПЦ.Смета_ПИР-04.09.24.pdf",
+  "generated_at": "2025-12-03T08:02:51.734507+00:00",
+  "engine": "tabula-py",
+  "options": {
+    "pages": "all",
+    "lattice": true,
+    "stream": false
+  },
+  "table_index": 1,
+  "rows": [],
+  "shape": [
+    0,
+    1
+  ],
+  "columns": [
+    "\"Строительство перинатального центра на 200 койко-мест\" в микрорайоне Акжайык, г. Шымкент"
+  ]
+}

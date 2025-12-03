@@ -1,0 +1,24 @@
+{
+  "file": "/Users/darynka/ge-completeness-SCP-PIR/ИРД.СМЕТАПИР/ПИР Балтабай.pdf",
+  "relative_path": "ПИР Балтабай.pdf",
+  "generated_at": "2025-12-03T08:01:37.354840+00:00",
+  "engine": "tabula-py",
+  "options": {
+    "pages": "all",
+    "lattice": true,
+    "stream": false
+  },
+  "table_index": 35,
+  "rows": [
+    [
+      "5"
+    ]
+  ],
+  "shape": [
+    1,
+    1
+  ],
+  "columns": [
+    "5"
+  ]
+}

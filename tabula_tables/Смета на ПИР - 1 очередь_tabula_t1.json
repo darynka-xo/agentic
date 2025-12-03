@@ -1,0 +1,24 @@
+{
+  "file": "/Users/darynka/ge-completeness-SCP-PIR/ИРД.СМЕТАПИР/Смета на ПИР - 1 очередь.pdf",
+  "relative_path": "Смета на ПИР - 1 очередь.pdf",
+  "generated_at": "2025-12-03T08:03:26.086099+00:00",
+  "engine": "tabula-py",
+  "options": {
+    "pages": "all",
+    "lattice": true,
+    "stream": false
+  },
+  "table_index": 1,
+  "rows": [
+    [
+      "п/"
+    ]
+  ],
+  "shape": [
+    1,
+    1
+  ],
+  "columns": [
+    "No п/п"
+  ]
+}
