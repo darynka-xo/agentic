@@ -68,7 +68,7 @@ class EstimateValidationCrew:
         )
 
     def _build_llm(self):
-        base_url = self.ollama_base_url.rstrip("/") + "/v1"
+        base_url = self.ollama_base_url.rstrip("/")
         return LLM(
             model=self.ollama_model,
             provider="ollama",
