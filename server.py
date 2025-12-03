@@ -18,18 +18,21 @@ class EstimateValidatorAPI(ls.LitAPI):
     """
 
     def setup(self, device: str | None = None):
-        # LitServe passes the worker/device identifier even if it is unused here.
         self.db = get_db()
         self.crew = build_crew(self.db)
 
+    # -------------------------------------------------------------------------
+    # FIX: Change type hint to Dict[str, Any] to force Body parsing
+    # -------------------------------------------------------------------------
     def decode_request(self, request: Dict[str, Any]) -> Dict[str, Any]:
         """
-        LitServe passes the JSON body as a dict here. 
-        We manually validate it against RequestBody to enforce the schema
-        without confusing the route generator.
+        LitServe passes the raw JSON body as a dictionary.
+        We manually validate it against RequestBody here.
         """
-        # Validate the incoming dictionary using the Pydantic model
+        # 1. Parse the raw dict into your Pydantic model
         validated_data = RequestBody(**request)
+        
+        # 2. Return the inner payload required by predict()
         return validated_data.tabula_json
 
     def predict(self, tabula_json: Dict[str, Any]) -> Dict[str, Any]:
