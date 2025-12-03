@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import logging
 import os
 from typing import Any, Dict
 from uuid import uuid4
@@ -8,6 +9,8 @@ from crewai import Agent, Crew, LLM, Process, Task
 
 from core.state import RawInput, ReferenceData, RowState
 from tools.db_search import DBSearchTool
+
+logger = logging.getLogger(__name__)
 
 
 class EstimateValidationCrew:
@@ -20,10 +23,12 @@ class EstimateValidationCrew:
         self.db_tool = DBSearchTool(db)
         self.ollama_model = os.getenv("OLLAMA_MODEL", "ollama/qwen3:30b")
         self.ollama_base_url = os.getenv("OLLAMA_BASE_URL", "http://127.0.0.1:11434")
+        logger.info(f"Initializing EstimateValidationCrew with model: {self.ollama_model}, base_url: {self.ollama_base_url}")
         self.structurer_agent = self._make_structurer_agent()
         self.auditor_agent = self._make_auditor_agent()
 
     def run(self, tabula_payload: Dict[str, Any]) -> RowState:
+        logger.info("Starting crew run with tabula_payload")
         structurer_task = self._make_structurer_task()
         auditor_task = self._make_auditor_task(structurer_task)
 
@@ -31,13 +36,30 @@ class EstimateValidationCrew:
             agents=[self.structurer_agent, self.auditor_agent],
             tasks=[structurer_task, auditor_task],
             process=Process.sequential,
-            verbose=False,
+            verbose=True,  # Enable verbose for debugging
         )
 
-        crew.kickoff(inputs={"tabula_payload": tabula_payload})
+        try:
+            logger.info("Kicking off crew tasks")
+            result = crew.kickoff(inputs={"tabula_payload": tabula_payload})
+            logger.info(f"Crew kickoff completed: {result}")
+        except Exception as e:
+            logger.error(f"Crew kickoff failed: {str(e)}", exc_info=True)
+            raise ValueError(f"Crew execution failed: {str(e)}") from e
+
+        # Validate outputs
+        if not structurer_task.output or not structurer_task.output.pydantic:
+            logger.error("Structurer task produced no output or invalid pydantic output")
+            raise ValueError("Structurer task failed to produce valid output")
+        
+        if not auditor_task.output or not auditor_task.output.pydantic:
+            logger.error("Auditor task produced no output or invalid pydantic output")
+            raise ValueError("Auditor task failed to produce valid output")
 
         raw_input = structurer_task.output.pydantic
         reference_data = auditor_task.output.pydantic
+        logger.info(f"Successfully extracted raw_input and reference_data")
+        
         state = RowState(
             id=str(uuid4()),
             raw_input=raw_input,
@@ -69,12 +91,24 @@ class EstimateValidationCrew:
 
     def _build_llm(self):
         base_url = self.ollama_base_url.rstrip("/")
-        return LLM(
-            model=self.ollama_model,
-            base_url=base_url,
-            api_key=os.getenv("OLLAMA_API_KEY", "ollama"),
-            temperature=0.0,
-        )
+        timeout = int(os.getenv("LLM_TIMEOUT", "600"))  # 10 minutes default
+        
+        logger.info(f"Building LLM with base_url: {base_url}, timeout: {timeout}s")
+        
+        try:
+            llm = LLM(
+                model=self.ollama_model,
+                base_url=base_url,
+                api_key=os.getenv("OLLAMA_API_KEY", "ollama"),
+                temperature=0.0,
+                timeout=timeout,
+                max_tokens=4096,  # Ensure we have enough tokens for response
+            )
+            logger.info("LLM instance created successfully")
+            return llm
+        except Exception as e:
+            logger.error(f"Failed to create LLM instance: {str(e)}", exc_info=True)
+            raise
 
     def _make_structurer_task(self) -> Task:
         schema_hint = RawInput.model_json_schema()
