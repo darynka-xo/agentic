@@ -51,5 +51,5 @@ class EstimateValidatorAPI(LitAPI):
 if __name__ == "__main__":
     api = EstimateValidatorAPI()
     server = LitServer(api, timeout=30)
-    server.serve()
+    server.run(port=8000)
 
