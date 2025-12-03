@@ -1,46 +1,64 @@
 from __future__ import annotations
+
+import os
 from typing import Any, Dict
-import litserve as ls
-from pydantic import BaseModel
+
+from fastapi import Body, FastAPI, HTTPException
+
 from agents import build_crew
 from config import get_db
 from core.calculator import run_deterministic_calculator
 
 
-class RequestBody(BaseModel):
-    tabula_json: Dict[str, Any]
-    
+app = FastAPI(title="Estimate Validator API")
+crew_cache = None
 
-class EstimateValidatorAPI(ls.LitAPI):
-    def setup(self, device: str | None = None):
-        self.db = get_db()
-        self.crew = build_crew(self.db)
 
-    def decode_request(self, request: RequestBody) -> Dict[str, Any]:
-        """
-        LitServe/FastAPI will automatically parse and validate the JSON body against RequestBody.
-        If validation fails, it returns a 422 error with details.
-        """
-        return request.tabula_json
+def _init_crew():
+    db = get_db()
+    return build_crew(db)
 
-    def predict(self, tabula_json: Dict[str, Any]) -> Dict[str, Any]:
-        """
-        Validate a single Tabula extracted row. Returns the fully populated
-        RowState model (as a dict) or an error descriptor.
-        """
-        state = self.crew.run(tabula_json)
+
+@app.on_event("startup")
+def on_startup():
+    global crew_cache
+    crew_cache = _init_crew()
+
+
+def _extract_payload(request: Dict[str, Any]) -> Dict[str, Any]:
+    if "tabula_json" in request:
+        tabula_json = request["tabula_json"]
+    else:
+        tabula_json = request
+
+    if not isinstance(tabula_json, dict):
+        raise HTTPException(
+            status_code=400, detail="tabula_json payload must be a JSON object."
+        )
+    return tabula_json
+
+
+@app.post("/predict")
+def predict(tabula_request: Dict[str, Any] = Body(...)) -> Dict[str, Any]:
+    if crew_cache is None:
+        raise HTTPException(status_code=503, detail="Crew initialization pending.")
+
+    tabula_json = _extract_payload(tabula_request)
+    try:
+        state = crew_cache.run(tabula_json)
         state = run_deterministic_calculator(state)
-        return state.model_dump()
-
-    def encode_response(self, response: Dict[str, Any]) -> Dict[str, Any]:
-        """
-        Wrap the RowState (or error) into a consistent API contract so clients
-        always receive an `output` envelope.
-        """
-        return {"output": response}
+        return {"output": state.model_dump()}
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
+    except Exception as exc:  # pragma: no cover
+        raise HTTPException(status_code=500, detail=str(exc)) from exc
 
 
 if __name__ == "__main__":
-    api = EstimateValidatorAPI()
-    server = ls.LitServer(api, timeout=30)
-    server.run(port=8000)
+    import uvicorn
+
+    uvicorn.run(
+        app,
+        host="0.0.0.0",
+        port=int(os.getenv("PORT", "8000")),
+    )
