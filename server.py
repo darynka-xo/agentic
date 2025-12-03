@@ -12,28 +12,17 @@ class RequestBody(BaseModel):
     
 
 class EstimateValidatorAPI(ls.LitAPI):
-    """
-    LitServe entry point. LitServe automatically executes methods in order:
-    decode_request -> predict -> encode_response for every inbound HTTP call.
-    """
-
     def setup(self, device: str | None = None):
         self.db = get_db()
         self.crew = build_crew(self.db)
 
-    # -------------------------------------------------------------------------
-    # FIX: Change type hint to Dict[str, Any] to force Body parsing
-    # -------------------------------------------------------------------------
+    # Remove RequestBody entirely, accept raw tabula_json directly
     def decode_request(self, request: Dict[str, Any]) -> Dict[str, Any]:
-        """
-        LitServe passes the raw JSON body as a dictionary.
-        We manually validate it against RequestBody here.
-        """
-        # 1. Parse the raw dict into your Pydantic model
-        validated_data = RequestBody(**request)
-        
-        # 2. Return the inner payload required by predict()
-        return validated_data.tabula_json
+        # Option A: client sends { "tabula_json": { ... } }
+        if "tabula_json" in request:
+            return request["tabula_json"]
+        # Option B: client sends raw tabula payload directly → accept it
+        return request  # just pass through
 
     def predict(self, tabula_json: Dict[str, Any]) -> Dict[str, Any]:
         """
