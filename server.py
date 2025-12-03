@@ -1,3 +1,4 @@
+from __future__ import annotations
 import litserve.mcp
 
 # --- MONKEY PATCH START ---
@@ -10,7 +11,7 @@ class MockMCPConnector:
 litserve.mcp._LitMCPServerConnector = MockMCPConnector
 # --- MONKEY PATCH END ---
 
-from __future__ import annotations
+
 
 from typing import Any, Dict
 
