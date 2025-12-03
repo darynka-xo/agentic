@@ -3,7 +3,7 @@ from __future__ import annotations
 from typing import Any, Dict, List, Optional, Type
 
 from crewai.tools import BaseTool
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, PrivateAttr
 
 try:
     from fuzzywuzzy import fuzz  # type: ignore
@@ -35,9 +35,11 @@ class DBSearchTool(BaseTool):
     )
     args_schema: Type[BaseModel] = DBSearchInput
 
+    _db: Any = PrivateAttr()
+
     def __init__(self, db):
         super().__init__()
-        self.db = db
+        self._db = db
 
     def _run(
         self,
@@ -66,7 +68,7 @@ class DBSearchTool(BaseTool):
         return self._run(*args, **kwargs)
 
     def _find_section(self, code: str) -> Dict[str, Any]:
-        section = self.db["sections"].find_one({"code": code})
+        section = self._db["sections"].find_one({"code": code})
         if not section:
             raise ValueError(f"No section found in SCP reference for code {code}.")
         rows = section.get("rows") or []
@@ -106,7 +108,7 @@ class DBSearchTool(BaseTool):
         if not extracted_tags:
             return []
 
-        coefficients = self.db["coefficients"].find({"applies_to.codes": table_code})
+        coefficients = self._db["coefficients"].find({"applies_to.codes": table_code})
         matched: List[Dict[str, Any]] = []
         lowered_tags = [tag.lower() for tag in extracted_tags]
 
