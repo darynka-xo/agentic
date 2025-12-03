@@ -1,13 +1,15 @@
 from __future__ import annotations
-
 from typing import Any, Dict
-
 import litserve as ls
-
+from pydantic import BaseModel  # <--- Import this
 from agents import build_crew
 from config import get_db
 from core.calculator import run_deterministic_calculator
 
+
+class RequestBody(BaseModel):
+    tabula_json: Dict[str, Any]
+    
 
 class EstimateValidatorAPI(ls.LitAPI):
     """
@@ -20,15 +22,12 @@ class EstimateValidatorAPI(ls.LitAPI):
         self.db = get_db()
         self.crew = build_crew(self.db)
 
-    def decode_request(self, payload: Dict[str, Any]) -> Dict[str, Any]:
+    def decode_request(self, request: RequestBody) -> Dict[str, Any]:
         """
-        Extract the Tabula row JSON from the incoming request body.
+        LitServe requires the argument be named 'request'.
+        The Pydantic type hint forces FastAPI to parse it as a JSON body.
         """
-        if isinstance(payload, dict) and "tabula_json" in payload:
-            return payload["tabula_json"]
-        if isinstance(payload, dict):
-            return payload
-        raise ValueError("Request body must be a JSON object describing the row.")
+        return request.tabula_json
 
     def predict(self, tabula_json: Dict[str, Any]) -> Dict[str, Any]:
         """
