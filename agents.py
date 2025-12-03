@@ -1,11 +1,10 @@
 from __future__ import annotations
 
 import os
-from typing import Any, Dict, Type
+from typing import Any, Dict
 from uuid import uuid4
 
 from crewai import Agent, Crew, LLM, Process, Task
-from pydantic import BaseModel
 
 from core.state import RawInput, ReferenceData, RowState
 from tools.db_search import DBSearchTool
@@ -47,7 +46,7 @@ class EstimateValidationCrew:
         return state
 
     def _make_structurer_agent(self) -> Agent:
-        llm = self._build_llm(RawInput)
+        llm = self._build_llm()
         return Agent(
             role="Structurer",
             goal="Transform raw Tabula JSON into the normalized RowState.raw_input.",
@@ -58,7 +57,7 @@ class EstimateValidationCrew:
         )
 
     def _make_auditor_agent(self) -> Agent:
-        llm = self._build_llm(ReferenceData)
+        llm = self._build_llm()
         return Agent(
             role="Auditor",
             goal="Fetch SCP reference constants and coefficients via tools.",
@@ -68,7 +67,7 @@ class EstimateValidationCrew:
             verbose=False,
         )
 
-    def _build_llm(self, response_model: Type[BaseModel]):
+    def _build_llm(self):
         base_url = self.ollama_base_url.rstrip("/") + "/v1"
         return LLM(
             model=self.ollama_model,
@@ -76,7 +75,6 @@ class EstimateValidationCrew:
             base_url=base_url,
             api_key="ollama",
             temperature=0.0,
-            response_format=response_model,
         )
 
     def _make_structurer_task(self) -> Task:
