@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Type
 
 from crewai.tools import BaseTool
 from pydantic import BaseModel, Field
@@ -33,7 +33,7 @@ class DBSearchTool(BaseTool):
         "current estimate line item. Always call this tool with the table code, "
         "numeric X value, and the list of extracted tags."
     )
-    args_schema = DBSearchInput
+    args_schema: Type[BaseModel] = DBSearchInput
 
     def __init__(self, db):
         super().__init__()
