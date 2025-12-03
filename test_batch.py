@@ -38,12 +38,27 @@ def test_file(filepath: Path, server_url: str) -> Dict:
             timeout=120  # 2 minutes timeout
         )
         
+        # Parse response
+        if response.status_code == 200:
+            try:
+                resp_json = response.json()
+            except:
+                resp_json = {"raw": response.text}
+        else:
+            # Try to parse error message
+            try:
+                resp_json = response.json()
+                error_detail = resp_json.get('detail', response.text)
+            except:
+                error_detail = response.text
+            resp_json = error_detail
+        
         return {
             "filename": filepath.name,
             "status": "success" if response.status_code == 200 else "failed",
             "http_code": response.status_code,
-            "response": response.json() if response.status_code == 200 else response.text,
-            "error": None
+            "response": resp_json,
+            "error": None if response.status_code == 200 else error_detail
         }
     
     except requests.exceptions.Timeout:

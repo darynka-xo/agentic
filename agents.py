@@ -8,6 +8,7 @@ from uuid import uuid4
 from crewai import Agent, Crew, LLM, Process, Task
 
 from core.state import RawInput, ReferenceData, RowState
+from preprocessor import preprocess_tabula_payload
 from tools.db_search import DBSearchTool
 
 logger = logging.getLogger(__name__)
@@ -29,6 +30,13 @@ class EstimateValidationCrew:
 
     def run(self, tabula_payload: Dict[str, Any]) -> RowState:
         logger.info("Starting crew run with tabula_payload")
+        
+        # Preprocess tabula format to simple format
+        logger.info(f"Input format: {list(tabula_payload.keys())}")
+        tabula_payload = preprocess_tabula_payload(tabula_payload)
+        logger.info(f"After preprocessing: {list(tabula_payload.keys())}")
+        logger.info(f"Raw text length: {len(tabula_payload.get('raw_text', ''))}")
+        
         structurer_task = self._make_structurer_task()
         auditor_task = self._make_auditor_task(structurer_task)
 
