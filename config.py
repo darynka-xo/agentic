@@ -11,7 +11,7 @@ except ImportError:  # pragma: no cover - optional dependency
 
 
 MONGO_URI: Optional[str] = os.getenv("MONGO_URI")
-MONGO_DB_NAME: str = os.getenv("MONGO_DB_NAME", "smeta_validation")
+MONGO_DB_NAME: str = os.getenv("MONGO_DB_NAME", "scp_verification_dev")
 
 
 def get_mongo_client() -> MongoClient:

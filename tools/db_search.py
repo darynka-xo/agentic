@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import logging
 from typing import Any, Dict, List, Optional, Type
 
 from crewai.tools import BaseTool
@@ -9,6 +10,8 @@ try:
     from fuzzywuzzy import fuzz  # type: ignore
 except ImportError:  # pragma: no cover - optional dependency
     fuzz = None
+
+logger = logging.getLogger(__name__)
 
 
 class DBSearchInput(BaseModel):
@@ -75,6 +78,16 @@ class DBSearchTool(BaseTool):
         Find a table by table_code in the nested MongoDB structure.
         Structure: sections -> subsections -> chapters -> tables
         """
+        logger.info(f"Searching for table_code: {table_code}")
+        
+        # Check database connection
+        try:
+            sections_count = self._db["sections"].count_documents({})
+            logger.info(f"Connected to database. Sections collection has {sections_count} documents")
+        except Exception as e:
+            logger.error(f"Database connection error: {str(e)}")
+            raise
+        
         # Query for a section document that contains the table_code in its nested structure
         # Use MongoDB's dot notation to search within nested arrays
         result = self._db["sections"].find_one(
@@ -82,7 +95,11 @@ class DBSearchTool(BaseTool):
         )
         
         if not result:
+            logger.error(f"No section found with table_code: {table_code}")
+            logger.info(f"Available sections: {list(self._db['sections'].find({}, {'code': 1, '_id': 0}).limit(5))}")
             raise ValueError(f"No section found in SCP reference for code {table_code}.")
+        
+        logger.info(f"Found section: {result.get('code')}")
         
         # Now navigate the nested structure to find the specific table
         for subsection in result.get("subsections", []):
@@ -92,7 +109,10 @@ class DBSearchTool(BaseTool):
                         # Found the table! Return it with rows
                         rows = table.get("positions", [])
                         if not rows:
+                            logger.error(f"Table {table_code} has no positions")
                             raise ValueError(f"Table {table_code} has no configured positions.")
+                        
+                        logger.info(f"Found table {table_code} with {len(rows)} positions")
                         # Return a dict with table info and rows
                         return {
                             "code": table_code,
@@ -101,6 +121,7 @@ class DBSearchTool(BaseTool):
                             "table": table
                         }
         
+        logger.error(f"Table {table_code} found in section but could not navigate to it")
         raise ValueError(f"Table {table_code} found in section but could not extract positions.")
 
     def _match_row(self, section: Dict[str, Any], x_value: float):
