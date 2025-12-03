@@ -71,9 +71,8 @@ class EstimateValidationCrew:
         base_url = self.ollama_base_url.rstrip("/")
         return LLM(
             model=self.ollama_model,
-            provider="ollama",
             base_url=base_url,
-            api_key="ollama",
+            api_key=os.getenv("OLLAMA_API_KEY", "ollama"),
             temperature=0.0,
         )
 
