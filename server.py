@@ -16,13 +16,12 @@ class EstimateValidatorAPI(ls.LitAPI):
         self.db = get_db()
         self.crew = build_crew(self.db)
 
-    # Remove RequestBody entirely, accept raw tabula_json directly
-    def decode_request(self, request: Dict[str, Any]) -> Dict[str, Any]:
-        # Option A: client sends { "tabula_json": { ... } }
-        if "tabula_json" in request:
-            return request["tabula_json"]
-        # Option B: client sends raw tabula payload directly → accept it
-        return request  # just pass through
+    def decode_request(self, request: RequestBody) -> Dict[str, Any]:
+        """
+        LitServe/FastAPI will automatically parse and validate the JSON body against RequestBody.
+        If validation fails, it returns a 422 error with details.
+        """
+        return request.tabula_json
 
     def predict(self, tabula_json: Dict[str, Any]) -> Dict[str, Any]:
         """
