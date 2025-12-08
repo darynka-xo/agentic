@@ -52,5 +52,5 @@ api_test_result.json
 .env.local
 .env.*.local
 
-# Но создаем .env.example для документации
+
 !.env.example

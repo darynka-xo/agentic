@@ -1,0 +1,51 @@
+{
+  "output": {
+    "id": "d6c2f5d5-ba58-45de-b877-7b11e0c77140",
+    "raw_input": {
+      "text_description": "Жилой дом Секция 1 12 этажей м2",
+      "table_code_claimed": "1706-0201-01",
+      "position_number": 4,
+      "X_claimed": -435.09,
+      "total_claimed": 52690700.0,
+      "year": 2023,
+      "claimed_coefficients": [
+        {
+          "id": "K3",
+          "value": 1.2,
+          "reason": null
+        },
+        {
+          "id": "K4",
+          "value": 1.2,
+          "reason": null
+        },
+        {
+          "id": "K5",
+          "value": 1.2,
+          "reason": null
+        }
+      ],
+      "extracted_tags": []
+    },
+    "reference_data": {
+      "ref_A": 2698.0,
+      "ref_B": 3.6,
+      "range_min": 0.0,
+      "range_max": 999999.0,
+      "formula_strategy": "standard",
+      "valid_coefficients": [
+        {
+          "id": "k2_stage",
+          "value": 1.21,
+          "reason": "Коэффициент стадийности K2 (РП/РД)"
+        }
+      ],
+      "source_position_id": "1706-0201-01-4"
+    },
+    "audit_verdict": {
+      "calculated_total": 2366.2,
+      "is_approved": false,
+      "reason": "Deviation 50324.50 тыс.тг (95.51%)"
+    }
+  }
+}
