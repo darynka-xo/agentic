@@ -1,0 +1,47 @@
+[
+  {
+    "filename": "_ПИР Келес_.pdf",
+    "status": "failed",
+    "http_code": 500,
+    "response": {
+      "detail": "PDF processing failed: `java` command is not found from this Python process.Please ensure Java is installed and PATH is set for `java`"
+    },
+    "error": "PDF processing failed: `java` command is not found from this Python process.Please ensure Java is installed and PATH is set for `java`"
+  },
+  {
+    "filename": "05-01 Расчет ПИР_Атамура 2 (1).pdf",
+    "status": "failed",
+    "http_code": 500,
+    "response": {
+      "detail": "PDF processing failed: `java` command is not found from this Python process.Please ensure Java is installed and PATH is set for `java`"
+    },
+    "error": "PDF processing failed: `java` command is not found from this Python process.Please ensure Java is installed and PATH is set for `java`"
+  },
+  {
+    "filename": "10. Смета_ПИР_Байдибек_би_от_17.01.2025 обновленная.pdf",
+    "status": "failed",
+    "http_code": 500,
+    "response": {
+      "detail": "PDF processing failed: `java` command is not found from this Python process.Please ensure Java is installed and PATH is set for `java`"
+    },
+    "error": "PDF processing failed: `java` command is not found from this Python process.Please ensure Java is installed and PATH is set for `java`"
+  },
+  {
+    "filename": "12 Школа Актау.pdf",
+    "status": "failed",
+    "http_code": 500,
+    "response": {
+      "detail": "PDF processing failed: `java` command is not found from this Python process.Please ensure Java is installed and PATH is set for `java`"
+    },
+    "error": "PDF processing failed: `java` command is not found from this Python process.Please ensure Java is installed and PATH is set for `java`"
+  },
+  {
+    "filename": "094 - ПИР_МЖК 18.03.2025.pdf",
+    "status": "failed",
+    "http_code": 500,
+    "response": {
+      "detail": "PDF processing failed: `java` command is not found from this Python process.Please ensure Java is installed and PATH is set for `java`"
+    },
+    "error": "PDF processing failed: `java` command is not found from this Python process.Please ensure Java is installed and PATH is set for `java`"
+  }
+]

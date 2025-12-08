@@ -124,7 +124,7 @@ def save_results(results: List[Dict], output_dir: str = "batch_results"):
 def main():
     """Main function to run batch tests."""
     SERVER_URL = "http://localhost:8000/predict"
-    MAX_FILES = 50
+    MAX_FILES = int(sys.argv[1]) if len(sys.argv) > 1 else 50
     
     print("=" * 60)
     print("BATCH TESTING TABULA FILES")

@@ -1,0 +1,33 @@
+============================================================
+BATCH TEST SUMMARY
+============================================================
+
+Timestamp: 2025-12-08T03:10:15.376904
+Total files: 10
+Success: 9
+Failed: 1
+Success rate: 90.00%
+
+============================================================
+FAILED FILES
+============================================================
+
+094 - ПИР_МЖК 18.03.2025_tabula_t3.json
+  HTTP Code: 400
+  Error: Crew execution failed: 4 validation errors for ReferenceData
+ref_A
+  Field required [type=missing, input_value={'position_number': 1, 'x...e row', 'value': 1000}]}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+ref_B
+  Field required [type=missing, input_value={'position_number': 1, 'x...e row', 'value': 1000}]}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+range_min
+  Field required [type=missing, input_value={'position_number': 1, 'x...e row', 'value': 1000}]}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+range_max
+  Field required [type=missing, input_value={'position_number': 1, 'x...e row', 'value': 1000}]}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+  Response: Crew execution failed: 4 validation errors for ReferenceData
+ref_A
+  Field required [type=missing, input_value={'position_number': 1, 'x...e row', 'value': 1000}]}, input_type=dict]
+    For further in

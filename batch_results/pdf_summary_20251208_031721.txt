@@ -1,0 +1,46 @@
+============================================================
+BATCH PDF TEST SUMMARY
+============================================================
+
+Timestamp: 2025-12-08T03:17:21.628847
+Total PDF files: 5
+Success: 5
+Failed: 0
+Success rate: 100.00%
+
+Total tables processed: 18
+Tables success: 14
+Tables failed: 4
+
+============================================================
+SUCCESSFUL FILES
+============================================================
+
+_ПИР Келес_.pdf
+  Tables processed: 7
+  Success: 5
+  Failed: 2
+
+05-01 Расчет ПИР_Атамура 2 (1).pdf
+  Tables processed: 5
+  Success: 5
+  Failed: 0
+
+10. Смета_ПИР_Байдибек_би_от_17.01.2025 обновленная.pdf
+  Tables processed: 1
+  Success: 1
+  Failed: 0
+
+12 Школа Актау.pdf
+  Tables processed: 2
+  Success: 0
+  Failed: 2
+
+094 - ПИР_МЖК 18.03.2025.pdf
+  Tables processed: 3
+  Success: 3
+  Failed: 0
+
+============================================================
+FAILED FILES
+============================================================

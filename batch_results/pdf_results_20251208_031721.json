@@ -1,0 +1,807 @@
+[
+  {
+    "filename": "_ПИР Келес_.pdf",
+    "status": "success",
+    "http_code": 200,
+    "tables_processed": 7,
+    "tables_success": 5,
+    "tables_failed": 2,
+    "response": {
+      "filename": "_ПИР Келес_.pdf",
+      "tables_processed": 7,
+      "results": [
+        {
+          "table_index": 1,
+          "status": "success",
+          "output": {
+            "id": "df49b1cc-b413-4e48-964a-1087404f3266",
+            "raw_input": {
+              "text_description": "Инженерно-геодезические изыскания. Рабочий проект",
+              "table_code_claimed": "1706-0201-01",
+              "position_number": 1,
+              "X_claimed": 0.0,
+              "total_claimed": 794916.6,
+              "year": 2024,
+              "claimed_coefficients": [],
+              "extracted_tags": []
+            },
+            "reference_data": {
+              "ref_A": 1345.0,
+              "ref_B": 4.48,
+              "range_min": 0.0,
+              "range_max": 999999.0,
+              "formula_strategy": "standard",
+              "valid_coefficients": [
+                {
+                  "id": "k2_stage",
+                  "value": 1.21,
+                  "reason": "Коэффициент стадийности K2 (РП/РД)"
+                }
+              ],
+              "source_position_id": "1706-0201-01-2"
+            },
+            "audit_verdict": {
+              "calculated_total": 1627.45,
+              "is_approved": false,
+              "reason": "Deviation 793289.15 тыс.тг (99.80%)"
+            }
+          }
+        },
+        {
+          "table_index": 2,
+          "status": "success",
+          "output": {
+            "id": "9839432d-87bb-4e4e-81c4-b5e551049932",
+            "raw_input": {
+              "text_description": "...",
+              "table_code_claimed": "1706-0201-01",
+              "position_number": 1,
+              "X_claimed": 0.0,
+              "total_claimed": 3413940.0,
+              "year": 2024,
+              "claimed_coefficients": [],
+              "extracted_tags": []
+            },
+            "reference_data": {
+              "ref_A": 10.5,
+              "ref_B": 20.3,
+              "range_min": 0.0,
+              "range_max": 100.0,
+              "formula_strategy": "standard",
+              "valid_coefficients": [
+                {
+                  "id": null,
+                  "value": 0.5,
+                  "reason": null
+                },
+                {
+                  "id": null,
+                  "value": 0.7,
+                  "reason": null
+                }
+              ],
+              "source_position_id": null
+            },
+            "audit_verdict": {
+              "calculated_total": 3.67,
+              "is_approved": false,
+              "reason": "Deviation 3410.26 тыс.тг (99.89%)"
+            }
+          }
+        },
+        {
+          "table_index": 3,
+          "status": "error",
+          "error": "Crew execution failed: 4 validation errors for ReferenceData\nref_A\n  Field required [type=missing, input_value={'table_code': '1601-0102...ea': 8, 'max_area': 12}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nref_B\n  Field required [type=missing, input_value={'table_code': '1601-0102...ea': 8, 'max_area': 12}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_min\n  Field required [type=missing, input_value={'table_code': '1601-0102...ea': 8, 'max_area': 12}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_max\n  Field required [type=missing, input_value={'table_code': '1601-0102...ea': 8, 'max_area': 12}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+        },
+        {
+          "table_index": 4,
+          "status": "success",
+          "output": {
+            "id": "c69f7202-01b7-4313-95d5-95a641430b51",
+            "raw_input": {
+              "text_description": "Итого по разделу 123 190,50 | Итого 579 162,48 | СЦИ РК 8.03-02023, раздел 1 табл.4 (св. 100 до 300 км, св. 1 до 2 мес.) Проц. расхода = 21 Расходы по внешнему транспорту Расстояние, км: 250 км. Продолжитель ость экспедиции изысканий, мес : 2 Стоимость полевых изысканий и расходов по внутреннему транспорту (СЦИ, раздел 1), тенге : 455 971,98 * 21 / 100 95 754,12 | 4К5о5м9а7н1д.9и8ровки производственн ого персонала 120 000 + 0 + 0 120 000,00 | Итого с учетом дополнительных начислений 794 916,60 | НДС 12% 794 916,6 * 0,12 95 389,99 | Итого по смете 890 306,59",
+              "table_code_claimed": "",
+              "position_number": 1,
+              "X_claimed": 250.0,
+              "total_claimed": 890306.59,
+              "year": 2024,
+              "claimed_coefficients": [
+                {
+                  "id": "K3",
+                  "value": 21.0,
+                  "reason": null
+                }
+              ],
+              "extracted_tags": []
+            },
+            "reference_data": {
+              "ref_A": 10.5,
+              "ref_B": 20.3,
+              "range_min": 5.0,
+              "range_max": 15.0,
+              "formula_strategy": "standard",
+              "valid_coefficients": [
+                {
+                  "id": "C01",
+                  "value": 1.2,
+                  "reason": "Baseline coefficient"
+                },
+                {
+                  "id": "C02",
+                  "value": 2.3,
+                  "reason": "Adjusted for higher range"
+                }
+              ],
+              "source_position_id": null
+            },
+            "audit_verdict": {
+              "calculated_total": 14035.98,
+              "is_approved": false,
+              "reason": "Deviation 876270.61 тыс.тг (98.42%)"
+            }
+          }
+        },
+        {
+          "table_index": 5,
+          "status": "success",
+          "output": {
+            "id": "4bb069b2-19e4-4821-a2e2-7e0c0fc7388e",
+            "raw_input": {
+              "text_description": "Инженерно-геологическая, гидрогеологическая рекогносцировка при проходимости хорошей: II категория сложности, полевые работы",
+              "table_code_claimed": "1602-0101-01",
+              "position_number": 3,
+              "X_claimed": 7589.0,
+              "total_claimed": 7589.0,
+              "year": 2024,
+              "claimed_coefficients": [],
+              "extracted_tags": []
+            },
+            "reference_data": {
+              "ref_A": 10.5,
+              "ref_B": 20.3,
+              "range_min": 5.0,
+              "range_max": 25.0,
+              "formula_strategy": "standard",
+              "valid_coefficients": [
+                {
+                  "id": null,
+                  "value": 1.2,
+                  "reason": null
+                },
+                {
+                  "id": null,
+                  "value": 1.5,
+                  "reason": null
+                }
+              ],
+              "source_position_id": null
+            },
+            "audit_verdict": {
+              "calculated_total": 277320.96,
+              "is_approved": false,
+              "reason": "Deviation 269731.96 тыс.тг (3554.25%)"
+            }
+          }
+        },
+        {
+          "table_index": 6,
+          "status": "error",
+          "error": "Crew execution failed: 1 validation error for RawInput\n  Invalid JSON: trailing characters at line 11 column 1 [type=json_invalid, input_value='{\\n  \"text_description\":...\"extracted_tags\": []\\n}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid"
+        },
+        {
+          "table_index": 7,
+          "status": "success",
+          "output": {
+            "id": "5cc37ffa-26ec-4210-9124-1618e4abb09f",
+            "raw_input": {
+              "text_description": "Камеральная обработка полевого испытания грунтов динамическим или статическим зондированием с последующей корректировкой разреза по данным лабораторных работ, на глубину 10 м",
+              "table_code_claimed": "1602-0802-02",
+              "position_number": 2,
+              "X_claimed": 319176.0,
+              "total_claimed": 339672.0,
+              "year": 2023,
+              "claimed_coefficients": [],
+              "extracted_tags": []
+            },
+            "reference_data": {
+              "ref_A": 10.5,
+              "ref_B": 20.3,
+              "range_min": 5.0,
+              "range_max": 30.0,
+              "formula_strategy": "standard",
+              "valid_coefficients": [
+                {
+                  "id": null,
+                  "value": 1.2,
+                  "reason": null
+                },
+                {
+                  "id": null,
+                  "value": 0.8,
+                  "reason": null
+                }
+              ],
+              "source_position_id": null
+            },
+            "audit_verdict": {
+              "calculated_total": 6220111.97,
+              "is_approved": false,
+              "reason": "Deviation 5880439.97 тыс.тг (1731.21%)"
+            }
+          }
+        }
+      ]
+    },
+    "error": null
+  },
+  {
+    "filename": "05-01 Расчет ПИР_Атамура 2 (1).pdf",
+    "status": "success",
+    "http_code": 200,
+    "tables_processed": 5,
+    "tables_success": 5,
+    "tables_failed": 0,
+    "response": {
+      "filename": "05-01 Расчет ПИР_Атамура 2 (1).pdf",
+      "tables_processed": 5,
+      "results": [
+        {
+          "table_index": 1,
+          "status": "success",
+          "output": {
+            "id": "4a5d9351-e116-44dc-812f-cfbf8ad8851b",
+            "raw_input": {
+              "text_description": "2 3 Жилой дом Секция 1 12 этажей м2 4 675,08 Сборник цен на проектные работы СЦП РК 8.03-01-2023 раздел 6 табл. 1706-0201-01 п.7 а= 10 637тыс.тенге в= 3,16тыс.тенге К2= 1,2 (РП) К3= 1,2 здание монолитное К4= 1,2 Сейсмичность 7 баллов К5= 1,2 Просадочный грунт К6= 1 все части РП Спр =(10 637+3,16х4 675,08) х1,20х1,2 х1,2=43 908,917тыс.тенге 43 908,917 х 1,2=52 690,700тыс.тенге",
+              "table_code_claimed": "1706-0201-01",
+              "position_number": 1,
+              "X_claimed": 4675.08,
+              "total_claimed": 52690700.0,
+              "year": 2023,
+              "claimed_coefficients": [
+                {
+                  "id": "K3",
+                  "value": 1.2,
+                  "reason": null
+                },
+                {
+                  "id": "K4",
+                  "value": 1.2,
+                  "reason": null
+                },
+                {
+                  "id": "K5",
+                  "value": 1.2,
+                  "reason": null
+                }
+              ],
+              "extracted_tags": []
+            },
+            "reference_data": {
+              "ref_A": 10.5,
+              "ref_B": 20.3,
+              "range_min": 5.0,
+              "range_max": 30.0,
+              "formula_strategy": "standard",
+              "valid_coefficients": [
+                {
+                  "id": "c0",
+                  "value": 1.2,
+                  "reason": null
+                },
+                {
+                  "id": "c1",
+                  "value": 2.3,
+                  "reason": null
+                }
+              ],
+              "source_position_id": null
+            },
+            "audit_verdict": {
+              "calculated_total": 452674.42,
+              "is_approved": false,
+              "reason": "Deviation 399983.72 тыс.тг (759.12%)"
+            }
+          }
+        },
+        {
+          "table_index": 2,
+          "status": "success",
+          "output": {
+            "id": "1584a078-7c9a-4b4b-a0c4-d50b57b35191",
+            "raw_input": {
+              "text_description": "Жилой дом Секция 2 12 этажей м2",
+              "table_code_claimed": "1706-0201-01",
+              "position_number": 4,
+              "X_claimed": -5080.28,
+              "total_claimed": 52584221.0,
+              "year": 2023,
+              "claimed_coefficients": [
+                {
+                  "id": "K2",
+                  "value": 1.2,
+                  "reason": null
+                },
+                {
+                  "id": "K3",
+                  "value": 1.2,
+                  "reason": null
+                },
+                {
+                  "id": "K4",
+                  "value": 1.2,
+                  "reason": null
+                },
+                {
+                  "id": "K5",
+                  "value": 1.2,
+                  "reason": null
+                },
+                {
+                  "id": "K6",
+                  "value": 1.2,
+                  "reason": null
+                }
+              ],
+              "extracted_tags": []
+            },
+            "reference_data": {
+              "ref_A": 2698.0,
+              "ref_B": 3.6,
+              "range_min": 0.0,
+              "range_max": 999999.0,
+              "formula_strategy": "standard",
+              "valid_coefficients": [
+                {
+                  "id": "k2_stage",
+                  "value": 1.21,
+                  "reason": "Коэффициент стадийности K2 (РП/РД)"
+                }
+              ],
+              "source_position_id": "1706-0201-01-4"
+            },
+            "audit_verdict": {
+              "calculated_total": -39118.71,
+              "is_approved": false,
+              "reason": "Deviation 91702.93 тыс.тг (174.39%)"
+            }
+          }
+        },
+        {
+          "table_index": 3,
+          "status": "success",
+          "output": {
+            "id": "e3043df2-53fa-42bf-a02a-491d685468a8",
+            "raw_input": {
+              "text_description": "Жилой дом Секция 4 9 этажей м2 3 589,90",
+              "table_code_claimed": "1706-0201-01",
+              "position_number": 6,
+              "X_claimed": -461.26,
+              "total_claimed": 38799369.0,
+              "year": 2023,
+              "claimed_coefficients": [
+                {
+                  "id": "K2",
+                  "value": 1.21,
+                  "reason": null
+                },
+                {
+                  "id": "K3",
+                  "value": 1.2,
+                  "reason": null
+                },
+                {
+                  "id": "K4",
+                  "value": 1.2,
+                  "reason": null
+                },
+                {
+                  "id": "K5",
+                  "value": 1.2,
+                  "reason": null
+                },
+                {
+                  "id": "K6",
+                  "value": 1.0,
+                  "reason": null
+                }
+              ],
+              "extracted_tags": []
+            },
+            "reference_data": {
+              "ref_A": 6997.0,
+              "ref_B": 3.22,
+              "range_min": 0.0,
+              "range_max": 999999.0,
+              "formula_strategy": "standard",
+              "valid_coefficients": [
+                {
+                  "id": "k2_stage",
+                  "value": 1.21,
+                  "reason": "Коэффициент стадийности K2 (РП/РД)"
+                }
+              ],
+              "source_position_id": "1706-0201-01-6"
+            },
+            "audit_verdict": {
+              "calculated_total": 11524.39,
+              "is_approved": false,
+              "reason": "Deviation 27274.98 тыс.тг (70.30%)"
+            }
+          }
+        },
+        {
+          "table_index": 4,
+          "status": "success",
+          "output": {
+            "id": "c89a753d-ced3-4705-9f10-8aed6634eada",
+            "raw_input": {
+              "text_description": "Жилой дом Секция 6 9 этажей м2",
+              "table_code_claimed": "1706-0201-01",
+              "position_number": 6,
+              "X_claimed": -473.5,
+              "total_claimed": 38404432.0,
+              "year": 2023,
+              "claimed_coefficients": [
+                {
+                  "id": "K2",
+                  "value": 1.21,
+                  "reason": null
+                },
+                {
+                  "id": "K3",
+                  "value": 1.2,
+                  "reason": null
+                },
+                {
+                  "id": "K4",
+                  "value": 1.2,
+                  "reason": null
+                },
+                {
+                  "id": "K5",
+                  "value": 1.2,
+                  "reason": null
+                },
+                {
+                  "id": "K6",
+                  "value": 1.2,
+                  "reason": null
+                }
+              ],
+              "extracted_tags": []
+            },
+            "reference_data": {
+              "ref_A": 6997.0,
+              "ref_B": 3.22,
+              "range_min": 0.0,
+              "range_max": 999999.0,
+              "formula_strategy": "standard",
+              "valid_coefficients": [
+                {
+                  "id": "k2_stage",
+                  "value": 1.21,
+                  "reason": "Коэффициент стадийности K2 (РП/РД)"
+                }
+              ],
+              "source_position_id": "1706-0201-01-6"
+            },
+            "audit_verdict": {
+              "calculated_total": 13730.38,
+              "is_approved": false,
+              "reason": "Deviation 24674.05 тыс.тг (64.25%)"
+            }
+          }
+        },
+        {
+          "table_index": 5,
+          "status": "success",
+          "output": {
+            "id": "13cd2fb2-c49e-40bf-b945-3934b16fcb00",
+            "raw_input": {
+              "text_description": "Паркинг (м2) 4 374,23 Сборник цен на проектные работы СЦП РК 8.03-01-2023 раздел 5 табл. 1705-0601-02 п.13 а= 10 660тыс.тенге в= 1,65тыс.тенге К2= 1,05 (РП) К3= 1,05 п. 11 Общая часть К4= 1,2 Сейсмичность 7 баллов К5= 1,2 просадочные грунты К7= 1 все части РП Спр =(10 660+1,65 х4 374,23) х1,05х0,93 х1,2 =20 948,830тыс.тенге 20 948,830 х1,2=25 138,597тыс.тенге",
+              "table_code_claimed": "1705-0601-02",
+              "position_number": 13,
+              "X_claimed": 4374.23,
+              "total_claimed": 25138597.0,
+              "year": 2023,
+              "claimed_coefficients": [
+                {
+                  "id": "K3",
+                  "value": 1.05,
+                  "reason": null
+                },
+                {
+                  "id": "K4",
+                  "value": 1.2,
+                  "reason": null
+                },
+                {
+                  "id": "K5",
+                  "value": 1.2,
+                  "reason": null
+                },
+                {
+                  "id": "K7",
+                  "value": 1.0,
+                  "reason": null
+                }
+              ],
+              "extracted_tags": []
+            },
+            "reference_data": {
+              "ref_A": 10.5,
+              "ref_B": 20.3,
+              "range_min": 5.0,
+              "range_max": 30.0,
+              "formula_strategy": "standard",
+              "valid_coefficients": [
+                {
+                  "id": null,
+                  "value": 0.8,
+                  "reason": null
+                },
+                {
+                  "id": null,
+                  "value": 1.2,
+                  "reason": null
+                }
+              ],
+              "source_position_id": null
+            },
+            "audit_verdict": {
+              "calculated_total": 128905.67,
+              "is_approved": false,
+              "reason": "Deviation 103767.08 тыс.тг (412.78%)"
+            }
+          }
+        }
+      ]
+    },
+    "error": null
+  },
+  {
+    "filename": "10. Смета_ПИР_Байдибек_би_от_17.01.2025 обновленная.pdf",
+    "status": "success",
+    "http_code": 200,
+    "tables_processed": 1,
+    "tables_success": 1,
+    "tables_failed": 0,
+    "response": {
+      "filename": "10. Смета_ПИР_Байдибек_би_от_17.01.2025 обновленная.pdf",
+      "tables_processed": 1,
+      "results": [
+        {
+          "table_index": 1,
+          "status": "success",
+          "output": {
+            "id": "4d6e8707-6db1-4a99-b050-93ca8f1b1d6e",
+            "raw_input": {
+              "text_description": "1 Инженерно-геодезическиеизыскания улицыприIIIкатегориисложности, (полевые работы) СЦИ РК 8.03-04-2023, Раздел 1, таб.1601-0102-01 п.13.",
+              "table_code_claimed": "1601-0102-01",
+              "position_number": 13,
+              "X_claimed": 70435.0,
+              "total_claimed": 1126783.0,
+              "year": 2023,
+              "claimed_coefficients": [],
+              "extracted_tags": []
+            },
+            "reference_data": {
+              "ref_A": 10.5,
+              "ref_B": 20.3,
+              "range_min": 5.0,
+              "range_max": 30.0,
+              "formula_strategy": "standard",
+              "valid_coefficients": [
+                {
+                  "id": "C1",
+                  "value": 1.2,
+                  "reason": null
+                },
+                {
+                  "id": "C2",
+                  "value": 0.8,
+                  "reason": null
+                }
+              ],
+              "source_position_id": null
+            },
+            "audit_verdict": {
+              "calculated_total": 1372647.36,
+              "is_approved": false,
+              "reason": "Deviation 1371520.58 тыс.тг (121720.03%)"
+            }
+          }
+        }
+      ]
+    },
+    "error": null
+  },
+  {
+    "filename": "12 Школа Актау.pdf",
+    "status": "success",
+    "http_code": 200,
+    "tables_processed": 2,
+    "tables_success": 0,
+    "tables_failed": 2,
+    "response": {
+      "filename": "12 Школа Актау.pdf",
+      "tables_processed": 2,
+      "results": [
+        {
+          "table_index": 1,
+          "status": "error",
+          "error": "Crew execution failed: 1 validation error for ReferenceData\n  Invalid JSON: expected `,` or `}` at line 9 column 41 [type=json_invalid, input_value='{\\n    \"reference_value\"..._value\": 54896 * 2.4\\n}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid"
+        },
+        {
+          "table_index": 2,
+          "status": "error",
+          "error": "Crew execution failed: 4 validation errors for ReferenceData\nref_A\n  Field required [type=missing, input_value={'position_number': 2, 'x...al_estimated_cost': 500}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nref_B\n  Field required [type=missing, input_value={'position_number': 2, 'x...al_estimated_cost': 500}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_min\n  Field required [type=missing, input_value={'position_number': 2, 'x...al_estimated_cost': 500}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_max\n  Field required [type=missing, input_value={'position_number': 2, 'x...al_estimated_cost': 500}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+        }
+      ]
+    },
+    "error": null
+  },
+  {
+    "filename": "094 - ПИР_МЖК 18.03.2025.pdf",
+    "status": "success",
+    "http_code": 200,
+    "tables_processed": 3,
+    "tables_success": 3,
+    "tables_failed": 0,
+    "response": {
+      "filename": "094 - ПИР_МЖК 18.03.2025.pdf",
+      "tables_processed": 3,
+      "results": [
+        {
+          "table_index": 1,
+          "status": "success",
+          "output": {
+            "id": "288113a1-0210-45e4-b6c0-343e663b3847",
+            "raw_input": {
+              "text_description": "Здания жилые многоквартирные: Шести- девятиэтажные (Блок 1) (А + B* Х) * КС * К1 * К * Кос_рп",
+              "table_code_claimed": "1706-0201-01",
+              "position_number": 3,
+              "X_claimed": 5.094,
+              "total_claimed": 23475203.0,
+              "year": 2024,
+              "claimed_coefficients": [
+                {
+                  "id": "KС",
+                  "value": 1.21,
+                  "reason": null
+                },
+                {
+                  "id": "К1",
+                  "value": 1.4,
+                  "reason": null
+                },
+                {
+                  "id": "К",
+                  "value": 1.2,
+                  "reason": null
+                },
+                {
+                  "id": "Кос рп",
+                  "value": 0.89,
+                  "reason": null
+                }
+              ],
+              "extracted_tags": []
+            },
+            "reference_data": {
+              "ref_A": 2428.0,
+              "ref_B": 4.13,
+              "range_min": 0.0,
+              "range_max": 99999.0,
+              "formula_strategy": "standard",
+              "valid_coefficients": [
+                {
+                  "id": "k2_stage",
+                  "value": 1.21,
+                  "reason": "Коэффициент стадийности K2 (РП/РД)"
+                }
+              ],
+              "source_position_id": "1706-0201-01-3"
+            },
+            "audit_verdict": {
+              "calculated_total": 3829.46,
+              "is_approved": false,
+              "reason": "Deviation 19645.74 тыс.тг (83.69%)"
+            }
+          }
+        },
+        {
+          "table_index": 2,
+          "status": "success",
+          "output": {
+            "id": "90286df8-c6e5-4350-a18d-0a6dd11dbdaa",
+            "raw_input": {
+              "text_description": "Здания жилые многоквартирные: Десяти- двенадцатиэтажные (Блок 2)",
+              "table_code_claimed": "1706-0201-01",
+              "position_number": 3,
+              "X_claimed": 4893.98,
+              "total_claimed": 34090836.0,
+              "year": 2024,
+              "claimed_coefficients": [
+                {
+                  "id": "KС",
+                  "value": 1.2,
+                  "reason": null
+                },
+                {
+                  "id": "К1",
+                  "value": 1.4,
+                  "reason": null
+                },
+                {
+                  "id": "К",
+                  "value": 1.2,
+                  "reason": null
+                },
+                {
+                  "id": "Кос рп",
+                  "value": 0.89,
+                  "reason": null
+                }
+              ],
+              "extracted_tags": []
+            },
+            "reference_data": {
+              "ref_A": 2428.0,
+              "ref_B": 4.13,
+              "range_min": 0.0,
+              "range_max": 999999.0,
+              "formula_strategy": "standard",
+              "valid_coefficients": [
+                {
+                  "id": "k2_stage",
+                  "value": 1.21,
+                  "reason": "Коэффициент стадийности K2 (РП/РД)"
+                }
+              ],
+              "source_position_id": "1706-0201-01-3"
+            },
+            "audit_verdict": {
+              "calculated_total": 35108.88,
+              "is_approved": true,
+              "reason": "Match within 2.99% tolerance"
+            }
+          }
+        },
+        {
+          "table_index": 3,
+          "status": "success",
+          "output": {
+            "id": "59ce4049-1e2a-454b-9fae-8ddc07f5bef9",
+            "raw_input": {
+              "text_description": "Итого проектные работы",
+              "table_code_claimed": "",
+              "position_number": 1,
+              "X_claimed": 0.0,
+              "total_claimed": 158748827.0,
+              "year": 2024,
+              "claimed_coefficients": [],
+              "extracted_tags": []
+            },
+            "reference_data": {
+              "ref_A": 29749.0,
+              "ref_B": 21.0,
+              "range_min": 0.0,
+              "range_max": 999999.0,
+              "formula_strategy": "standard",
+              "valid_coefficients": [],
+              "source_position_id": "1701-0207-01-1"
+            },
+            "audit_verdict": {
+              "calculated_total": 29749.0,
+              "is_approved": false,
+              "reason": "Deviation 128999.83 тыс.тг (81.26%)"
+            }
+          }
+        }
+      ]
+    },
+    "error": null
+  }
+]

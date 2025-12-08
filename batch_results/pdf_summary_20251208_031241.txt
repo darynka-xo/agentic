@@ -1,0 +1,41 @@
+============================================================
+BATCH PDF TEST SUMMARY
+============================================================
+
+Timestamp: 2025-12-08T03:12:41.191878
+Total PDF files: 5
+Success: 0
+Failed: 5
+Success rate: 0.00%
+
+Total tables processed: 0
+Tables success: 0
+Tables failed: 0
+
+============================================================
+SUCCESSFUL FILES
+============================================================
+
+============================================================
+FAILED FILES
+============================================================
+
+_ПИР Келес_.pdf
+  HTTP Code: 500
+  Error: PDF processing failed: `java` command is not found from this Python process.Please ensure Java is installed and PATH is set for `java`
+
+05-01 Расчет ПИР_Атамура 2 (1).pdf
+  HTTP Code: 500
+  Error: PDF processing failed: `java` command is not found from this Python process.Please ensure Java is installed and PATH is set for `java`
+
+10. Смета_ПИР_Байдибек_би_от_17.01.2025 обновленная.pdf
+  HTTP Code: 500
+  Error: PDF processing failed: `java` command is not found from this Python process.Please ensure Java is installed and PATH is set for `java`
+
+12 Школа Актау.pdf
+  HTTP Code: 500
+  Error: PDF processing failed: `java` command is not found from this Python process.Please ensure Java is installed and PATH is set for `java`
+
+094 - ПИР_МЖК 18.03.2025.pdf
+  HTTP Code: 500
+  Error: PDF processing failed: `java` command is not found from this Python process.Please ensure Java is installed and PATH is set for `java`
