@@ -1,0 +1,1620 @@
+[
+  {
+    "filename": "05-01 Расчет ПИР_Атамура 2_tabula_t1.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "4ac19c9f-546d-411c-bce6-a4d05b243273",
+        "raw_input": {
+          "text_description": "Жилой дом Секция 1 12 этажей м2",
+          "table_code_claimed": "1706-0201-01",
+          "X_claimed": 4675.08,
+          "total_claimed": 52690700.0,
+          "extracted_tags": [
+            "жилой дом",
+            "12 этажей",
+            "монолитное",
+            "сейсмичность"
+          ]
+        },
+        "reference_data": {
+          "ref_A": 50.2,
+          "ref_B": 75.3,
+          "range_min": 10.0,
+          "range_max": 90.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "C1",
+              "value": 2.0,
+              "reason": null
+            },
+            {
+              "id": "C2",
+              "value": 3.5,
+              "reason": null
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": 2464586.07,
+          "is_approved": false,
+          "reason": "Claim deviates by 50226113.93 (> 1.00)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "05-01 Расчет ПИР_Атамура 2_tabula_t2.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 1 validation error for ReferenceData\n  Invalid JSON: key must be a string at line 21 column 39 [type=json_invalid, input_value='{\\n    \"table_code\": \"17...n adjustment\"\\n    ]\\n}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid",
+    "error": "Crew execution failed: 1 validation error for ReferenceData\n  Invalid JSON: key must be a string at line 21 column 39 [type=json_invalid, input_value='{\\n    \"table_code\": \"17...n adjustment\"\\n    ]\\n}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid"
+  },
+  {
+    "filename": "05-01 Расчет ПИР_Атамура 2_tabula_t3.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 4 validation errors for ReferenceData\nref_A\n  Field required [type=missing, input_value={'table_code': '1706-0201...х помещений'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nref_B\n  Field required [type=missing, input_value={'table_code': '1706-0201...х помещений'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_min\n  Field required [type=missing, input_value={'table_code': '1706-0201...х помещений'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_max\n  Field required [type=missing, input_value={'table_code': '1706-0201...х помещений'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+    "error": "Crew execution failed: 4 validation errors for ReferenceData\nref_A\n  Field required [type=missing, input_value={'table_code': '1706-0201...х помещений'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nref_B\n  Field required [type=missing, input_value={'table_code': '1706-0201...х помещений'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_min\n  Field required [type=missing, input_value={'table_code': '1706-0201...х помещений'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_max\n  Field required [type=missing, input_value={'table_code': '1706-0201...х помещений'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+  },
+  {
+    "filename": "05-01 Расчет ПИР_Атамура 2_tabula_t4.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 1 validation error for ReferenceData\n  Invalid JSON: key must be a string at line 1 column 2 [type=json_invalid, input_value='{Total Units} = 108 \\\\ti...timated_cost\": 27000\\n}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid",
+    "error": "Crew execution failed: 1 validation error for ReferenceData\n  Invalid JSON: key must be a string at line 1 column 2 [type=json_invalid, input_value='{Total Units} = 108 \\\\ti...timated_cost\": 27000\\n}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid"
+  },
+  {
+    "filename": "05-01 Расчет ПИР_Атамура 2_tabula_t5.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "e2a9d599-a262-4f1a-b9ce-3b3704e7b2cd",
+        "raw_input": {
+          "text_description": "Автоматическое пожаротушение паркинга (м2)",
+          "table_code_claimed": "1709-0101-01",
+          "X_claimed": 374.23,
+          "total_claimed": 2186800.0,
+          "extracted_tags": [
+            "пожаротушение",
+            "паркинг"
+          ]
+        },
+        "reference_data": {
+          "ref_A": 10.5,
+          "ref_B": 20.3,
+          "range_min": 0.0,
+          "range_max": 100.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "C1",
+              "value": 1.2,
+              "reason": null
+            },
+            {
+              "id": "C2",
+              "value": 2.5,
+              "reason": null
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": 22822.11,
+          "is_approved": false,
+          "reason": "Claim deviates by 2163977.89 (> 1.00)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "094 - ПИР_МЖК 18.03.2025_tabula_t1.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "91e1ef8f-0cb0-4a7a-8a7d-f6d8bddb901d",
+        "raw_input": {
+          "text_description": "Здания жилые многоквартирные: Шести- девятиэтажные (Блок 1)",
+          "table_code_claimed": "1706-0201-01",
+          "X_claimed": 3368.17,
+          "total_claimed": 5094000.0,
+          "extracted_tags": [
+            "загородные",
+            "жилые многоквартирные",
+            "шести- девятиэтажные"
+          ]
+        },
+        "reference_data": {
+          "ref_A": 0.85,
+          "ref_B": 1.2,
+          "range_min": 3000.0,
+          "range_max": 4000.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": null,
+              "value": 0.9,
+              "reason": null
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": 3638.39,
+          "is_approved": false,
+          "reason": "Claim deviates by 5090361.61 (> 1.00)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "094 - ПИР_МЖК 18.03.2025_tabula_t2.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "8398b444-a939-4a4b-8a52-44c150366b81",
+        "raw_input": {
+          "text_description": "Здания жилые многоквартирные: Десяти- двенадцатиэтажные (Блок 2)",
+          "table_code_claimed": "1706-0201- 01",
+          "X_claimed": 4893.98,
+          "total_claimed": 34090836.0,
+          "extracted_tags": [
+            "загородные",
+            "жилые",
+            "многоквартирные",
+            "десяти- двенадцатиэтажные"
+          ]
+        },
+        "reference_data": {
+          "ref_A": 15.0,
+          "ref_B": 20.0,
+          "range_min": 20.0,
+          "range_max": 30.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": null,
+              "value": 25.0,
+              "reason": null
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": 2447365.0,
+          "is_approved": false,
+          "reason": "Claim deviates by 31643471.00 (> 1.00)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "094 - ПИР_МЖК 18.03.2025_tabula_t3.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 1 validation error for RawInput\nX_claimed\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type",
+    "error": "Crew execution failed: 1 validation error for RawInput\nX_claimed\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type"
+  },
+  {
+    "filename": "10. Смета_ПИР_Байдибек_би_от_17.01.2025 обновленная_tabula_t1.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "255db511-70cd-4744-99b2-6db1b02c5cd3",
+        "raw_input": {
+          "text_description": "Инженерно-геодезическиеизыскания автомобильной дороги приIII категории сложности, (камеральные работы)",
+          "table_code_claimed": "СЦИ РК 8.03-04-2023",
+          "X_claimed": 17785.0,
+          "total_claimed": 80696.013,
+          "extracted_tags": [
+            "инженерно-геодезические",
+            "изыскания",
+            "автомобильная дорога",
+            "III категория сложности",
+            "камеральные работы"
+          ]
+        },
+        "reference_data": {
+          "ref_A": 10.5,
+          "ref_B": 20.3,
+          "range_min": 5.0,
+          "range_max": 15.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "coeff_1",
+              "value": 1.2,
+              "reason": null
+            },
+            {
+              "id": "coeff_2",
+              "value": 1.5,
+              "reason": null
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": 649882.8,
+          "is_approved": false,
+          "reason": "Claim deviates by 569186.79 (> 1.00)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "1111ПИР_АЗС-25 31_tabula_t1.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "2d5e35f6-aa8e-411e-9adb-a83844b144bf",
+        "raw_input": {
+          "text_description": "Автозаправочная станция: общего пользования, пропускная способность от 100 до 170 авт. в час",
+          "table_code_claimed": "1701-0403-01",
+          "X_claimed": 135.0,
+          "total_claimed": 11837.0,
+          "extracted_tags": [
+            "автозаправочная станция",
+            "общего пользования",
+            "пропускная способность"
+          ]
+        },
+        "reference_data": {
+          "ref_A": 125.0,
+          "ref_B": 180.0,
+          "range_min": 120.0,
+          "range_max": 180.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": null,
+              "value": 125.0,
+              "reason": null
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": 3053125.0,
+          "is_approved": false,
+          "reason": "Claim deviates by 3041288.00 (> 1.00)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "12 Школа Актау_tabula_t1.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "d39e5ca5-7b6d-404a-8a39-cdd37bc1340f",
+        "raw_input": {
+          "text_description": "Школы-интернаты и специальные школы-интернаты 1 м2 общей площади основных помещений и зданий",
+          "table_code_claimed": "1706-0201-06",
+          "X_claimed": 6784.0,
+          "total_claimed": 20671332.0,
+          "extracted_tags": [
+            "школы-интернаты",
+            "специальные школы-интернаты"
+          ]
+        },
+        "reference_data": {
+          "ref_A": 1234.56,
+          "ref_B": 7890.12,
+          "range_min": 6784.0,
+          "range_max": 10000.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": null,
+              "value": 0.85,
+              "reason": null
+            },
+            {
+              "id": null,
+              "value": 0.92,
+              "reason": null
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": 41858746.36,
+          "is_approved": false,
+          "reason": "Claim deviates by 21187414.36 (> 1.00)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "12 Школа Актау_tabula_t2.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 4 validation errors for ReferenceData\nref_A\n  Field required [type=missing, input_value={'table_code': 'SG-08', '...s of line measurement.'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nref_B\n  Field required [type=missing, input_value={'table_code': 'SG-08', '...s of line measurement.'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_min\n  Field required [type=missing, input_value={'table_code': 'SG-08', '...s of line measurement.'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_max\n  Field required [type=missing, input_value={'table_code': 'SG-08', '...s of line measurement.'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+    "error": "Crew execution failed: 4 validation errors for ReferenceData\nref_A\n  Field required [type=missing, input_value={'table_code': 'SG-08', '...s of line measurement.'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nref_B\n  Field required [type=missing, input_value={'table_code': 'SG-08', '...s of line measurement.'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_min\n  Field required [type=missing, input_value={'table_code': 'SG-08', '...s of line measurement.'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_max\n  Field required [type=missing, input_value={'table_code': 'SG-08', '...s of line measurement.'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+  },
+  {
+    "filename": "Kernei ПИР_tabula_t1.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "b26abbd8-434a-4e68-a824-f005fa9693b3",
+        "raw_input": {
+          "text_description": "Кладка стен и фундамента м2",
+          "table_code_claimed": "1706-0201-01",
+          "X_claimed": 350.0,
+          "total_claimed": 4985000.0,
+          "extracted_tags": [
+            "кладка",
+            "стен",
+            "фундамента"
+          ]
+        },
+        "reference_data": {
+          "ref_A": 100.5,
+          "ref_B": 200.75,
+          "range_min": 300.0,
+          "range_max": 400.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "C1",
+              "value": 1.2,
+              "reason": null
+            },
+            {
+              "id": "C2",
+              "value": 1.5,
+              "reason": null
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": 126653.4,
+          "is_approved": false,
+          "reason": "Claim deviates by 4858346.60 (> 1.00)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "Kernei ПИР_tabula_t2.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 4 validation errors for ReferenceData\nref_A\n  Field required [type=missing, input_value={'table_code': '1706-0301...1, 'coefficient_4': 0.9}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nref_B\n  Field required [type=missing, input_value={'table_code': '1706-0301...1, 'coefficient_4': 0.9}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_min\n  Field required [type=missing, input_value={'table_code': '1706-0301...1, 'coefficient_4': 0.9}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_max\n  Field required [type=missing, input_value={'table_code': '1706-0301...1, 'coefficient_4': 0.9}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+    "error": "Crew execution failed: 4 validation errors for ReferenceData\nref_A\n  Field required [type=missing, input_value={'table_code': '1706-0301...1, 'coefficient_4': 0.9}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nref_B\n  Field required [type=missing, input_value={'table_code': '1706-0301...1, 'coefficient_4': 0.9}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_min\n  Field required [type=missing, input_value={'table_code': '1706-0301...1, 'coefficient_4': 0.9}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_max\n  Field required [type=missing, input_value={'table_code': '1706-0301...1, 'coefficient_4': 0.9}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+  },
+  {
+    "filename": "Kernei ПИР_tabula_t3.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "aa29d956-5132-4b6e-b1b9-923bb8236f0f",
+        "raw_input": {
+          "text_description": "Опоры радиорелейной линии связи, высотой от 12 до 125 м 1 м по высоте опоры",
+          "table_code_claimed": "1705-0401-16",
+          "X_claimed": 30.48,
+          "total_claimed": 304800.0,
+          "extracted_tags": [
+            "опоры",
+            "радиорелейная линия связи",
+            "высотой от 12 до 125 м"
+          ]
+        },
+        "reference_data": {
+          "ref_A": 1006.0,
+          "ref_B": 0.7,
+          "range_min": 0.0,
+          "range_max": 0.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [],
+          "source_position_id": "1705-0401-16-1"
+        },
+        "audit_verdict": {
+          "calculated_total": 1027.34,
+          "is_approved": false,
+          "reason": "Claim deviates by 303772.66 (> 1.00)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "Kernei ПИР_tabula_t4.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "f651d184-f96b-4887-9a8b-0c07c1206e6e",
+        "raw_input": {
+          "text_description": "трансформаторные подстанции напряжением 6-20/0,4 кВ мачтовая однотрансформаторная мощностью до 1x160 кВ.А 1 подстанция",
+          "table_code_claimed": "1710-0110-03",
+          "X_claimed": 113.0,
+          "total_claimed": 11300.0,
+          "extracted_tags": [
+            "трансформаторные",
+            "подстанции",
+            "6-20/0,4 кВ",
+            "мачтовая",
+            "однотрансформаторная",
+            "мощностью до 1x160 кВ.А"
+          ]
+        },
+        "reference_data": {
+          "ref_A": 100.0,
+          "ref_B": 200.0,
+          "range_min": 50.0,
+          "range_max": 300.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "A1",
+              "value": 1.5,
+              "reason": null
+            },
+            {
+              "id": "B2",
+              "value": 2.0,
+              "reason": null
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": 68100.0,
+          "is_approved": false,
+          "reason": "Claim deviates by 56800.00 (> 1.00)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "Kernei ПИР_tabula_t5.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "51b89122-565a-4322-b7e7-b07021d50530",
+        "raw_input": {
+          "text_description": "инженерно геодезические и геологические изыскания услуга",
+          "table_code_claimed": "1706-0201-01",
+          "X_claimed": 500000.0,
+          "total_claimed": 4984888.0,
+          "extracted_tags": [
+            "инженерно",
+            "геодезические",
+            "геологические",
+            "изыскания"
+          ]
+        },
+        "reference_data": {
+          "ref_A": 500000.0,
+          "ref_B": 1706020101.0,
+          "range_min": 0.0,
+          "range_max": 1000000.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": null,
+              "value": 1.0,
+              "reason": null
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": 853010051000000.0,
+          "is_approved": false,
+          "reason": "Claim deviates by 853010046015112.00 (> 1.00)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "Kernei ПИР_tabula_t6.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "9d1b554f-8689-4910-9cb3-4e79981d5c63",
+        "raw_input": {
+          "text_description": "Конструктивные работы в здании сейсмичности",
+          "table_code_claimed": "1706-0201-01",
+          "X_claimed": 3542.89,
+          "total_claimed": 12345678.9,
+          "extracted_tags": [
+            "конструктивные",
+            "работы",
+            "сейсмичность"
+          ]
+        },
+        "reference_data": {
+          "ref_A": 1.0,
+          "ref_B": 2.0,
+          "range_min": 3542.89,
+          "range_max": 3542.89,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": null,
+              "value": 1.0,
+              "reason": null
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": 7086.78,
+          "is_approved": false,
+          "reason": "Claim deviates by 12338592.12 (> 1.00)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "Kernei ПИР_tabula_t7.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "e82de201-93a9-41e4-9907-4b928671c2e7",
+        "raw_input": {
+          "text_description": "Кладка стен и фундамента м2",
+          "table_code_claimed": "1706-0201-01",
+          "X_claimed": 450.0,
+          "total_claimed": 9375000.0,
+          "extracted_tags": [
+            "кладка",
+            "стен",
+            "фундамента"
+          ]
+        },
+        "reference_data": {
+          "ref_A": 10.5,
+          "ref_B": 20.3,
+          "range_min": 100.0,
+          "range_max": 200.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "coef_1",
+              "value": 0.85,
+              "reason": null
+            },
+            {
+              "id": "coef_2",
+              "value": 0.92,
+              "reason": null
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": 7151.78,
+          "is_approved": false,
+          "reason": "Claim deviates by 9367848.22 (> 1.00)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "Kernei ПИР_tabula_t8.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 1 validation error for ReferenceData\n  Invalid JSON: key must be a string at line 5 column 23 [type=json_invalid, input_value='{\\n  \"table_code\": \"1706... code 1706-0201-01.\"\\n}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid",
+    "error": "Crew execution failed: 1 validation error for ReferenceData\n  Invalid JSON: key must be a string at line 5 column 23 [type=json_invalid, input_value='{\\n  \"table_code\": \"1706... code 1706-0201-01.\"\\n}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid"
+  },
+  {
+    "filename": "Kernei ПИР_tabula_t9.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "f69358ea-9f74-41a2-b225-2cc87a67b582",
+        "raw_input": {
+          "text_description": "Конструкция здания Секция 1 высота 25 метров",
+          "table_code_claimed": "1706-0301-01",
+          "X_claimed": 25.0,
+          "total_claimed": 45000000.0,
+          "extracted_tags": [
+            "конструкция",
+            "здания",
+            "секция",
+            "высота"
+          ]
+        },
+        "reference_data": {
+          "ref_A": 0.85,
+          "ref_B": 1.2,
+          "range_min": 20.0,
+          "range_max": 30.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "c01",
+              "value": 0.9,
+              "reason": null
+            },
+            {
+              "id": "c02",
+              "value": 1.1,
+              "reason": null
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": 30.54,
+          "is_approved": false,
+          "reason": "Claim deviates by 44999969.46 (> 1.00)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "NSP-0124-ПИР_tabula_t1.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "dd3233dc-6a4d-441d-82a4-894b3409d71e",
+        "raw_input": {
+          "text_description": "Школа на 1500 учащихся Сборник цен на проектные работы для строительства",
+          "table_code_claimed": "1706-0201-06",
+          "X_claimed": 15134.74,
+          "total_claimed": 196362448.0,
+          "extracted_tags": [
+            "монолитное",
+            "сейсмичность"
+          ]
+        },
+        "reference_data": {
+          "ref_A": 10.5,
+          "ref_B": 20.3,
+          "range_min": 0.0,
+          "range_max": 100.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "C01",
+              "value": 0.8,
+              "reason": null
+            },
+            {
+              "id": "C02",
+              "value": 0.9,
+              "reason": null
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": 221216.92,
+          "is_approved": false,
+          "reason": "Claim deviates by 196141231.08 (> 1.00)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "NSP-0124-ПИР_tabula_t2.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "f9439264-3d4f-49c5-878d-8d26217b25b4",
+        "raw_input": {
+          "text_description": "Объекты энергетики Трансформаторные подстанции напряжением 6-20/0,4-10 кВ,распределительные и секционирующие пункты напряжением 6-20 кВ",
+          "table_code_claimed": "Таблица 1710-0110-03",
+          "X_claimed": 1.0,
+          "total_claimed": 398490.0,
+          "extracted_tags": [
+            "энергетики",
+            "трансформаторные подстанции"
+          ]
+        },
+        "reference_data": {
+          "ref_A": 1.0,
+          "ref_B": 1.0,
+          "range_min": 0.0,
+          "range_max": 2.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": null,
+              "value": 1.0,
+              "reason": null
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": 2.0,
+          "is_approved": false,
+          "reason": "Claim deviates by 398488.00 (> 1.00)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "NSP-0124-ПИР_tabula_t3.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "af74a38f-846e-4ec9-b925-5f7beb795e55",
+        "raw_input": {
+          "text_description": "Кладка стен и перекрытий м2",
+          "table_code_claimed": "1706-0201-01",
+          "X_claimed": 450.0,
+          "total_claimed": 3897000.0,
+          "extracted_tags": [
+            "монолитное",
+            "сейсмичность"
+          ]
+        },
+        "reference_data": {
+          "ref_A": 100.0,
+          "ref_B": 200.0,
+          "range_min": 400.0,
+          "range_max": 500.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "coeff_1",
+              "value": 1.2,
+              "reason": null
+            },
+            {
+              "id": "coeff_2",
+              "value": 0.9,
+              "reason": null
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": 97308.0,
+          "is_approved": false,
+          "reason": "Claim deviates by 3799692.00 (> 1.00)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "__с.Киши Шыган смета на ПИР ГСН изм_tabula_t1.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "509abc8f-45e2-4b87-b1f7-2181176f8462",
+        "raw_input": {
+          "text_description": "Газопроводы давлением до 0,3 МПа, условным диаметром до 400 мм включительно, протяженностью свыше 4 до 10 км",
+          "table_code_claimed": "1701-0502-01",
+          "X_claimed": 5332.0,
+          "total_claimed": 4604370.0,
+          "extracted_tags": [
+            "газопроводы",
+            "давление до 0,3 МПа",
+            "условный диаметр до 400 мм",
+            "протяженность свыше 4 до 10 км"
+          ]
+        },
+        "reference_data": {
+          "ref_A": 10.5,
+          "ref_B": 20.3,
+          "range_min": 5.0,
+          "range_max": 25.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "C1",
+              "value": 1.2,
+              "reason": null
+            },
+            {
+              "id": "C2",
+              "value": 0.8,
+              "reason": null
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": 103920.1,
+          "is_approved": false,
+          "reason": "Claim deviates by 4500449.90 (> 1.00)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "__с.Киши Шыган смета на ПИР ГСН изм_tabula_t2.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 4 validation errors for ReferenceData\nref_A\n  Field required [type=missing, input_value={'table_code': '1701-0502...00 * 2.97 = $297,000.'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nref_B\n  Field required [type=missing, input_value={'table_code': '1701-0502...00 * 2.97 = $297,000.'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_min\n  Field required [type=missing, input_value={'table_code': '1701-0502...00 * 2.97 = $297,000.'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_max\n  Field required [type=missing, input_value={'table_code': '1701-0502...00 * 2.97 = $297,000.'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+    "error": "Crew execution failed: 4 validation errors for ReferenceData\nref_A\n  Field required [type=missing, input_value={'table_code': '1701-0502...00 * 2.97 = $297,000.'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nref_B\n  Field required [type=missing, input_value={'table_code': '1701-0502...00 * 2.97 = $297,000.'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_min\n  Field required [type=missing, input_value={'table_code': '1701-0502...00 * 2.97 = $297,000.'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_max\n  Field required [type=missing, input_value={'table_code': '1701-0502...00 * 2.97 = $297,000.'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+  },
+  {
+    "filename": "_ПИР Келес__tabula_t1.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 1 validation error for RawInput\nX_claimed\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type",
+    "error": "Crew execution failed: 1 validation error for RawInput\nX_claimed\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type"
+  },
+  {
+    "filename": "_ПИР Келес__tabula_t2.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 1 validation error for RawInput\nX_claimed\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type",
+    "error": "Crew execution failed: 1 validation error for RawInput\nX_claimed\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type"
+  },
+  {
+    "filename": "_ПИР Келес__tabula_t3.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "ad99fe8a-47e9-4242-995a-ccc5f0a09ce7",
+        "raw_input": {
+          "text_description": "Топографическая съемка на незастроенной территории, масштаб съемки 1:500, высота сечения рельефа 0,25 м: II категории сложности - полевые работы",
+          "table_code_claimed": "1601-0102-01",
+          "X_claimed": 8.5428006,
+          "total_claimed": 455971.98,
+          "extracted_tags": [
+            "топографическая съемка",
+            "незастроенная территория",
+            "масштаб 1:500",
+            "высота сечения рельефа 0,25 м",
+            "II категория сложности"
+          ]
+        },
+        "reference_data": {
+          "ref_A": 1.0,
+          "ref_B": 2.0,
+          "range_min": 0.0,
+          "range_max": 10.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "C1",
+              "value": 3.5,
+              "reason": null
+            },
+            {
+              "id": "C2",
+              "value": -2.0,
+              "reason": null
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": -126.6,
+          "is_approved": false,
+          "reason": "Claim deviates by 456098.58 (> 1.00)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "_ПИР Келес__tabula_t4.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "0960276f-f00c-43e2-b083-ee3b3cf4ea04",
+        "raw_input": {
+          "text_description": "Расходы по внешнему транспорту Расстояние, км: 250 км. Продолжительность экспедиции изысканий, мес : 2 Стоимость полевых изысканий и расходов по внутреннему транспорту (СЦИ, раздел 1), тенге : 455 971,98 * 21 / 100 95 754,12",
+          "table_code_claimed": "8.03-04-2023, раздел 1 табл.4 (св. 100 до 300 км, св. 1 до 2 мес.)",
+          "X_claimed": 250.0,
+          "total_claimed": 95754.12,
+          "extracted_tags": [
+            "расходы",
+            "транспорту",
+            "изысканий",
+            "внутреннему транспорту"
+          ]
+        },
+        "reference_data": {
+          "ref_A": 500.0,
+          "ref_B": 300.0,
+          "range_min": 100.0,
+          "range_max": 5000.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "fuel_cost",
+              "value": 0.2,
+              "reason": null
+            },
+            {
+              "id": "vehicle_rental",
+              "value": 100.0,
+              "reason": null
+            },
+            {
+              "id": "driver_wages",
+              "value": 50.0,
+              "reason": null
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": 75500000.0,
+          "is_approved": false,
+          "reason": "Claim deviates by 75404245.88 (> 1.00)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "_ПИР Келес__tabula_t5.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 1 validation error for RawInput\n  Invalid JSON: trailing characters at line 9 column 1 [type=json_invalid, input_value='{\\n  \"text_description\":...ораторные\"]\\n}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid",
+    "error": "Crew execution failed: 1 validation error for RawInput\n  Invalid JSON: trailing characters at line 9 column 1 [type=json_invalid, input_value='{\\n  \"text_description\":...ораторные\"]\\n}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid"
+  },
+  {
+    "filename": "_ПИР Келес__tabula_t6.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 4 validation errors for ReferenceData\nref_A\n  Field required [type=missing, input_value={'estimated_cost': 1016.5...t': 1000, 'x_value': 33}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nref_B\n  Field required [type=missing, input_value={'estimated_cost': 1016.5...t': 1000, 'x_value': 33}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_min\n  Field required [type=missing, input_value={'estimated_cost': 1016.5...t': 1000, 'x_value': 33}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_max\n  Field required [type=missing, input_value={'estimated_cost': 1016.5...t': 1000, 'x_value': 33}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+    "error": "Crew execution failed: 4 validation errors for ReferenceData\nref_A\n  Field required [type=missing, input_value={'estimated_cost': 1016.5...t': 1000, 'x_value': 33}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nref_B\n  Field required [type=missing, input_value={'estimated_cost': 1016.5...t': 1000, 'x_value': 33}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_min\n  Field required [type=missing, input_value={'estimated_cost': 1016.5...t': 1000, 'x_value': 33}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_max\n  Field required [type=missing, input_value={'estimated_cost': 1016.5...t': 1000, 'x_value': 33}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+  },
+  {
+    "filename": "_ПИР Келес__tabula_t7.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "e0b7fe2d-4b32-490a-8a26-be7a613876b1",
+        "raw_input": {
+          "text_description": "Камеральная обработка полевого испытания грунтов динамическим или статическим зондированием с последующей корректировкой разреза по данным лабораторных работ, на глубину 10 м",
+          "table_code_claimed": "1602-0802-02",
+          "X_claimed": 339176.0,
+          "total_claimed": 319176.0,
+          "extracted_tags": [
+            "камеральная",
+            "полевое испытание",
+            "динамическое зондирование",
+            "статическое зондирование",
+            "корректировка разреза",
+            "лабораторные работы"
+          ]
+        },
+        "reference_data": {
+          "ref_A": 100.5,
+          "ref_B": 200.75,
+          "range_min": 50.0,
+          "range_max": 300.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "C01",
+              "value": 1.05,
+              "reason": null
+            },
+            {
+              "id": "C02",
+              "value": 1.1,
+              "reason": null
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": 78643583.29,
+          "is_approved": false,
+          "reason": "Claim deviates by 78324407.29 (> 1.00)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "АГЗС ПИР_tabula_t1.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "89435908-cc1c-43af-8ed5-e6b865b3bae9",
+        "raw_input": {
+          "text_description": "Кладка стен и фундамента м2",
+          "table_code_claimed": "1706-0201-01",
+          "X_claimed": 350.0,
+          "total_claimed": 4985000.0,
+          "extracted_tags": [
+            "кладка",
+            "стен",
+            "фундамента"
+          ]
+        },
+        "reference_data": {
+          "ref_A": 10.5,
+          "ref_B": 20.3,
+          "range_min": 300.0,
+          "range_max": 400.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "C1",
+              "value": 1.2,
+              "reason": null
+            },
+            {
+              "id": "C2",
+              "value": 1.5,
+              "reason": null
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": 12807.9,
+          "is_approved": false,
+          "reason": "Claim deviates by 4972192.10 (> 1.00)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "АГЗС ПИР_tabula_t2.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "c457799f-4e8a-45b5-a844-16b054a58fab",
+        "raw_input": {
+          "text_description": "Автомобильная газозаправочная станция производительностью свыше 10000 до 20000 тонн газа в год (А + B* (0.4 * Хмин + 0.6 * Х)) * КС * ПРОЦ",
+          "table_code_claimed": "1701-0503-01",
+          "X_claimed": 580.0,
+          "total_claimed": 5507.4,
+          "extracted_tags": [
+            "Автомобильная газозаправочная станция",
+            "производительностью свыше 10000 до 20000 тонн газа в год"
+          ]
+        },
+        "reference_data": {
+          "ref_A": 100.0,
+          "ref_B": 25.6,
+          "range_min": 1000.0,
+          "range_max": 2000.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "C1",
+              "value": 1.23,
+              "reason": null
+            },
+            {
+              "id": "C2",
+              "value": 0.98,
+              "reason": null
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": 18018.32,
+          "is_approved": false,
+          "reason": "Claim deviates by 12510.92 (> 1.00)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "АГЗС ПИР_tabula_t3.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 1 validation error for ReferenceData\n  Invalid JSON: key must be a string at line 5 column 23 [type=json_invalid, input_value='{\\n  \"table_code\": \"1706... code 1706-0201-01.\"\\n}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid",
+    "error": "Crew execution failed: 1 validation error for ReferenceData\n  Invalid JSON: key must be a string at line 5 column 23 [type=json_invalid, input_value='{\\n  \"table_code\": \"1706... code 1706-0201-01.\"\\n}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid"
+  },
+  {
+    "filename": "Жалгызагаш Расчет предел стоим_tabula_t1.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 4 validation errors for ReferenceData\nref_A\n  Field required [type=missing, input_value={'table_code': 'GZP', 'x_...eference for code GZP.'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nref_B\n  Field required [type=missing, input_value={'table_code': 'GZP', 'x_...eference for code GZP.'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_min\n  Field required [type=missing, input_value={'table_code': 'GZP', 'x_...eference for code GZP.'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_max\n  Field required [type=missing, input_value={'table_code': 'GZP', 'x_...eference for code GZP.'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+    "error": "Crew execution failed: 4 validation errors for ReferenceData\nref_A\n  Field required [type=missing, input_value={'table_code': 'GZP', 'x_...eference for code GZP.'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nref_B\n  Field required [type=missing, input_value={'table_code': 'GZP', 'x_...eference for code GZP.'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_min\n  Field required [type=missing, input_value={'table_code': 'GZP', 'x_...eference for code GZP.'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_max\n  Field required [type=missing, input_value={'table_code': 'GZP', 'x_...eference for code GZP.'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+  },
+  {
+    "filename": "П5. Расчет стоимости проектных (проектно-изыскательных) работ_tabula_t1.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 4 validation errors for ReferenceData\nref_A\n  Field required [type=missing, input_value={'flow_rate': 21.0, 'cost...00, 'total_cost': 10500}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nref_B\n  Field required [type=missing, input_value={'flow_rate': 21.0, 'cost...00, 'total_cost': 10500}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_min\n  Field required [type=missing, input_value={'flow_rate': 21.0, 'cost...00, 'total_cost': 10500}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_max\n  Field required [type=missing, input_value={'flow_rate': 21.0, 'cost...00, 'total_cost': 10500}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+    "error": "Crew execution failed: 4 validation errors for ReferenceData\nref_A\n  Field required [type=missing, input_value={'flow_rate': 21.0, 'cost...00, 'total_cost': 10500}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nref_B\n  Field required [type=missing, input_value={'flow_rate': 21.0, 'cost...00, 'total_cost': 10500}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_min\n  Field required [type=missing, input_value={'flow_rate': 21.0, 'cost...00, 'total_cost': 10500}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_max\n  Field required [type=missing, input_value={'flow_rate': 21.0, 'cost...00, 'total_cost': 10500}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+  },
+  {
+    "filename": "П5. Расчет стоимости проектных (проектно-изыскательных) работ_tabula_t2.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "8083dfe4-1fde-4885-9212-643308323280",
+        "raw_input": {
+          "text_description": "резервуары для воды емкостью от 2000,00 до 6000,00 м3",
+          "table_code_claimed": "1708-0101-05",
+          "X_claimed": 1.0,
+          "total_claimed": 906000.0,
+          "extracted_tags": [
+            "резервуары",
+            "вода",
+            "емкость"
+          ]
+        },
+        "reference_data": {
+          "ref_A": 100.0,
+          "ref_B": 200.0,
+          "range_min": 100.0,
+          "range_max": 200.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": null,
+              "value": 1.0,
+              "reason": null
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": 300.0,
+          "is_approved": false,
+          "reason": "Claim deviates by 905700.00 (> 1.00)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "П5. Расчет стоимости проектных (проектно-изыскательных) работ_tabula_t3.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "c1120c4e-9dd0-4e2a-b575-e9c9fb2364f0",
+        "raw_input": {
+          "text_description": "Трансформаторные подстанции напряжением 6/10 (10/6) кВ закрытая двухтрансформаторная, мощностью до 2x4000 кВ.А и количеством ячеек до 16",
+          "table_code_claimed": "1710-0110-03",
+          "X_claimed": 455.0,
+          "total_claimed": 777744.0,
+          "extracted_tags": [
+            "трансформаторные подстанции",
+            "6/10 (10/6) кВ",
+            "закрытая двухтрансформаторная",
+            "мощностью до 2x4000 кВ.А",
+            "количеством ячеек до 16"
+          ]
+        },
+        "reference_data": {
+          "ref_A": 10.5,
+          "ref_B": 20.3,
+          "range_min": 6000.0,
+          "range_max": 8000.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "T1",
+              "value": 9.8,
+              "reason": null
+            },
+            {
+              "id": "T2",
+              "value": 19.7,
+              "reason": null
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": 1785225.82,
+          "is_approved": false,
+          "reason": "Claim deviates by 1007481.82 (> 1.00)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "П5. Расчет стоимости проектных (проектно-изыскательных) работ_tabula_t4.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "13eee8ca-4ba0-4b8b-bc15-fa59315a58f1",
+        "raw_input": {
+          "text_description": "Канализационна я насосная станция перекачки бытовых сточных вод или неагрессивных и невзрывоопасны х производственн ых сточных вод, производительн остью от 50,00 до 500,00 м3/ч",
+          "table_code_claimed": "1708-0101-09",
+          "X_claimed": 1.0,
+          "total_claimed": 4040000.0,
+          "extracted_tags": [
+            "канализационная",
+            "насосная станция",
+            "перекачка сточных вод",
+            "производительность"
+          ]
+        },
+        "reference_data": {
+          "ref_A": 0.1,
+          "ref_B": 50.0,
+          "range_min": 0.1,
+          "range_max": 50.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "C1",
+              "value": 0.1,
+              "reason": null
+            },
+            {
+              "id": "C2",
+              "value": 50.0,
+              "reason": null
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": 250.5,
+          "is_approved": false,
+          "reason": "Claim deviates by 4039749.50 (> 1.00)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "П5. Расчет стоимости проектных (проектно-изыскательных) работ_tabula_t5.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "1b578886-fadd-472b-8357-edf13be43a03",
+        "raw_input": {
+          "text_description": "от 100 до 500 м3/ч (Коэф. на проект) KС2 = 1,00 (Коэф. на рабочую документацию) KС3 = 0,20 (Коэф. на предпроектные работы, НДЦС РК 8.01-08-2022, п.10.4) К1=1,10 (Общ.полож.по прим.цен на проектные работы для стр-ва, прил.Б, табл.Б.1)",
+          "table_code_claimed": "",
+          "X_claimed": 350.0,
+          "total_claimed": 47295699.0,
+          "extracted_tags": [
+            "м3/ч",
+            "коэффициенты"
+          ]
+        },
+        "reference_data": {
+          "ref_A": 10.5,
+          "ref_B": 20.3,
+          "range_min": 5.0,
+          "range_max": 30.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "C01",
+              "value": 1.2,
+              "reason": null
+            },
+            {
+              "id": "C02",
+              "value": 2.3,
+              "reason": null
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": 19638.78,
+          "is_approved": false,
+          "reason": "Claim deviates by 47276060.22 (> 1.00)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "ПИР  оконч_tabula_t1.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "e6e31e69-73fc-44cd-9f15-555a12fa90a5",
+        "raw_input": {
+          "text_description": "Проектные работы",
+          "table_code_claimed": "",
+          "X_claimed": 18976572.03,
+          "total_claimed": 18976572.03,
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 0.5,
+          "ref_B": 1.2,
+          "range_min": -10.0,
+          "range_max": 10.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "C1",
+              "value": 0.3,
+              "reason": null
+            },
+            {
+              "id": "C2",
+              "value": -0.7,
+              "reason": null
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": -4782096.26,
+          "is_approved": false,
+          "reason": "Claim deviates by 23758668.29 (> 1.00)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "ПИР  оконч_tabula_t2.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "27c998de-57fb-4b3a-b1ab-8807076878ee",
+        "raw_input": {
+          "text_description": "Здания жилые многоквартирные: Шести- девятиэтажные",
+          "table_code_claimed": "1706-0201-01",
+          "X_claimed": 3960.18,
+          "total_claimed": 18976572.0,
+          "extracted_tags": [
+            "Здания жилые многоквартирные",
+            "Шести- девятиэтажные"
+          ]
+        },
+        "reference_data": {
+          "ref_A": 1500.0,
+          "ref_B": 2000.0,
+          "range_min": 6.0,
+          "range_max": 9.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": null,
+              "value": 0.7,
+              "reason": null
+            },
+            {
+              "id": null,
+              "value": 1.5,
+              "reason": null
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": 8317953.0,
+          "is_approved": false,
+          "reason": "Claim deviates by 10658619.00 (> 1.00)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "ПИР (1)_tabula_t1.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "8a6c4f3e-14f5-4ea3-beaf-d6b0b41280e7",
+        "raw_input": {
+          "text_description": "Капитальный ремонт здания судебно-медицинской экспертизы, морга 475 м3",
+          "table_code_claimed": "1706-0501-01",
+          "X_claimed": 475.0,
+          "total_claimed": 2878475.0,
+          "extracted_tags": [
+            "капитальный ремонт",
+            "морга"
+          ]
+        },
+        "reference_data": {
+          "ref_A": 1000.0,
+          "ref_B": 500.0,
+          "range_min": 400.0,
+          "range_max": 600.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "C01",
+              "value": 0.8,
+              "reason": null
+            },
+            {
+              "id": "C02",
+              "value": 0.9,
+              "reason": null
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": 171720.0,
+          "is_approved": false,
+          "reason": "Claim deviates by 2706755.00 (> 1.00)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "ПИР (10)_tabula_t1.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "bd4a4b3a-a973-482c-92a0-93cf82a817e3",
+        "raw_input": {
+          "text_description": "опоры радиорелейной линии связи, высотой от 12 до 125 м 1 м по высоте опоры",
+          "table_code_claimed": "1705-0401-16",
+          "X_claimed": 60.0,
+          "total_claimed": 987.503,
+          "extracted_tags": [
+            "опоры",
+            "радиорелейная линия связи",
+            "высотой от 12 до 125 м"
+          ]
+        },
+        "reference_data": {
+          "ref_A": 1006.0,
+          "ref_B": 0.7,
+          "range_min": 0.0,
+          "range_max": 0.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [],
+          "source_position_id": "1705-0401-16-1"
+        },
+        "audit_verdict": {
+          "calculated_total": 1048.0,
+          "is_approved": false,
+          "reason": "Claim deviates by 60.50 (> 1.00)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "ПИР (10)_tabula_t2.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "7755a507-3746-475f-a8b9-8c86e8fddbf7",
+        "raw_input": {
+          "text_description": "Инженерно- геологические изыскания",
+          "table_code_claimed": "CРП=BV * Xзад CРП=1",
+          "X_claimed": 1452.479,
+          "total_claimed": 1452479.0,
+          "extracted_tags": [
+            "инженерно-геологические",
+            "изыскания"
+          ]
+        },
+        "reference_data": {
+          "ref_A": 10.5,
+          "ref_B": 20.3,
+          "range_min": 0.0,
+          "range_max": 100.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "C1",
+              "value": 1.2,
+              "reason": null
+            },
+            {
+              "id": "C2",
+              "value": 0.8,
+              "reason": null
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": 28315.99,
+          "is_approved": false,
+          "reason": "Claim deviates by 1424163.01 (> 1.00)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "ПИР (10)_tabula_t3.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 4 validation errors for ReferenceData\nref_A\n  Field required [type=missing, input_value={'table_code_claimed': 'O...ctures', 'error': False}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nref_B\n  Field required [type=missing, input_value={'table_code_claimed': 'O...ctures', 'error': False}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_min\n  Field required [type=missing, input_value={'table_code_claimed': 'O...ctures', 'error': False}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_max\n  Field required [type=missing, input_value={'table_code_claimed': 'O...ctures', 'error': False}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+    "error": "Crew execution failed: 4 validation errors for ReferenceData\nref_A\n  Field required [type=missing, input_value={'table_code_claimed': 'O...ctures', 'error': False}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nref_B\n  Field required [type=missing, input_value={'table_code_claimed': 'O...ctures', 'error': False}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_min\n  Field required [type=missing, input_value={'table_code_claimed': 'O...ctures', 'error': False}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_max\n  Field required [type=missing, input_value={'table_code_claimed': 'O...ctures', 'error': False}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+  },
+  {
+    "filename": "ПИР (10)_tabula_t4.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 4 validation errors for ReferenceData\nref_A\n  Field required [type=missing, input_value={'table_code_claimed': 'H...timated_cost': 234678.9}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nref_B\n  Field required [type=missing, input_value={'table_code_claimed': 'H...timated_cost': 234678.9}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_min\n  Field required [type=missing, input_value={'table_code_claimed': 'H...timated_cost': 234678.9}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_max\n  Field required [type=missing, input_value={'table_code_claimed': 'H...timated_cost': 234678.9}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+    "error": "Crew execution failed: 4 validation errors for ReferenceData\nref_A\n  Field required [type=missing, input_value={'table_code_claimed': 'H...timated_cost': 234678.9}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nref_B\n  Field required [type=missing, input_value={'table_code_claimed': 'H...timated_cost': 234678.9}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_min\n  Field required [type=missing, input_value={'table_code_claimed': 'H...timated_cost': 234678.9}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_max\n  Field required [type=missing, input_value={'table_code_claimed': 'H...timated_cost': 234678.9}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+  },
+  {
+    "filename": "ПИР (10)_tabula_t5.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "8adeecd1-5598-4dfc-8091-f80c8d76dc5d",
+        "raw_input": {
+          "text_description": "Ударно-канатное бурение скважин глубиной до 20 м в грунтах п.м. т.1602-0203-01 п.11",
+          "table_code_claimed": "1602-0203-01",
+          "X_claimed": 18.0,
+          "total_claimed": 636.0,
+          "extracted_tags": [
+            "бурение",
+            "скважины",
+            "грунты"
+          ]
+        },
+        "reference_data": {
+          "ref_A": 1.0,
+          "ref_B": 2.0,
+          "range_min": 0.0,
+          "range_max": 10.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "C1",
+              "value": 3.5,
+              "reason": null
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": 129.5,
+          "is_approved": false,
+          "reason": "Claim deviates by 506.50 (> 1.00)"
+        }
+      }
+    },
+    "error": null
+  }
+]

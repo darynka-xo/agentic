@@ -22,7 +22,7 @@ class EstimateValidationCrew:
 
     def __init__(self, db):
         self.db_tool = DBSearchTool(db)
-        self.ollama_model = os.getenv("OLLAMA_MODEL", "ollama/qwen3:30b")
+        self.ollama_model = os.getenv("OLLAMA_MODEL", "ollama/qwen2.5:7b")
         self.ollama_base_url = os.getenv("OLLAMA_BASE_URL", "http://127.0.0.1:11434")
         logger.info(f"Initializing EstimateValidationCrew with model: {self.ollama_model}, base_url: {self.ollama_base_url}")
         self.structurer_agent = self._make_structurer_agent()
@@ -102,18 +102,19 @@ class EstimateValidationCrew:
         base_url = self.ollama_base_url.rstrip("/")
         timeout = int(os.getenv("LLM_TIMEOUT", "600"))  # 10 minutes default
         
-        logger.info(f"Building LLM with base_url: {base_url}, timeout: {timeout}s")
+        logger.info(f"Building LLM with base_url: {base_url}, timeout: {timeout}s, model: {self.ollama_model}")
         
         try:
             llm = LLM(
                 model=self.ollama_model,
                 base_url=base_url,
                 api_key=os.getenv("OLLAMA_API_KEY", "ollama"),
-                temperature=0.0,  # Deterministic
+                temperature=0.0,  # Deterministic for consistent JSON
                 timeout=timeout,
-                max_tokens=2048,  # Reduced for faster responses
+                max_tokens=4096,  # Increased for full JSON responses
+                num_ctx=4096,  # Context window
             )
-            logger.info("LLM instance created successfully with JSON mode")
+            logger.info(f"LLM instance created successfully: {self.ollama_model}")
             return llm
         except Exception as e:
             logger.error(f"Failed to create LLM instance: {str(e)}", exc_info=True)
@@ -121,22 +122,27 @@ class EstimateValidationCrew:
 
     def _make_structurer_task(self) -> Task:
         description = (
-            "Extract these fields from the text in {{tabula_payload}}:\n"
-            "1. text_description: main description of the work\n"
-            "2. table_code_claimed: code like '1706-0201-01'\n"
-            "3. X_claimed: numeric value (площадь, длина, etc.)\n"
-            "4. total_claimed: final cost in tenge\n"
-            "5. extracted_tags: relevant tags like ['монолитное', 'сейсмичность', etc.]\n\n"
-            "Example input: '1 Жилой дом Секция 1 12 этажей м2 4 675,08 табл. 1706-0201-01 52 690 700'\n"
-            "Example output:\n"
+            "Extract from {{tabula_payload}}:\n"
+            "1. text_description\n"
+            "2. table_code_claimed (like '1706-0201-01')\n"
+            "3. position_number (integer)\n"
+            "4. X_claimed (numeric)\n"
+            "5. total_claimed (cost in tenge)\n"
+            "6. year (from 'СЦП 2023', default 2024)\n"
+            "7. claimed_coefficients: IF you see К3, К4, К5, К6, К7, extract as [{\"id\": \"K3\", \"value\": 1.2}, ...]. If not found use []. Skip К1, К2.\n"
+            "8. extracted_tags\n\n"
+            "Example: 'табл.1706-0201-01 п.7 СЦП 2023 К3=1.2 К4=1.2 52690700'\n"
             "{\n"
-            '  "text_description": "Жилой дом Секция 1 12 этажей",\n'
+            '  "text_description": "...",\n'
             '  "table_code_claimed": "1706-0201-01",\n'
-            '  "X_claimed": 4675.08,\n'
+            '  "position_number": 7,\n'
+            '  "X_claimed": 0,\n'
             '  "total_claimed": 52690700,\n'
-            '  "extracted_tags": ["жилой дом", "12 этажей", "монолитное", "сейсмичность"]\n'
+            '  "year": 2023,\n'
+            '  "claimed_coefficients": [{"id": "K3", "value": 1.2}, {"id": "K4", "value": 1.2}],\n'
+            '  "extracted_tags": []\n'
             "}\n\n"
-            "Return ONLY valid JSON, no other text."
+            "Return ONLY valid JSON, no text."
         )
 
         return Task(
@@ -150,7 +156,8 @@ class EstimateValidationCrew:
         schema_hint = ReferenceData.model_json_schema()
         description = (
             "Read the latest RowState.raw_input JSON from the structurer task and call "
-            "the db_search tool using table_code_claimed, X_claimed, and extracted_tags. "
+            "the db_search tool using table_code_claimed, position_number, x_claimed, year, and extracted_tags. "
+            "IMPORTANT: You MUST provide all parameters from raw_input: position_number, year, x_claimed. "
             "Do not invent values. Return the JSON from the tool unchanged, making sure "
             f"it conforms to this schema: {schema_hint}."
         )

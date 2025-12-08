@@ -1,0 +1,352 @@
+[
+  {
+    "filename": "05-01 Расчет ПИР_Атамура 2_tabula_t1.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: Invalid response from LLM call - None or empty.",
+    "error": "Crew execution failed: Invalid response from LLM call - None or empty."
+  },
+  {
+    "filename": "05-01 Расчет ПИР_Атамура 2_tabula_t2.json",
+    "status": "failed",
+    "http_code": 500,
+    "response": "Internal Server Error",
+    "error": "Internal Server Error"
+  },
+  {
+    "filename": "05-01 Расчет ПИР_Атамура 2_tabula_t3.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec58710>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "05-01 Расчет ПИР_Атамура 2_tabula_t4.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec58d70>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "05-01 Расчет ПИР_Атамура 2_tabula_t5.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec58290>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "094 - ПИР_МЖК 18.03.2025_tabula_t1.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec59910>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "094 - ПИР_МЖК 18.03.2025_tabula_t2.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec5a5d0>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "094 - ПИР_МЖК 18.03.2025_tabula_t3.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec5b290>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "10. Смета_ПИР_Байдибек_би_от_17.01.2025 обновленная_tabula_t1.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec336e0>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "1111ПИР_АЗС-25 31_tabula_t1.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec5a810>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "12 Школа Актау_tabula_t1.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec599d0>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "12 Школа Актау_tabula_t2.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec58e30>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "Kernei ПИР_tabula_t1.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec786e0>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "Kernei ПИР_tabula_t2.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec5bfe0>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "Kernei ПИР_tabula_t3.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec59280>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "Kernei ПИР_tabula_t4.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec5af30>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "Kernei ПИР_tabula_t5.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec5b4d0>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "Kernei ПИР_tabula_t6.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaed89400>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "Kernei ПИР_tabula_t7.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec79340>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "Kernei ПИР_tabula_t8.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec5bc20>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "Kernei ПИР_tabula_t9.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec5a960>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "NSP-0124-ПИР_tabula_t1.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec59ee0>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "NSP-0124-ПИР_tabula_t2.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec58290>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "NSP-0124-ПИР_tabula_t3.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec79070>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "__с.Киши Шыган смета на ПИР ГСН изм_tabula_t1.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec59580>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "__с.Киши Шыган смета на ПИР ГСН изм_tabula_t2.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec5aea0>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "_ПИР Келес__tabula_t1.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec5a1b0>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "_ПИР Келес__tabula_t2.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec5b290>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "_ПИР Келес__tabula_t3.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaed89400>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "_ПИР Келес__tabula_t4.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec33770>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "_ПИР Келес__tabula_t5.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec5b440>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "_ПИР Келес__tabula_t6.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec5a090>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "_ПИР Келес__tabula_t7.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec59550>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "АГЗС ПИР_tabula_t1.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec78950>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "АГЗС ПИР_tabula_t2.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdafbeb6e0>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "АГЗС ПИР_tabula_t3.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec59040>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "Жалгызагаш Расчет предел стоим_tabula_t1.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec5a000>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "П5. Расчет стоимости проектных (проектно-изыскательных) работ_tabula_t1.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec5a660>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "П5. Расчет стоимости проектных (проектно-изыскательных) работ_tabula_t2.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec5b740>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "П5. Расчет стоимости проектных (проектно-изыскательных) работ_tabula_t3.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec58d40>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "П5. Расчет стоимости проектных (проектно-изыскательных) работ_tabula_t4.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec5b5c0>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "П5. Расчет стоимости проектных (проектно-изыскательных) работ_tabula_t5.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec59d30>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "ПИР  оконч_tabula_t1.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec59550>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "ПИР  оконч_tabula_t2.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec5bec0>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "ПИР (1)_tabula_t1.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec797c0>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "ПИР (10)_tabula_t1.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec58350>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "ПИР (10)_tabula_t2.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec59220>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "ПИР (10)_tabula_t3.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec5acc0>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "ПИР (10)_tabula_t4.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec5ae10>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  },
+  {
+    "filename": "ПИР (10)_tabula_t5.json",
+    "status": "failed",
+    "http_code": null,
+    "response": null,
+    "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /predict (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7dcdaec793a0>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+  }
+]

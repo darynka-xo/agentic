@@ -5,7 +5,7 @@ from pathlib import Path
 
 import requests
 
-SERVER_URL = os.getenv("VALIDATOR_URL", "http://127.0.0.1:8000")
+SERVER_URL = os.getenv("VALIDATOR_URL", "http://localhost:8000")
 
 
 def load_payload(path: str):

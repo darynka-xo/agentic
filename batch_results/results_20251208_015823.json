@@ -1,0 +1,1446 @@
+[
+  {
+    "filename": "05-01 Расчет ПИР_Атамура 2_tabula_t1.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 1 validation error for ReferenceData\n  Invalid JSON: key must be a string at line 1 column 2 [type=json_invalid, input_value='{Adjusted Price} = 4675....usted_price\": 233754\\n}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid",
+    "error": "Crew execution failed: 1 validation error for ReferenceData\n  Invalid JSON: key must be a string at line 1 column 2 [type=json_invalid, input_value='{Adjusted Price} = 4675....usted_price\": 233754\\n}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid"
+  },
+  {
+    "filename": "05-01 Расчет ПИР_Атамура 2_tabula_t2.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "4241eb9a-6d91-43bf-9b87-e79e5d9cf0df",
+        "raw_input": {
+          "text_description": "Офисные помещения, м2 ВСТРОЕННЫЕ Секция 2",
+          "table_code_claimed": "1706-0201-08",
+          "position_number": 4,
+          "X_claimed": 421.45,
+          "total_claimed": 10570176.0,
+          "year": 2023,
+          "claimed_coefficients": [
+            {
+              "id": "K3",
+              "value": 1.2,
+              "reason": "РП"
+            },
+            {
+              "id": "K4",
+              "value": 1.2,
+              "reason": "здание монолитное"
+            },
+            {
+              "id": "K5",
+              "value": 0.5,
+              "reason": "пониж.коэф.общ.пол."
+            },
+            {
+              "id": "K6",
+              "value": 1.2,
+              "reason": "Встроен.помещения"
+            },
+            {
+              "id": "K7",
+              "value": 1.0,
+              "reason": "Просадочный грунт"
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 11453.0,
+          "ref_B": 17.0,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.2,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1706-0201-08-4"
+        },
+        "audit_verdict": {
+          "calculated_total": 19302.78,
+          "is_approved": false,
+          "reason": "Deviation 8732.60 тыс.тг (82.62%)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "05-01 Расчет ПИР_Атамура 2_tabula_t3.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "e3b8869d-4057-4221-8d0b-053c4dd8986e",
+        "raw_input": {
+          "text_description": "Офисные помещения, м2 ВСТРОЕННЫЕ Секция 4",
+          "table_code_claimed": "1706-0201-08",
+          "position_number": 8,
+          "X_claimed": 461.26,
+          "total_claimed": 11395676.0,
+          "year": 2024,
+          "claimed_coefficients": [
+            {
+              "id": "K3",
+              "value": 1.2,
+              "reason": "К3= 1,2 (РП)"
+            },
+            {
+              "id": "K4",
+              "value": 1.2,
+              "reason": "К4= 1,2"
+            },
+            {
+              "id": "K5",
+              "value": 0.5,
+              "reason": "К5= 0,5"
+            },
+            {
+              "id": "K6",
+              "value": 1.2,
+              "reason": "К6= 1,2"
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 10820.0,
+          "ref_B": 19.0,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.2,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1706-0201-08-8"
+        },
+        "audit_verdict": {
+          "calculated_total": 20304.63,
+          "is_approved": false,
+          "reason": "Deviation 8908.95 тыс.тг (78.18%)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "05-01 Расчет ПИР_Атамура 2_tabula_t4.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "7d62cc0b-abbd-495a-a10d-9a4fbbae6469",
+        "raw_input": {
+          "text_description": "Офисные помещения, м2 ВСТРОЕННЫЕ Секция 6",
+          "table_code_claimed": "1706-0201-08",
+          "position_number": 2,
+          "X_claimed": 473.5,
+          "total_claimed": 19415808.0,
+          "year": 2024,
+          "claimed_coefficients": [
+            {
+              "id": "K3",
+              "value": 1.2,
+              "reason": "мнолитное"
+            },
+            {
+              "id": "K4",
+              "value": 1.2,
+              "reason": "сейсмичность"
+            },
+            {
+              "id": "K5",
+              "value": 0.5,
+              "reason": "пониж.коэф.общ.пол."
+            },
+            {
+              "id": "K6",
+              "value": 1.2,
+              "reason": "Встроен.помещения"
+            },
+            {
+              "id": "K7",
+              "value": 1.2,
+              "reason": "Просадочный грунт"
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 2026.0,
+          "ref_B": 23.0,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.2,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1706-0201-08-2"
+        },
+        "audit_verdict": {
+          "calculated_total": 16070.19,
+          "is_approved": false,
+          "reason": "Deviation 3345.62 тыс.тг (17.23%)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "05-01 Расчет ПИР_Атамура 2_tabula_t5.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 3 validation errors for RawInput\nclaimed_coefficients.0.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.1.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.3.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type",
+    "error": "Crew execution failed: 3 validation errors for RawInput\nclaimed_coefficients.0.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.1.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.3.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type"
+  },
+  {
+    "filename": "094 - ПИР_МЖК 18.03.2025_tabula_t1.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "b3024e54-885d-42c5-b9c0-d0abcd8d3d5d",
+        "raw_input": {
+          "text_description": "Шести- девятиэтажные (Блок 1)",
+          "table_code_claimed": "1706-0201-01",
+          "position_number": 6,
+          "X_claimed": 3368.17,
+          "total_claimed": 5094000.0,
+          "year": 2021,
+          "claimed_coefficients": [
+            {
+              "id": "K3",
+              "value": 1.4,
+              "reason": "1,4 * 1,21 * 1,2"
+            },
+            {
+              "id": "K4",
+              "value": 1.21,
+              "reason": "Коэф. на рабочий проект"
+            },
+            {
+              "id": "K5",
+              "value": 1.2,
+              "reason": "Коэф. на просадочность"
+            },
+            {
+              "id": "K6",
+              "value": 0.89,
+              "reason": "доля выбранных частей проекта для стадии \"Рабочий проект\", за исключением части \"Сметная документация\""
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 5094.0,
+          "ref_B": 2.34,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.21,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1706-0201-01-6"
+        },
+        "audit_verdict": {
+          "calculated_total": 28405.0,
+          "is_approved": false,
+          "reason": "Deviation 23311.00 тыс.тг (457.62%)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "094 - ПИР_МЖК 18.03.2025_tabula_t2.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "fe8d4adf-453b-4e54-bf1d-f6de019e3618",
+        "raw_input": {
+          "text_description": "Здания жилые многоквартирные: Десяти- двенадцатиэтажные (Блок 2) (А + B* Х) * КС * К1 * К * Кос_рп 1 м2 общей площади основных помещений и зданий",
+          "table_code_claimed": "1706-0201-01",
+          "position_number": 3,
+          "X_claimed": 4893.98,
+          "total_claimed": 7744000.0,
+          "year": 2021,
+          "claimed_coefficients": [
+            {
+              "id": "K3",
+              "value": 1.4,
+              "reason": "1,4 * 1,20 * 1,20"
+            },
+            {
+              "id": "K4",
+              "value": 1.2,
+              "reason": "Коэф. на просадочность"
+            },
+            {
+              "id": "K5",
+              "value": 1.2,
+              "reason": "Коэф. на рабочий проект"
+            },
+            {
+              "id": "K6",
+              "value": 0.89,
+              "reason": "Кос рп=89% - доля выбранных частей проекта для стадии \"Рабочий проект\", за исключением части \"Сметная документация\""
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 1541.0,
+          "ref_B": 2.62,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.21,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1706-0201-01-3"
+        },
+        "audit_verdict": {
+          "calculated_total": 31183.0,
+          "is_approved": false,
+          "reason": "Deviation 23439.00 тыс.тг (302.67%)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "094 - ПИР_МЖК 18.03.2025_tabula_t3.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "3137cabe-e1d6-483e-a2b6-3af908bcfe4b",
+        "raw_input": {
+          "text_description": "Итого проектные работы 158 748 827 | 7.0 Договор No 13-22 от 26.07.2022г Инженерно-геологические изыскания, выполненное ТОО \"Алматы ГИИЗ\" (А + В * Х) услуга 1 892 857 | 8.0 Договор No ИГИ.Т-3/003- 2024-ПИПС от 05.09.2024г Инженерно геодезические изыскания, выполненные ТОО \"Проектный институт \"Проект Сити\" (А + В * Х) услуга 1 66 964 | Итого инженерно-геологические изыскания 959 821 | Итого по смете (проектные + изыскательские работы) 159 708 649",
+          "table_code_claimed": "",
+          "position_number": 7,
+          "X_claimed": 0.0,
+          "total_claimed": 159708649.0,
+          "year": 2024,
+          "claimed_coefficients": [],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 0.5,
+          "ref_B": 1.5,
+          "range_min": 0.0,
+          "range_max": 2.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "C1",
+              "value": 1.0,
+              "reason": null
+            },
+            {
+              "id": "C2",
+              "value": 2.0,
+              "reason": null
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": 1.0,
+          "is_approved": false,
+          "reason": "Deviation 159707.65 тыс.тг (100.00%)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "10. Смета_ПИР_Байдибек_би_от_17.01.2025 обновленная_tabula_t1.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 3 validation errors for RawInput\nclaimed_coefficients.0.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.1.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.2.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type",
+    "error": "Crew execution failed: 3 validation errors for RawInput\nclaimed_coefficients.0.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.1.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.2.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type"
+  },
+  {
+    "filename": "1111ПИР_АЗС-25 31_tabula_t1.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 1 validation error for RawInput\n  Invalid JSON: trailing characters at line 14 column 2 [type=json_invalid, input_value='{\\n  \"text_description\":...\"extracted_tags\": []\\n}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid",
+    "error": "Crew execution failed: 1 validation error for RawInput\n  Invalid JSON: trailing characters at line 14 column 2 [type=json_invalid, input_value='{\\n  \"text_description\":...\"extracted_tags\": []\\n}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid"
+  },
+  {
+    "filename": "12 Школа Актау_tabula_t1.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 1 validation error for ReferenceData\n  Invalid JSON: expected `,` or `}` at line 12 column 30 [type=json_invalid, input_value='{\\n  \"table_code\": \"1706...ated_value\": 7385.28\\n}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid",
+    "error": "Crew execution failed: 1 validation error for ReferenceData\n  Invalid JSON: expected `,` or `}` at line 12 column 30 [type=json_invalid, input_value='{\\n  \"table_code\": \"1706...ated_value\": 7385.28\\n}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid"
+  },
+  {
+    "filename": "12 Школа Актау_tabula_t2.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 1 validation error for ReferenceData\n  Invalid JSON: key must be a string at line 7 column 29 [type=json_invalid, input_value='{\\n  \"reference_rows\": [... is valid in Smeta.\"\\n}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid",
+    "error": "Crew execution failed: 1 validation error for ReferenceData\n  Invalid JSON: key must be a string at line 7 column 29 [type=json_invalid, input_value='{\\n  \"reference_rows\": [... is valid in Smeta.\"\\n}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid"
+  },
+  {
+    "filename": "Kernei ПИР_tabula_t1.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "4dc487c0-823c-4775-98ba-16ce5cc5c695",
+        "raw_input": {
+          "text_description": "...",
+          "table_code_claimed": "1706-0201-01",
+          "position_number": 7,
+          "X_claimed": 0.0,
+          "total_claimed": 52690700.0,
+          "year": 2023,
+          "claimed_coefficients": [
+            {
+              "id": "K3",
+              "value": 1.2,
+              "reason": "монолитное"
+            },
+            {
+              "id": "K4",
+              "value": 1.2,
+              "reason": "сейсмичность"
+            },
+            {
+              "id": "K5",
+              "value": 1.2,
+              "reason": "грунт"
+            },
+            {
+              "id": "K6",
+              "value": 1.0,
+              "reason": "РП"
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 10637.0,
+          "ref_B": 3.16,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.2,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1706-0201-01-7"
+        },
+        "audit_verdict": {
+          "calculated_total": 22056.88,
+          "is_approved": false,
+          "reason": "Deviation 30633.82 тыс.тг (58.14%)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "Kernei ПИР_tabula_t2.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "7dc2176a-b5ef-47ef-8909-c7f766eeb2a4",
+        "raw_input": {
+          "text_description": "...",
+          "table_code_claimed": "1706-0201-01",
+          "position_number": 7,
+          "X_claimed": 0.0,
+          "total_claimed": 52690700.0,
+          "year": 2023,
+          "claimed_coefficients": [
+            {
+              "id": "K3",
+              "value": 1.2,
+              "reason": "монолитное"
+            },
+            {
+              "id": "K4",
+              "value": 1.2,
+              "reason": "сейсмичность"
+            },
+            {
+              "id": "K5",
+              "value": 1.2,
+              "reason": "грунт"
+            },
+            {
+              "id": "K6",
+              "value": 1.0,
+              "reason": "РП"
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 10637.0,
+          "ref_B": 3.16,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.2,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1706-0201-01-7"
+        },
+        "audit_verdict": {
+          "calculated_total": 22056.88,
+          "is_approved": false,
+          "reason": "Deviation 30633.82 тыс.тг (58.14%)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "Kernei ПИР_tabula_t3.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 4 validation errors for RawInput\nclaimed_coefficients.1.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.2.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.3.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.4.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type",
+    "error": "Crew execution failed: 4 validation errors for RawInput\nclaimed_coefficients.1.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.2.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.3.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.4.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type"
+  },
+  {
+    "filename": "Kernei ПИР_tabula_t4.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "f87bfe24-66fb-4ece-a365-da8da5a9ac52",
+        "raw_input": {
+          "text_description": "1710-0104-02, п.7 KС = 1,13 (Коэф. на рабочий проект)",
+          "table_code_claimed": "1710-0104-02",
+          "position_number": 7,
+          "X_claimed": 11300.0,
+          "total_claimed": 11300.0,
+          "year": 2024,
+          "claimed_coefficients": [
+            {
+              "id": "KС",
+              "value": 1.13,
+              "reason": "Коэф. на рабочий проект"
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 0.28,
+          "ref_B": 1.13,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [],
+          "source_position_id": "1710-0104-02-7"
+        },
+        "audit_verdict": {
+          "calculated_total": 14429.29,
+          "is_approved": false,
+          "reason": "Deviation 3129.29 тыс.тг (27.69%)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "Kernei ПИР_tabula_t5.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 5 validation errors for RawInput\nclaimed_coefficients.0.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.1.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.2.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.3.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.4.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type",
+    "error": "Crew execution failed: 5 validation errors for RawInput\nclaimed_coefficients.0.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.1.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.2.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.3.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.4.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type"
+  },
+  {
+    "filename": "Kernei ПИР_tabula_t6.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "66425723-bb56-4692-b8c8-854730198ea1",
+        "raw_input": {
+          "text_description": "...",
+          "table_code_claimed": "1706-0201-01",
+          "position_number": 7,
+          "X_claimed": 0.0,
+          "total_claimed": 52690700.0,
+          "year": 2023,
+          "claimed_coefficients": [
+            {
+              "id": "K3",
+              "value": 1.2,
+              "reason": "монолитное"
+            },
+            {
+              "id": "K4",
+              "value": 1.2,
+              "reason": "сейсмичность"
+            },
+            {
+              "id": "K5",
+              "value": 1.2,
+              "reason": "грунт"
+            },
+            {
+              "id": "K6",
+              "value": 1.0,
+              "reason": "РП"
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 10637.0,
+          "ref_B": 3.16,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.2,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1706-0201-01-7"
+        },
+        "audit_verdict": {
+          "calculated_total": 22056.88,
+          "is_approved": false,
+          "reason": "Deviation 30633.82 тыс.тг (58.14%)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "Kernei ПИР_tabula_t7.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "6e4a42ab-bb3b-4702-aab1-3e8261ba51e7",
+        "raw_input": {
+          "text_description": "...",
+          "table_code_claimed": "1706-0201-01",
+          "position_number": 7,
+          "X_claimed": 0.0,
+          "total_claimed": 52690700.0,
+          "year": 2023,
+          "claimed_coefficients": [
+            {
+              "id": "K3",
+              "value": 1.2,
+              "reason": "монолитное"
+            },
+            {
+              "id": "K4",
+              "value": 1.2,
+              "reason": "сейсмичность"
+            },
+            {
+              "id": "K5",
+              "value": 1.2,
+              "reason": "грунт"
+            },
+            {
+              "id": "K6",
+              "value": 1.0,
+              "reason": "РП"
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 10637.0,
+          "ref_B": 3.16,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.2,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1706-0201-01-7"
+        },
+        "audit_verdict": {
+          "calculated_total": 22056.88,
+          "is_approved": false,
+          "reason": "Deviation 30633.82 тыс.тг (58.14%)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "Kernei ПИР_tabula_t8.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "ec916c60-41e0-47c0-b5b5-a90d7c1c53b2",
+        "raw_input": {
+          "text_description": "...",
+          "table_code_claimed": "1706-0201-01",
+          "position_number": 7,
+          "X_claimed": 0.0,
+          "total_claimed": 52690700.0,
+          "year": 2023,
+          "claimed_coefficients": [
+            {
+              "id": "K3",
+              "value": 1.2,
+              "reason": "монолитное"
+            },
+            {
+              "id": "K4",
+              "value": 1.2,
+              "reason": "сейсмичность"
+            },
+            {
+              "id": "K5",
+              "value": 1.2,
+              "reason": "грунт"
+            },
+            {
+              "id": "K6",
+              "value": 1.0,
+              "reason": "РП"
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 10637.0,
+          "ref_B": 3.16,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.2,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1706-0201-01-7"
+        },
+        "audit_verdict": {
+          "calculated_total": 22056.88,
+          "is_approved": false,
+          "reason": "Deviation 30633.82 тыс.тг (58.14%)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "Kernei ПИР_tabula_t9.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "b3446360-7ce6-4891-952a-b8bbbea480ea",
+        "raw_input": {
+          "text_description": "...",
+          "table_code_claimed": "1706-0201-01",
+          "position_number": 7,
+          "X_claimed": 0.0,
+          "total_claimed": 52690700.0,
+          "year": 2023,
+          "claimed_coefficients": [
+            {
+              "id": "K3",
+              "value": 1.2,
+              "reason": "монолитное"
+            },
+            {
+              "id": "K4",
+              "value": 1.2,
+              "reason": "сейсмичность"
+            },
+            {
+              "id": "K5",
+              "value": 1.2,
+              "reason": "грунт"
+            },
+            {
+              "id": "K6",
+              "value": 1.0,
+              "reason": "РП"
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 10637.0,
+          "ref_B": 3.16,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.2,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1706-0201-01-7"
+        },
+        "audit_verdict": {
+          "calculated_total": 22056.88,
+          "is_approved": false,
+          "reason": "Deviation 30633.82 тыс.тг (58.14%)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "NSP-0124-ПИР_tabula_t1.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 4 validation errors for ReferenceData\nref_A\n  Field required [type=missing, input_value={'table_code': '1706-0201...mated_result': 15.63874}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nref_B\n  Field required [type=missing, input_value={'table_code': '1706-0201...mated_result': 15.63874}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_min\n  Field required [type=missing, input_value={'table_code': '1706-0201...mated_result': 15.63874}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_max\n  Field required [type=missing, input_value={'table_code': '1706-0201...mated_result': 15.63874}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+    "error": "Crew execution failed: 4 validation errors for ReferenceData\nref_A\n  Field required [type=missing, input_value={'table_code': '1706-0201...mated_result': 15.63874}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nref_B\n  Field required [type=missing, input_value={'table_code': '1706-0201...mated_result': 15.63874}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_min\n  Field required [type=missing, input_value={'table_code': '1706-0201...mated_result': 15.63874}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_max\n  Field required [type=missing, input_value={'table_code': '1706-0201...mated_result': 15.63874}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+  },
+  {
+    "filename": "NSP-0124-ПИР_tabula_t2.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 4 validation errors for RawInput\nclaimed_coefficients.0.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.1.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.2.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.3.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type",
+    "error": "Crew execution failed: 4 validation errors for RawInput\nclaimed_coefficients.0.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.1.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.2.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.3.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type"
+  },
+  {
+    "filename": "NSP-0124-ПИР_tabula_t3.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "9b3ccafc-914a-4042-9f1a-38a2b96a7e63",
+        "raw_input": {
+          "text_description": "...",
+          "table_code_claimed": "1706-0201-01",
+          "position_number": 7,
+          "X_claimed": 0.0,
+          "total_claimed": 52690700.0,
+          "year": 2023,
+          "claimed_coefficients": [
+            {
+              "id": "K3",
+              "value": 1.2,
+              "reason": "монолитное"
+            },
+            {
+              "id": "K4",
+              "value": 1.2,
+              "reason": "сейсмичность"
+            },
+            {
+              "id": "K5",
+              "value": 1.2,
+              "reason": "грунт"
+            },
+            {
+              "id": "K6",
+              "value": 1.0,
+              "reason": "РП"
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 10637.0,
+          "ref_B": 3.16,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.2,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1706-0201-01-7"
+        },
+        "audit_verdict": {
+          "calculated_total": 22056.88,
+          "is_approved": false,
+          "reason": "Deviation 30633.82 тыс.тг (58.14%)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "__с.Киши Шыган смета на ПИР ГСН изм_tabula_t1.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 4 validation errors for RawInput\nclaimed_coefficients.0.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.1.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.2.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.4.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type",
+    "error": "Crew execution failed: 4 validation errors for RawInput\nclaimed_coefficients.0.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.1.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.2.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.4.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type"
+  },
+  {
+    "filename": "__с.Киши Шыган смета на ПИР ГСН изм_tabula_t2.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "6f3edf2d-29c4-4742-933c-1b5cccc62301",
+        "raw_input": {
+          "text_description": "Коэффициенты: Крп=2,97 - Коэффициент отношения к стоимости разработки рабочей документации «Рабочий проект» СЦП РК 8.03-01-2022 по разделу 1. таблица 1701-0502-01 пункт 1.",
+          "table_code_claimed": "1701-0502-01",
+          "position_number": 6,
+          "X_claimed": 0.3645,
+          "total_claimed": 99587.0,
+          "year": 2022,
+          "claimed_coefficients": [
+            {
+              "id": "K3",
+              "value": 2.97,
+              "reason": null
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 0.3,
+          "ref_B": 1.15,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [],
+          "source_position_id": "1701-0502-01-6"
+        },
+        "audit_verdict": {
+          "calculated_total": 2.14,
+          "is_approved": false,
+          "reason": "Deviation 99584.86 тыс.тг (100.00%)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "_ПИР Келес__tabula_t1.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 1 validation error for RawInput\nclaimed_coefficients.0.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type",
+    "error": "Crew execution failed: 1 validation error for RawInput\nclaimed_coefficients.0.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type"
+  },
+  {
+    "filename": "_ПИР Келес__tabula_t2.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "9e2ddc17-a7c4-484d-86f2-2a49ff3cb800",
+        "raw_input": {
+          "text_description": "специальность (квалификация) количество одного исполнител я Всего | 1 2 3 4 5 6 7 8 9.0 | Итого по расценке 10 1 664 3413,94 5 680 79 6,16 | Итого оплата труда 5 680 796,16 | Стоимость проектных работ (Спр с Кзп=0,40) 14 201 990,40",
+          "table_code_claimed": "",
+          "position_number": 0,
+          "X_claimed": 0.0,
+          "total_claimed": 14201990.4,
+          "year": 2024,
+          "claimed_coefficients": [],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 0.4,
+          "ref_B": 1.25,
+          "range_min": 1.0,
+          "range_max": 10.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": null,
+              "value": 0.4,
+              "reason": null
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": 0.16,
+          "is_approved": false,
+          "reason": "Deviation 14201.83 тыс.тг (100.00%)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "_ПИР Келес__tabula_t3.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 4 validation errors for RawInput\nclaimed_coefficients.0.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.1.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.2.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.3.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type",
+    "error": "Crew execution failed: 4 validation errors for RawInput\nclaimed_coefficients.0.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.1.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.2.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.3.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type"
+  },
+  {
+    "filename": "_ПИР Келес__tabula_t4.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 1 validation error for RawInput\n  Invalid JSON: key must be a string at line 10 column 18 [type=json_invalid, input_value='{\\n  \"text_description\":...\"extracted_tags\": []\\n}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid",
+    "error": "Crew execution failed: 1 validation error for RawInput\n  Invalid JSON: key must be a string at line 10 column 18 [type=json_invalid, input_value='{\\n  \"text_description\":...\"extracted_tags\": []\\n}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid"
+  },
+  {
+    "filename": "_ПИР Келес__tabula_t5.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 5 validation errors for RawInput\nclaimed_coefficients.0.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.1.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.2.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.3.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.4.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type",
+    "error": "Crew execution failed: 5 validation errors for RawInput\nclaimed_coefficients.0.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.1.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.2.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.3.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.4.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type"
+  },
+  {
+    "filename": "_ПИР Келес__tabula_t6.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 4 validation errors for RawInput\nclaimed_coefficients.0.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.1.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.2.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.4.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type",
+    "error": "Crew execution failed: 4 validation errors for RawInput\nclaimed_coefficients.0.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.1.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.2.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.4.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type"
+  },
+  {
+    "filename": "_ПИР Келес__tabula_t7.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 5 validation errors for RawInput\nclaimed_coefficients.0.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.1.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.2.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.3.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.4.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type",
+    "error": "Crew execution failed: 5 validation errors for RawInput\nclaimed_coefficients.0.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.1.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.2.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.3.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.4.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type"
+  },
+  {
+    "filename": "АГЗС ПИР_tabula_t1.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "a076dfe6-25a5-4a1f-b360-969ecb33b6b9",
+        "raw_input": {
+          "text_description": "...",
+          "table_code_claimed": "1706-0201-01",
+          "position_number": 7,
+          "X_claimed": 0.0,
+          "total_claimed": 52690700.0,
+          "year": 2023,
+          "claimed_coefficients": [
+            {
+              "id": "K3",
+              "value": 1.2,
+              "reason": "монолитное"
+            },
+            {
+              "id": "K4",
+              "value": 1.2,
+              "reason": "сейсмичность"
+            },
+            {
+              "id": "K5",
+              "value": 1.2,
+              "reason": "грунт"
+            },
+            {
+              "id": "K6",
+              "value": 1.0,
+              "reason": "РП"
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 10637.0,
+          "ref_B": 3.16,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.2,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1706-0201-01-7"
+        },
+        "audit_verdict": {
+          "calculated_total": 22056.88,
+          "is_approved": false,
+          "reason": "Deviation 30633.82 тыс.тг (58.14%)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "АГЗС ПИР_tabula_t2.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "9a1bd9da-741a-4c33-8ec1-96310b12e9cf",
+        "raw_input": {
+          "text_description": "Автомобильная газозаправочная станция производительностью свыше 10000 до 20000 тонн газа в год (А + B* (0.4 * Хмин + 0.6 * Х)) * КС * ПРОЦ",
+          "table_code_claimed": "1701-0503-01",
+          "position_number": 1,
+          "X_claimed": 580.0,
+          "total_claimed": 5507.4,
+          "year": 2025,
+          "claimed_coefficients": [
+            {
+              "id": "KС",
+              "value": 1.15,
+              "reason": "Коэффициент на рабочий проект"
+            },
+            {
+              "id": "ПРОЦ",
+              "value": 0.9,
+              "reason": "Итоговый коэффициент по видам проектных работ"
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 5570.0,
+          "ref_B": 2.28,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.15,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1701-0503-01-1"
+        },
+        "audit_verdict": {
+          "calculated_total": 8203.68,
+          "is_approved": false,
+          "reason": "Deviation 2696.28 тыс.тг (48.96%)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "АГЗС ПИР_tabula_t3.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "0d8da2c4-2c1e-420a-b45c-3540b305dd46",
+        "raw_input": {
+          "text_description": "...",
+          "table_code_claimed": "1706-0201-01",
+          "position_number": 7,
+          "X_claimed": 0.0,
+          "total_claimed": 52690700.0,
+          "year": 2023,
+          "claimed_coefficients": [
+            {
+              "id": "K3",
+              "value": 1.2,
+              "reason": "монолитное"
+            },
+            {
+              "id": "K4",
+              "value": 1.2,
+              "reason": "сейсмичность"
+            },
+            {
+              "id": "K5",
+              "value": 1.2,
+              "reason": "грунт"
+            },
+            {
+              "id": "K6",
+              "value": 1.0,
+              "reason": "РП"
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 10637.0,
+          "ref_B": 3.16,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.2,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1706-0201-01-7"
+        },
+        "audit_verdict": {
+          "calculated_total": 22056.88,
+          "is_approved": false,
+          "reason": "Deviation 30633.82 тыс.тг (58.14%)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "Жалгызагаш Расчет предел стоим_tabula_t1.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 5 validation errors for RawInput\nclaimed_coefficients.0.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.1.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.2.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.3.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.4.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type",
+    "error": "Crew execution failed: 5 validation errors for RawInput\nclaimed_coefficients.0.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.1.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.2.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.3.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.4.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type"
+  },
+  {
+    "filename": "П5. Расчет стоимости проектных (проектно-изыскательных) работ_tabula_t1.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 4 validation errors for RawInput\nclaimed_coefficients.1.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.2.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.3.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.4.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type",
+    "error": "Crew execution failed: 4 validation errors for RawInput\nclaimed_coefficients.1.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.2.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.3.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.4.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type"
+  },
+  {
+    "filename": "П5. Расчет стоимости проектных (проектно-изыскательных) работ_tabula_t2.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "486042dd-54e7-48f5-a519-04dca351503d",
+        "raw_input": {
+          "text_description": "Резервуары для воды емкостью от 2000,00 до 6000,00 м3",
+          "table_code_claimed": "1708-0101-05",
+          "position_number": 1,
+          "X_claimed": 5000.0,
+          "total_claimed": 906000.0,
+          "year": 2023,
+          "claimed_coefficients": [
+            {
+              "id": "K3",
+              "value": 0.43,
+              "reason": "Коэф. на проект"
+            },
+            {
+              "id": "K4",
+              "value": 1.0,
+              "reason": "Коэф. на рабочую документацию"
+            },
+            {
+              "id": "K5",
+              "value": 0.2,
+              "reason": "Коэф. на предпроектные работы, НДЦС РК 8.01-08-2022, п.10.4"
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 4453.0,
+          "ref_B": 8.82,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.14,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1708-0101-05-1"
+        },
+        "audit_verdict": {
+          "calculated_total": 4760.14,
+          "is_approved": false,
+          "reason": "Deviation 901239.86 тыс.тг (99.47%)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "П5. Расчет стоимости проектных (проектно-изыскательных) работ_tabula_t3.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 3 validation errors for RawInput\nclaimed_coefficients.1.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.2.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.4.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type",
+    "error": "Crew execution failed: 3 validation errors for RawInput\nclaimed_coefficients.1.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.2.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.4.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type"
+  },
+  {
+    "filename": "П5. Расчет стоимости проектных (проектно-изыскательных) работ_tabula_t4.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "64734262-57ad-467f-80f8-6a540fc893be",
+        "raw_input": {
+          "text_description": "Канализационна я насосная станция перекачки бытовых сточных вод или неагрессивных и невзрывоопасны х производственн ых сточных вод, производительн остью от 50,00 до 500,00 м3/ч",
+          "table_code_claimed": "1708-0101-09",
+          "position_number": 1,
+          "X_claimed": 1.0,
+          "total_claimed": 4040000.0,
+          "year": 2023,
+          "claimed_coefficients": [
+            {
+              "id": "K3",
+              "value": 0.29,
+              "reason": "Коэф. на проект"
+            },
+            {
+              "id": "K4",
+              "value": 1.0,
+              "reason": "Коэф. на рабочую документацию"
+            },
+            {
+              "id": "K5",
+              "value": 0.2,
+              "reason": "Коэф. на предпроектные работы, НДЦС РК 8.01-08-2022, п.10.4"
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 4404.0,
+          "ref_B": 5.91,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.13,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1708-0101-09-1"
+        },
+        "audit_verdict": {
+          "calculated_total": 289.03,
+          "is_approved": false,
+          "reason": "Deviation 3750.97 тыс.тг (92.85%)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "П5. Расчет стоимости проектных (проектно-изыскательных) работ_tabula_t5.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 1 validation error for RawInput\n  Invalid JSON: key must be a string at line 10 column 18 [type=json_invalid, input_value='{\\n  \"text_description\":...\"extracted_tags\": []\\n}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid",
+    "error": "Crew execution failed: 1 validation error for RawInput\n  Invalid JSON: key must be a string at line 10 column 18 [type=json_invalid, input_value='{\\n  \"text_description\":...\"extracted_tags\": []\\n}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid"
+  },
+  {
+    "filename": "ПИР  оконч_tabula_t1.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "eac939e9-6ad7-4ad8-8e3f-712da247b326",
+        "raw_input": {
+          "text_description": "СМЕТА No 2025/02 Проектные работы",
+          "table_code_claimed": "",
+          "position_number": 1,
+          "X_claimed": 18976572.03,
+          "total_claimed": 18976572.03,
+          "year": 2024,
+          "claimed_coefficients": [],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 29749.0,
+          "ref_B": 21.0,
+          "range_min": 0.0,
+          "range_max": 99999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [],
+          "source_position_id": "1701-0207-01-1"
+        },
+        "audit_verdict": {
+          "calculated_total": 398537761.63,
+          "is_approved": false,
+          "reason": "Deviation 398518785.06 тыс.тг (2100056.77%)"
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "ПИР  оконч_tabula_t2.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 3 validation errors for RawInput\nclaimed_coefficients.0.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.1.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.2.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type",
+    "error": "Crew execution failed: 3 validation errors for RawInput\nclaimed_coefficients.0.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.1.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.2.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type"
+  },
+  {
+    "filename": "ПИР (1)_tabula_t1.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 1 validation error for RawInput\nclaimed_coefficients.4.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type",
+    "error": "Crew execution failed: 1 validation error for RawInput\nclaimed_coefficients.4.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type"
+  },
+  {
+    "filename": "ПИР (10)_tabula_t1.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 1 validation error for RawInput\n  Invalid JSON: trailing characters at line 13 column 2 [type=json_invalid, input_value='{\\n  \"text_description\":...\"extracted_tags\": []\\n}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid",
+    "error": "Crew execution failed: 1 validation error for RawInput\n  Invalid JSON: trailing characters at line 13 column 2 [type=json_invalid, input_value='{\\n  \"text_description\":...\"extracted_tags\": []\\n}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid"
+  },
+  {
+    "filename": "ПИР (10)_tabula_t2.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 4 validation errors for RawInput\nclaimed_coefficients.0.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.1.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.2.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.4.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type",
+    "error": "Crew execution failed: 4 validation errors for RawInput\nclaimed_coefficients.0.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.1.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.2.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.4.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type"
+  },
+  {
+    "filename": "ПИР (10)_tabula_t3.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 5 validation errors for RawInput\nclaimed_coefficients.0.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.1.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.2.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.3.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.4.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type",
+    "error": "Crew execution failed: 5 validation errors for RawInput\nclaimed_coefficients.0.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.1.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.2.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.3.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.4.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type"
+  },
+  {
+    "filename": "ПИР (10)_tabula_t4.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 5 validation errors for RawInput\nclaimed_coefficients.0.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.1.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.2.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.3.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.4.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type",
+    "error": "Crew execution failed: 5 validation errors for RawInput\nclaimed_coefficients.0.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.1.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.2.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.3.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type\nclaimed_coefficients.4.value\n  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.12/v/float_type"
+  },
+  {
+    "filename": "ПИР (10)_tabula_t5.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 4 validation errors for ReferenceData\nref_A\n  Field required [type=missing, input_value={'table_code': '1602-0203...the given parameters.'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nref_B\n  Field required [type=missing, input_value={'table_code': '1602-0203...the given parameters.'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_min\n  Field required [type=missing, input_value={'table_code': '1602-0203...the given parameters.'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_max\n  Field required [type=missing, input_value={'table_code': '1602-0203...the given parameters.'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+    "error": "Crew execution failed: 4 validation errors for ReferenceData\nref_A\n  Field required [type=missing, input_value={'table_code': '1602-0203...the given parameters.'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nref_B\n  Field required [type=missing, input_value={'table_code': '1602-0203...the given parameters.'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_min\n  Field required [type=missing, input_value={'table_code': '1602-0203...the given parameters.'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_max\n  Field required [type=missing, input_value={'table_code': '1602-0203...the given parameters.'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+  }
+]

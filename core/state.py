@@ -5,18 +5,28 @@ from typing import List, Literal, Optional
 from pydantic import BaseModel, Field
 
 
+class CoefficientData(BaseModel):
+    id: Optional[str] = None
+    value: Optional[float] = None  # Опционально чтобы не ломаться если LLM не может извлечь
+    reason: Optional[str] = None
+    
+    def is_valid(self) -> bool:
+        """Проверка что коэффициент валидный для использования"""
+        return self.value is not None and 0.1 <= self.value <= 10.0
+
+
 class RawInput(BaseModel):
     text_description: str
     table_code_claimed: str
-    X_claimed: float
+    position_number: int  # Номер позиции из сметы (e.g., 24)
+    X_claimed: float  # Объем/площадь для расчета (e.g., 2.5)
     total_claimed: float
+    year: int = 2024  # Год СЦП (2019-2025), если не указан в смете - используется 2024
+    claimed_coefficients: List[CoefficientData] = Field(
+        default_factory=list,
+        description="Коэффициенты из текста сметы (K3, K4, K5 и т.д.)"
+    )
     extracted_tags: List[str] = Field(default_factory=list)
-
-
-class CoefficientData(BaseModel):
-    id: Optional[str]
-    value: float
-    reason: Optional[str] = None
 
 
 class ReferenceData(BaseModel):

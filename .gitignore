@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+server.log
+ollama.log
+nohup.out
+
+# Temporary files
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# Test results (временные)
+test_direct_result.json
+test_with_coefficients.json
+test_year_2023_result.json
+api_test_result.json
+
+# Но ОСТАВЛЯЕМ batch_results/ (важные результаты тестов)
+!batch_results/
+!batch_results/*.json
+!batch_results/*.txt
+
+# Оставляем примеры для тестов
+!test_payload.json
+!test_simple_payload.json
+
+# Environment файлы (содержат пароли)
+.env
+.env.local
+.env.*.local
+
+# Но создаем .env.example для документации
+!.env.example

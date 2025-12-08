@@ -47,15 +47,25 @@ def tabula_to_simple_format(tabula_payload: Dict[str, Any]) -> Dict[str, Any]:
             "page_number": tabula_payload.get("table_index", 1)
         }
     
-    # Convert all rows to text
+    # Convert rows to text, skipping headers/empty rows
     all_text = []
     for idx, row in enumerate(rows):
         row_text = extract_text_from_tabula_row(row)
-        if row_text:  # Skip empty rows
-            all_text.append(f"{idx+1}. {row_text}")
+        
+        # Skip header rows (usually numbers, empty, or section titles)
+        if not row_text:
+            continue
+        if row_text.strip() in ["1", "2", "3", "4", "5"]:  # Header numbers
+            continue
+        if len(row_text.split()) < 3:  # Too short to be useful
+            continue
+        if "Проектные работы" in row_text and len(row_text) < 50:  # Section headers
+            continue
+            
+        all_text.append(row_text)
     
-    # Join all rows
-    combined_text = " ".join(all_text)
+    # Join rows with newline for better readability
+    combined_text = " | ".join(all_text)
     
     return {
         "raw_text": combined_text,

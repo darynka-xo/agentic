@@ -1,0 +1,123 @@
+============================================================
+BATCH TEST SUMMARY
+============================================================
+
+Timestamp: 2025-12-08T00:57:12.676471
+Total files: 50
+Success: 40
+Failed: 10
+Success rate: 80.00%
+
+============================================================
+FAILED FILES
+============================================================
+
+05-01 Расчет ПИР_Атамура 2_tabula_t5.json
+  HTTP Code: 400
+  Error: Crew execution failed: 1 validation error for ReferenceData
+  Invalid JSON: expected `,` or `}` at line 20 column 31 [type=json_invalid, input_value='{\n  "table_code_claimed... 0.8 + 4374.23 * 1.2\n}', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid
+  Response: Crew execution failed: 1 validation error for ReferenceData
+  Invalid JSON: expected `,` or `}` at line 20 column 31 [type=json_invalid, input_value='{\n  "table_code_claimed... 0.8 + 4374.23 * 1.2\n}
+
+094 - ПИР_МЖК 18.03.2025_tabula_t3.json
+  HTTP Code: 400
+  Error: Crew execution failed: 1 validation error for ReferenceData
+  Invalid JSON: key must be a string at line 6 column 27 [type=json_invalid, input_value='{\n  "position_number": ...ated_cost": 946.4285\n}', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid
+  Response: Crew execution failed: 1 validation error for ReferenceData
+  Invalid JSON: key must be a string at line 6 column 27 [type=json_invalid, input_value='{\n  "position_number": ...ated_cost": 946.4285\n}
+
+10. Смета_ПИР_Байдибек_би_от_17.01.2025 обновленная_tabula_t1.json
+  HTTP Code: 400
+  Error: Crew execution failed: 1 validation error for RawInput
+X_claimed
+  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/float_type
+  Response: Crew execution failed: 1 validation error for RawInput
+X_claimed
+  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]
+    For further information visit https://err
+
+Kernei ПИР_tabula_t3.json
+  HTTP Code: 400
+  Error: Crew execution failed: 1 validation error for RawInput
+  Invalid JSON: trailing characters at line 9 column 2 [type=json_invalid, input_value='{\n  "text_description":..."extracted_tags": []\n}', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid
+  Response: Crew execution failed: 1 validation error for RawInput
+  Invalid JSON: trailing characters at line 9 column 2 [type=json_invalid, input_value='{\n  "text_description":..."extracted_tags": []\n}', inpu
+
+_ПИР Келес__tabula_t1.json
+  HTTP Code: 400
+  Error: Crew execution failed: 4 validation errors for ReferenceData
+ref_A
+  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/float_type
+ref_B
+  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/float_type
+range_min
+  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/float_type
+range_max
+  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/float_type
+  Response: Crew execution failed: 4 validation errors for ReferenceData
+ref_A
+  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]
+    For further information visit https://e
+
+Жалгызагаш Расчет предел стоим_tabula_t1.json
+  HTTP Code: 400
+  Error: Crew execution failed: 1 validation error for ReferenceData
+  Invalid JSON: expected value at line 9 column 23 [type=json_invalid, input_value='{\n  "position_number": ...imated_cost": 37.296\n}', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid
+  Response: Crew execution failed: 1 validation error for ReferenceData
+  Invalid JSON: expected value at line 9 column 23 [type=json_invalid, input_value='{\n  "position_number": ...imated_cost": 37.296\n}', inp
+
+П5. Расчет стоимости проектных (проектно-изыскательных) работ_tabula_t3.json
+  HTTP Code: 400
+  Error: Crew execution failed: 4 validation errors for ReferenceData
+ref_A
+  Field required [type=missing, input_value={'reference_rows': [{'pos...'c': 1.1}, 'year': 2023}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+ref_B
+  Field required [type=missing, input_value={'reference_rows': [{'pos...'c': 1.1}, 'year': 2023}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+range_min
+  Field required [type=missing, input_value={'reference_rows': [{'pos...'c': 1.1}, 'year': 2023}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+range_max
+  Field required [type=missing, input_value={'reference_rows': [{'pos...'c': 1.1}, 'year': 2023}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+  Response: Crew execution failed: 4 validation errors for ReferenceData
+ref_A
+  Field required [type=missing, input_value={'reference_rows': [{'pos...'c': 1.1}, 'year': 2023}, input_type=dict]
+    For further in
+
+П5. Расчет стоимости проектных (проектно-изыскательных) работ_tabula_t5.json
+  HTTP Code: 400
+  Error: Crew execution failed: 1 validation error for RawInput
+position_number
+  Input should be a valid integer [type=int_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/int_type
+  Response: Crew execution failed: 1 validation error for RawInput
+position_number
+  Input should be a valid integer [type=int_type, input_value=None, input_type=NoneType]
+    For further information visit https:
+
+ПИР  оконч_tabula_t1.json
+  HTTP Code: 400
+  Error: Crew execution failed: 1 validation error for RawInput
+  Invalid JSON: trailing characters at line 9 column 2 [type=json_invalid, input_value='{\n  "text_description":..."extracted_tags": []\n}', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid
+  Response: Crew execution failed: 1 validation error for RawInput
+  Invalid JSON: trailing characters at line 9 column 2 [type=json_invalid, input_value='{\n  "text_description":..."extracted_tags": []\n}', inpu
+
+ПИР (10)_tabula_t1.json
+  HTTP Code: 400
+  Error: Crew execution failed: 1 validation error for RawInput
+  Invalid JSON: trailing characters at line 9 column 2 [type=json_invalid, input_value='{\n  "text_description":..."extracted_tags": []\n}', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid
+  Response: Crew execution failed: 1 validation error for RawInput
+  Invalid JSON: trailing characters at line 9 column 2 [type=json_invalid, input_value='{\n  "text_description":..."extracted_tags": []\n}', inpu
