@@ -41,10 +41,34 @@ class ReferenceData(BaseModel):
     source_position_id: Optional[str] = None
 
 
+class Discrepancy(BaseModel):
+    """Детальное описание одного несоответствия"""
+    type: str  # Тип несоответствия: "year_mismatch", "coefficient_error", "value_deviation", etc
+    severity: str  # "critical", "warning", "info"
+    message: str  # Описание на русском языке
+    details: Optional[dict] = None  # Дополнительные детали
+
+
+class CalculationBreakdown(BaseModel):
+    """Детальная разбивка расчета"""
+    base_cost: Optional[float] = None  # Базовая стоимость (A + B × X)
+    coefficients_applied: List[dict] = Field(default_factory=list)  # Примененные коэффициенты
+    final_cost: Optional[float] = None  # Итоговая стоимость
+    formula_used: Optional[str] = None  # Формула в текстовом виде
+
+
 class AuditVerdict(BaseModel):
     calculated_total: Optional[float] = None
     is_approved: bool = False
     reason: Optional[str] = None
+    discrepancies: List[Discrepancy] = Field(
+        default_factory=list,
+        description="Список обнаруженных несоответствий"
+    )
+    calculation_breakdown: Optional[CalculationBreakdown] = Field(
+        default=None,
+        description="Детальная разбивка расчета"
+    )
 
 
 class RowState(BaseModel):

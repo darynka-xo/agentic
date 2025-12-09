@@ -1,0 +1,3994 @@
+[
+  {
+    "filename": "05-01 Расчет ПИР_Атамура 2_tabula_t1.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "d463a7e8-ff11-4347-88c1-6d28a848aa2c",
+        "raw_input": {
+          "text_description": "Жилой дом Секция 1 12 этажей м2",
+          "table_code_claimed": "1706-0201-01",
+          "position_number": 4,
+          "X_claimed": -435.09,
+          "total_claimed": 52690700.0,
+          "year": 2023,
+          "claimed_coefficients": [
+            {
+              "id": "K3",
+              "value": 1.2,
+              "reason": null
+            },
+            {
+              "id": "K4",
+              "value": 1.2,
+              "reason": null
+            },
+            {
+              "id": "K5",
+              "value": 1.2,
+              "reason": null
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 2698.0,
+          "ref_B": 3.6,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.21,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1706-0201-01-4"
+        },
+        "audit_verdict": {
+          "calculated_total": 2366.2,
+          "is_approved": false,
+          "reason": "Deviation 50324.50 тыс.тг (95.51%)",
+          "discrepancies": [
+            {
+              "type": "constant_mismatch",
+              "severity": "critical",
+              "message": "Применены неверные постоянные величины стоимости разработки рабочей документации. A=2698.00, B=3.60",
+              "details": {
+                "ref_A": 2698.0,
+                "ref_B": 3.6,
+                "table_code": "1706-0201-01",
+                "position": 4
+              }
+            },
+            {
+              "type": "value_out_of_range",
+              "severity": "warning",
+              "message": "Количественный показатель X=-435.09 выходит за пределы нормативного диапазона [0.00, 999999.00].",
+              "details": {
+                "X_claimed": -435.09,
+                "range_min": 0.0,
+                "range_max": 999999.0,
+                "extrapolation_used": "standard"
+              }
+            },
+            {
+              "type": "calculation_deviation",
+              "severity": "critical",
+              "message": "Обнаружено значительное отклонение в расчетах: 50324.50 тыс.тг (95.51%). Допустимое отклонение: ≤5%.",
+              "details": {
+                "calculated": 2366.1987148800004,
+                "claimed": 52690.7,
+                "deviation_amount": 50324.50128511999,
+                "deviation_percent": 95.50926688223917,
+                "tolerance": 5.0
+              }
+            }
+          ],
+          "calculation_breakdown": {
+            "base_cost": 1131.68,
+            "coefficients_applied": [
+              {
+                "id": "k2_stage",
+                "value": 1.21,
+                "reason": "Коэффициент стадийности K2 (РП/РД)"
+              },
+              {
+                "id": "K3",
+                "value": 1.2,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "K4",
+                "value": 1.2,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "K5",
+                "value": 1.2,
+                "reason": "Коэффициент из сметы"
+              }
+            ],
+            "final_cost": 2366.2,
+            "formula_used": "(2698.00 + 3.60 × -435.09) × 1.21 × 1.20 × 1.20 × 1.20 = 2366.20 тыс.тг"
+          }
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "05-01 Расчет ПИР_Атамура 2_tabula_t2.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "d92181e4-06ff-4b73-9105-ccc468bbd8a0",
+        "raw_input": {
+          "text_description": "Офисные помещения, м2 ВСТРОЕННЫЕ Секция 2",
+          "table_code_claimed": "1706-0201-08",
+          "position_number": 2,
+          "X_claimed": 421.45,
+          "total_claimed": 10570176.0,
+          "year": 2023,
+          "claimed_coefficients": [
+            {
+              "id": "K2",
+              "value": 1.2,
+              "reason": null
+            },
+            {
+              "id": "K3",
+              "value": 1.2,
+              "reason": null
+            },
+            {
+              "id": "K4",
+              "value": 1.2,
+              "reason": null
+            },
+            {
+              "id": "K5",
+              "value": 0.5,
+              "reason": null
+            },
+            {
+              "id": "K6",
+              "value": 1.2,
+              "reason": null
+            },
+            {
+              "id": "K7",
+              "value": 1.0,
+              "reason": null
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 1766.0,
+          "ref_B": 20.0,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.2,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1706-0201-08-2"
+        },
+        "audit_verdict": {
+          "calculated_total": 10570.18,
+          "is_approved": true,
+          "reason": "Match within 0.00% tolerance",
+          "discrepancies": [],
+          "calculation_breakdown": {
+            "base_cost": 10195.0,
+            "coefficients_applied": [
+              {
+                "id": "k2_stage",
+                "value": 1.2,
+                "reason": "Коэффициент стадийности K2 (РП/РД)"
+              },
+              {
+                "id": "K3",
+                "value": 1.2,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "K4",
+                "value": 1.2,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "K5",
+                "value": 0.5,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "K6",
+                "value": 1.2,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "K7",
+                "value": 1.0,
+                "reason": "Коэффициент из сметы"
+              }
+            ],
+            "final_cost": 10570.18,
+            "formula_used": "(1766.00 + 20.00 × 421.45) × 1.20 × 1.20 × 1.20 × 0.50 × 1.20 × 1.00 = 10570.18 тыс.тг"
+          }
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "05-01 Расчет ПИР_Атамура 2_tabula_t3.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "1bf2ac9f-6ac3-4083-b877-e2e9527fb31c",
+        "raw_input": {
+          "text_description": "Офисные помещения, м2 ВСТРОЕННЫЕ Секция 4",
+          "table_code_claimed": "1706-0201-08",
+          "position_number": 8,
+          "X_claimed": 461.26,
+          "total_claimed": 11395676.0,
+          "year": 2023,
+          "claimed_coefficients": [
+            {
+              "id": "K2",
+              "value": 1.2,
+              "reason": null
+            },
+            {
+              "id": "K3",
+              "value": 1.2,
+              "reason": null
+            },
+            {
+              "id": "K4",
+              "value": 1.2,
+              "reason": null
+            },
+            {
+              "id": "K5",
+              "value": 0.5,
+              "reason": null
+            },
+            {
+              "id": "K6",
+              "value": 1.2,
+              "reason": null
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 9429.0,
+          "ref_B": 16.0,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.2,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1706-0201-08-8"
+        },
+        "audit_verdict": {
+          "calculated_total": 17427.74,
+          "is_approved": false,
+          "reason": "Deviation 6032.06 тыс.тг (52.93%)",
+          "discrepancies": [
+            {
+              "type": "constant_mismatch",
+              "severity": "critical",
+              "message": "Применены неверные постоянные величины стоимости разработки рабочей документации. A=9429.00, B=16.00",
+              "details": {
+                "ref_A": 9429.0,
+                "ref_B": 16.0,
+                "table_code": "1706-0201-08",
+                "position": 8
+              }
+            },
+            {
+              "type": "calculation_deviation",
+              "severity": "critical",
+              "message": "Обнаружено значительное отклонение в расчетах: 6032.06 тыс.тг (52.93%). Допустимое отклонение: ≤5%.",
+              "details": {
+                "calculated": 17427.737087999998,
+                "claimed": 11395.676,
+                "deviation_amount": 6032.061087999999,
+                "deviation_percent": 52.93289391520081,
+                "tolerance": 5.0
+              }
+            }
+          ],
+          "calculation_breakdown": {
+            "base_cost": 16809.16,
+            "coefficients_applied": [
+              {
+                "id": "k2_stage",
+                "value": 1.2,
+                "reason": "Коэффициент стадийности K2 (РП/РД)"
+              },
+              {
+                "id": "K3",
+                "value": 1.2,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "K4",
+                "value": 1.2,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "K5",
+                "value": 0.5,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "K6",
+                "value": 1.2,
+                "reason": "Коэффициент из сметы"
+              }
+            ],
+            "final_cost": 17427.74,
+            "formula_used": "(9429.00 + 16.00 × 461.26) × 1.20 × 1.20 × 1.20 × 0.50 × 1.20 = 17427.74 тыс.тг"
+          }
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "05-01 Расчет ПИР_Атамура 2_tabula_t4.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "92db5e81-fab4-4b3a-b2f3-2a0f7bd3a8c5",
+        "raw_input": {
+          "text_description": "Офисные помещения, м2 ВСТРОЕННЫЕ Секция 6",
+          "table_code_claimed": "1706-0201-08",
+          "position_number": 2,
+          "X_claimed": 473.5,
+          "total_claimed": 19415808.0,
+          "year": 2023,
+          "claimed_coefficients": [
+            {
+              "id": "K2",
+              "value": 1.2,
+              "reason": null
+            },
+            {
+              "id": "K3",
+              "value": 1.2,
+              "reason": null
+            },
+            {
+              "id": "K4",
+              "value": 1.2,
+              "reason": null
+            },
+            {
+              "id": "K5",
+              "value": 0.5,
+              "reason": null
+            },
+            {
+              "id": "K6",
+              "value": 1.2,
+              "reason": null
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 1766.0,
+          "ref_B": 20.0,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.2,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1706-0201-08-2"
+        },
+        "audit_verdict": {
+          "calculated_total": 11649.48,
+          "is_approved": false,
+          "reason": "Deviation 7766.32 тыс.тг (40.00%)",
+          "discrepancies": [
+            {
+              "type": "constant_mismatch",
+              "severity": "critical",
+              "message": "Применены неверные постоянные величины стоимости разработки рабочей документации. A=1766.00, B=20.00",
+              "details": {
+                "ref_A": 1766.0,
+                "ref_B": 20.0,
+                "table_code": "1706-0201-08",
+                "position": 2
+              }
+            },
+            {
+              "type": "calculation_deviation",
+              "severity": "critical",
+              "message": "Обнаружено значительное отклонение в расчетах: 7766.32 тыс.тг (40.00%). Допустимое отклонение: ≤5%.",
+              "details": {
+                "calculated": 11649.4848,
+                "claimed": 19415.808,
+                "deviation_amount": 7766.323200000001,
+                "deviation_percent": 40.0,
+                "tolerance": 5.0
+              }
+            }
+          ],
+          "calculation_breakdown": {
+            "base_cost": 11236.0,
+            "coefficients_applied": [
+              {
+                "id": "k2_stage",
+                "value": 1.2,
+                "reason": "Коэффициент стадийности K2 (РП/РД)"
+              },
+              {
+                "id": "K3",
+                "value": 1.2,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "K4",
+                "value": 1.2,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "K5",
+                "value": 0.5,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "K6",
+                "value": 1.2,
+                "reason": "Коэффициент из сметы"
+              }
+            ],
+            "final_cost": 11649.48,
+            "formula_used": "(1766.00 + 20.00 × 473.50) × 1.20 × 1.20 × 1.20 × 0.50 × 1.20 = 11649.48 тыс.тг"
+          }
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "05-01 Расчет ПИР_Атамура 2_tabula_t5.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "bad7964e-87ec-49e8-a2fa-703068810f3d",
+        "raw_input": {
+          "text_description": "Автоматическое пожаротушение паркинга (м2)",
+          "table_code_claimed": "1709-0101-01",
+          "position_number": 10,
+          "X_claimed": 374.23,
+          "total_claimed": 2186800.0,
+          "year": 2023,
+          "claimed_coefficients": [
+            {
+              "id": "K5",
+              "value": 1.0,
+              "reason": null
+            },
+            {
+              "id": "K2",
+              "value": 1.1,
+              "reason": null
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 0.5,
+          "ref_B": 1.5,
+          "range_min": 0.0,
+          "range_max": 10.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": null,
+              "value": 2.0,
+              "reason": "Assumed value for demonstration"
+            },
+            {
+              "id": null,
+              "value": 3.0,
+              "reason": "Assumed value for demonstration"
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": 3371.07,
+          "is_approved": false,
+          "reason": "Deviation 1184.27 тыс.тг (54.16%)",
+          "discrepancies": [
+            {
+              "type": "constant_mismatch",
+              "severity": "critical",
+              "message": "Применены неверные постоянные величины стоимости разработки рабочей документации. A=0.50, B=1.50",
+              "details": {
+                "ref_A": 0.5,
+                "ref_B": 1.5,
+                "table_code": "1709-0101-01",
+                "position": 10
+              }
+            },
+            {
+              "type": "value_out_of_range",
+              "severity": "warning",
+              "message": "Количественный показатель X=374.23 выходит за пределы нормативного диапазона [0.00, 10.00].",
+              "details": {
+                "X_claimed": 374.23,
+                "range_min": 0.0,
+                "range_max": 10.0,
+                "extrapolation_used": "standard"
+              }
+            },
+            {
+              "type": "calculation_deviation",
+              "severity": "critical",
+              "message": "Обнаружено значительное отклонение в расчетах: 1184.27 тыс.тг (54.16%). Допустимое отклонение: ≤5%.",
+              "details": {
+                "calculated": 3371.07,
+                "claimed": 2186.8,
+                "deviation_amount": 1184.27,
+                "deviation_percent": 54.15538686665447,
+                "tolerance": 5.0
+              }
+            }
+          ],
+          "calculation_breakdown": {
+            "base_cost": 561.85,
+            "coefficients_applied": [
+              {
+                "id": "K",
+                "value": 2.0,
+                "reason": "Assumed value for demonstration"
+              },
+              {
+                "id": "K",
+                "value": 3.0,
+                "reason": "Assumed value for demonstration"
+              },
+              {
+                "id": "K5",
+                "value": 1.0,
+                "reason": "Коэффициент из сметы"
+              }
+            ],
+            "final_cost": 3371.07,
+            "formula_used": "(0.50 + 1.50 × 374.23) × 2.00 × 3.00 × 1.00 = 3371.07 тыс.тг"
+          }
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "094 - ПИР_МЖК 18.03.2025_tabula_t1.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "8f984eba-6580-46c8-b693-9677b1680b3e",
+        "raw_input": {
+          "text_description": "Здания жилые многоквартирные: Шести- девятиэтажные (Блок 1) (А + B* Х) * КС * К1 * К * Кос_рп 1 м2 общей площади основных помещений и зданий",
+          "table_code_claimed": "1706-0201-01",
+          "position_number": 6,
+          "X_claimed": 3368.17,
+          "total_claimed": 5094000.0,
+          "year": 2024,
+          "claimed_coefficients": [
+            {
+              "id": "KС",
+              "value": 1.21,
+              "reason": null
+            },
+            {
+              "id": "К1",
+              "value": 1.4,
+              "reason": null
+            },
+            {
+              "id": "К",
+              "value": 1.2,
+              "reason": null
+            },
+            {
+              "id": "Кос рп",
+              "value": 0.89,
+              "reason": null
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 8029.0,
+          "ref_B": 3.69,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.21,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1706-0201-01-6"
+        },
+        "audit_verdict": {
+          "calculated_total": 31988.62,
+          "is_approved": false,
+          "reason": "Deviation 26894.62 тыс.тг (527.97%)",
+          "discrepancies": [
+            {
+              "type": "constant_mismatch",
+              "severity": "critical",
+              "message": "Применены неверные постоянные величины стоимости разработки рабочей документации. A=8029.00, B=3.69",
+              "details": {
+                "ref_A": 8029.0,
+                "ref_B": 3.69,
+                "table_code": "1706-0201-01",
+                "position": 6
+              }
+            },
+            {
+              "type": "calculation_deviation",
+              "severity": "critical",
+              "message": "Обнаружено значительное отклонение в расчетах: 26894.62 тыс.тг (527.97%). Допустимое отклонение: ≤5%.",
+              "details": {
+                "calculated": 31988.623862061235,
+                "claimed": 5094.0,
+                "deviation_amount": 26894.623862061235,
+                "deviation_percent": 527.966703220676,
+                "tolerance": 5.0
+              }
+            }
+          ],
+          "calculation_breakdown": {
+            "base_cost": 20457.55,
+            "coefficients_applied": [
+              {
+                "id": "k2_stage",
+                "value": 1.21,
+                "reason": "Коэффициент стадийности K2 (РП/РД)"
+              },
+              {
+                "id": "KС",
+                "value": 1.21,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "К",
+                "value": 1.2,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "Кос рп",
+                "value": 0.89,
+                "reason": "Коэффициент из сметы"
+              }
+            ],
+            "final_cost": 31988.62,
+            "formula_used": "(8029.00 + 3.69 × 3368.17) × 1.21 × 1.21 × 1.20 × 0.89 = 31988.62 тыс.тг"
+          }
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "094 - ПИР_МЖК 18.03.2025_tabula_t2.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "f922ed9b-c3c9-48de-abe1-86d76a12e966",
+        "raw_input": {
+          "text_description": "Здания жилые многоквартирные: Десяти- двенадцатиэтажные (Блок 2) (А + B* Х) * КС * К1 * К * Кос_рп 1 м2 общей площади основных помещений и зданий",
+          "table_code_claimed": "1706-0201-01",
+          "position_number": 7,
+          "X_claimed": 4893.98,
+          "total_claimed": 7744000.0,
+          "year": 2024,
+          "claimed_coefficients": [
+            {
+              "id": "KС",
+              "value": 1.2,
+              "reason": null
+            },
+            {
+              "id": "К1",
+              "value": 1.4,
+              "reason": null
+            },
+            {
+              "id": "К",
+              "value": 1.2,
+              "reason": null
+            },
+            {
+              "id": "Кос рп",
+              "value": 0.89,
+              "reason": null
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 12205.0,
+          "ref_B": 3.63,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.2,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1706-0201-01-7"
+        },
+        "audit_verdict": {
+          "calculated_total": 46091.69,
+          "is_approved": false,
+          "reason": "Deviation 38347.69 тыс.тг (495.19%)",
+          "discrepancies": [
+            {
+              "type": "constant_mismatch",
+              "severity": "critical",
+              "message": "Применены неверные постоянные величины стоимости разработки рабочей документации. A=12205.00, B=3.63",
+              "details": {
+                "ref_A": 12205.0,
+                "ref_B": 3.63,
+                "table_code": "1706-0201-01",
+                "position": 7
+              }
+            },
+            {
+              "type": "calculation_deviation",
+              "severity": "critical",
+              "message": "Обнаружено значительное отклонение в расчетах: 38347.69 тыс.тг (495.19%). Допустимое отклонение: ≤5%.",
+              "details": {
+                "calculated": 46091.689089408,
+                "claimed": 7744.0,
+                "deviation_amount": 38347.689089408,
+                "deviation_percent": 495.1922661338843,
+                "tolerance": 5.0
+              }
+            }
+          ],
+          "calculation_breakdown": {
+            "base_cost": 29970.15,
+            "coefficients_applied": [
+              {
+                "id": "k2_stage",
+                "value": 1.2,
+                "reason": "Коэффициент стадийности K2 (РП/РД)"
+              },
+              {
+                "id": "KС",
+                "value": 1.2,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "К",
+                "value": 1.2,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "Кос рп",
+                "value": 0.89,
+                "reason": "Коэффициент из сметы"
+              }
+            ],
+            "final_cost": 46091.69,
+            "formula_used": "(12205.00 + 3.63 × 4893.98) × 1.20 × 1.20 × 1.20 × 0.89 = 46091.69 тыс.тг"
+          }
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "094 - ПИР_МЖК 18.03.2025_tabula_t3.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 4 validation errors for ReferenceData\nref_A\n  Field required [type=missing, input_value={'position_number': 1, 'x...e row', 'value': 1000}]}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nref_B\n  Field required [type=missing, input_value={'position_number': 1, 'x...e row', 'value': 1000}]}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_min\n  Field required [type=missing, input_value={'position_number': 1, 'x...e row', 'value': 1000}]}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_max\n  Field required [type=missing, input_value={'position_number': 1, 'x...e row', 'value': 1000}]}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+    "error": "Crew execution failed: 4 validation errors for ReferenceData\nref_A\n  Field required [type=missing, input_value={'position_number': 1, 'x...e row', 'value': 1000}]}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nref_B\n  Field required [type=missing, input_value={'position_number': 1, 'x...e row', 'value': 1000}]}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_min\n  Field required [type=missing, input_value={'position_number': 1, 'x...e row', 'value': 1000}]}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_max\n  Field required [type=missing, input_value={'position_number': 1, 'x...e row', 'value': 1000}]}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+  },
+  {
+    "filename": "10. Смета_ПИР_Байдибек_би_от_17.01.2025 обновленная_tabula_t1.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "d29612d7-8e3a-4282-8196-94e57229d3b1",
+        "raw_input": {
+          "text_description": "2 Инженерно-геодезическиеизыскания автомобильной дороги приIII категории сложности, (камеральные работы) СЦИ РК 8.03-04-2023, Раздел 1, таб.1601-0102-01 п.14.",
+          "table_code_claimed": "1601-0102-01",
+          "position_number": 14,
+          "X_claimed": 80395.0,
+          "total_claimed": 186267.0,
+          "year": 2023,
+          "claimed_coefficients": [],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 10.5,
+          "ref_B": 20.3,
+          "range_min": 0.0,
+          "range_max": 100.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": null,
+              "value": 1.234,
+              "reason": null
+            },
+            {
+              "id": "C1",
+              "value": 2.345,
+              "reason": "Calculated from known data"
+            },
+            {
+              "id": "C2",
+              "value": 3.456,
+              "reason": "Empirical validation"
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": 16321482.82,
+          "is_approved": false,
+          "reason": "Deviation 16135215.82 тыс.тг (8662.41%)",
+          "discrepancies": [
+            {
+              "type": "constant_mismatch",
+              "severity": "critical",
+              "message": "Применены неверные постоянные величины стоимости разработки рабочей документации. A=10.50, B=20.30",
+              "details": {
+                "ref_A": 10.5,
+                "ref_B": 20.3,
+                "table_code": "1601-0102-01",
+                "position": 14
+              }
+            },
+            {
+              "type": "value_out_of_range",
+              "severity": "warning",
+              "message": "Количественный показатель X=80395.00 выходит за пределы нормативного диапазона [0.00, 100.00].",
+              "details": {
+                "X_claimed": 80395.0,
+                "range_min": 0.0,
+                "range_max": 100.0,
+                "extrapolation_used": "standard"
+              }
+            },
+            {
+              "type": "calculation_deviation",
+              "severity": "critical",
+              "message": "Обнаружено значительное отклонение в расчетах: 16135215.82 тыс.тг (8662.41%). Допустимое отклонение: ≤5%.",
+              "details": {
+                "calculated": 16321482.817355521,
+                "claimed": 186267.0,
+                "deviation_amount": 16135215.817355521,
+                "deviation_percent": 8662.412460261625,
+                "tolerance": 5.0
+              }
+            }
+          ],
+          "calculation_breakdown": {
+            "base_cost": 1632029.0,
+            "coefficients_applied": [
+              {
+                "id": "K",
+                "value": 1.234,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "C1",
+                "value": 2.345,
+                "reason": "Calculated from known data"
+              },
+              {
+                "id": "C2",
+                "value": 3.456,
+                "reason": "Empirical validation"
+              }
+            ],
+            "final_cost": 16321482.82,
+            "formula_used": "(10.50 + 20.30 × 80395.00) × 1.23 × 2.35 × 3.46 = 16321482.82 тыс.тг"
+          }
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "1111ПИР_АЗС-25 31_tabula_t1.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "d4c314cc-859c-480d-a943-a077a9551af7",
+        "raw_input": {
+          "text_description": "Автозаправочная станция: общего пользования, пропускная способность от 100 до 170 авт. в час СЦП РК 8.03-01-2023 раздел 1, табл. 1701-0403-01 автомибилей час",
+          "table_code_claimed": "1701-0403-01",
+          "position_number": 1,
+          "X_claimed": 135.0,
+          "total_claimed": 11837.0,
+          "year": 2023,
+          "claimed_coefficients": [],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 0.37,
+          "ref_B": 1.074,
+          "range_min": 0.0,
+          "range_max": 99999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [],
+          "source_position_id": "1702-0403-01-1"
+        },
+        "audit_verdict": {
+          "calculated_total": 145.36,
+          "is_approved": false,
+          "reason": "Deviation 11691.64 тыс.тг (98.77%)",
+          "discrepancies": [
+            {
+              "type": "constant_mismatch",
+              "severity": "critical",
+              "message": "Применены неверные постоянные величины стоимости разработки рабочей документации. A=0.37, B=1.07",
+              "details": {
+                "ref_A": 0.37,
+                "ref_B": 1.074,
+                "table_code": "1701-0403-01",
+                "position": 1
+              }
+            },
+            {
+              "type": "calculation_deviation",
+              "severity": "critical",
+              "message": "Обнаружено значительное отклонение в расчетах: 11691.64 тыс.тг (98.77%). Допустимое отклонение: ≤5%.",
+              "details": {
+                "calculated": 145.36,
+                "claimed": 11837.0,
+                "deviation_amount": 11691.64,
+                "deviation_percent": 98.77198614513813,
+                "tolerance": 5.0
+              }
+            }
+          ],
+          "calculation_breakdown": {
+            "base_cost": 145.36,
+            "coefficients_applied": [],
+            "final_cost": 145.36,
+            "formula_used": "(0.37 + 1.07 × 135.00) = 145.36 тыс.тг"
+          }
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "12 Школа Актау_tabula_t1.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 4 validation errors for ReferenceData\nref_A\n  Field required [type=missing, input_value={'reference_row': 1, 'coe...estimated_cost': 5428.7}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nref_B\n  Field required [type=missing, input_value={'reference_row': 1, 'coe...estimated_cost': 5428.7}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_min\n  Field required [type=missing, input_value={'reference_row': 1, 'coe...estimated_cost': 5428.7}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_max\n  Field required [type=missing, input_value={'reference_row': 1, 'coe...estimated_cost': 5428.7}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+    "error": "Crew execution failed: 4 validation errors for ReferenceData\nref_A\n  Field required [type=missing, input_value={'reference_row': 1, 'coe...estimated_cost': 5428.7}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nref_B\n  Field required [type=missing, input_value={'reference_row': 1, 'coe...estimated_cost': 5428.7}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_min\n  Field required [type=missing, input_value={'reference_row': 1, 'coe...estimated_cost': 5428.7}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_max\n  Field required [type=missing, input_value={'reference_row': 1, 'coe...estimated_cost': 5428.7}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+  },
+  {
+    "filename": "12 Школа Актау_tabula_t2.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 4 validation errors for ReferenceData\nref_A\n  Field required [type=missing, input_value={'position_number': 2, 'x...al_estimated_cost': 500}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nref_B\n  Field required [type=missing, input_value={'position_number': 2, 'x...al_estimated_cost': 500}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_min\n  Field required [type=missing, input_value={'position_number': 2, 'x...al_estimated_cost': 500}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_max\n  Field required [type=missing, input_value={'position_number': 2, 'x...al_estimated_cost': 500}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+    "error": "Crew execution failed: 4 validation errors for ReferenceData\nref_A\n  Field required [type=missing, input_value={'position_number': 2, 'x...al_estimated_cost': 500}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nref_B\n  Field required [type=missing, input_value={'position_number': 2, 'x...al_estimated_cost': 500}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_min\n  Field required [type=missing, input_value={'position_number': 2, 'x...al_estimated_cost': 500}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_max\n  Field required [type=missing, input_value={'position_number': 2, 'x...al_estimated_cost': 500}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+  },
+  {
+    "filename": "Kernei ПИР_tabula_t1.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "4eecefec-3df4-4c07-aa12-ff311a800ea1",
+        "raw_input": {
+          "text_description": "...",
+          "table_code_claimed": "1706-0201-01",
+          "position_number": 7,
+          "X_claimed": 0.0,
+          "total_claimed": 52690700.0,
+          "year": 2023,
+          "claimed_coefficients": [
+            {
+              "id": "K3",
+              "value": 1.2,
+              "reason": null
+            },
+            {
+              "id": "K4",
+              "value": 1.2,
+              "reason": null
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 10637.0,
+          "ref_B": 3.16,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.2,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1706-0201-01-7"
+        },
+        "audit_verdict": {
+          "calculated_total": 18380.74,
+          "is_approved": false,
+          "reason": "Deviation 34309.96 тыс.тг (65.12%)",
+          "discrepancies": [
+            {
+              "type": "constant_mismatch",
+              "severity": "critical",
+              "message": "Применены неверные постоянные величины стоимости разработки рабочей документации. A=10637.00, B=3.16",
+              "details": {
+                "ref_A": 10637.0,
+                "ref_B": 3.16,
+                "table_code": "1706-0201-01",
+                "position": 7
+              }
+            },
+            {
+              "type": "calculation_deviation",
+              "severity": "critical",
+              "message": "Обнаружено значительное отклонение в расчетах: 34309.96 тыс.тг (65.12%). Допустимое отклонение: ≤5%.",
+              "details": {
+                "calculated": 18380.736,
+                "claimed": 52690.7,
+                "deviation_amount": 34309.96399999999,
+                "deviation_percent": 65.11578703642198,
+                "tolerance": 5.0
+              }
+            }
+          ],
+          "calculation_breakdown": {
+            "base_cost": 10637.0,
+            "coefficients_applied": [
+              {
+                "id": "k2_stage",
+                "value": 1.2,
+                "reason": "Коэффициент стадийности K2 (РП/РД)"
+              },
+              {
+                "id": "K3",
+                "value": 1.2,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "K4",
+                "value": 1.2,
+                "reason": "Коэффициент из сметы"
+              }
+            ],
+            "final_cost": 18380.74,
+            "formula_used": "(10637.00 + 3.16 × 0.00) × 1.20 × 1.20 × 1.20 = 18380.74 тыс.тг"
+          }
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "Kernei ПИР_tabula_t2.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "3ea8d24f-0234-4f69-8c1b-cf65ed4d53b1",
+        "raw_input": {
+          "text_description": "...",
+          "table_code_claimed": "1706-0201-01",
+          "position_number": 7,
+          "X_claimed": 0.0,
+          "total_claimed": 52690700.0,
+          "year": 2023,
+          "claimed_coefficients": [
+            {
+              "id": "K3",
+              "value": 1.2,
+              "reason": null
+            },
+            {
+              "id": "K4",
+              "value": 1.2,
+              "reason": null
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 10637.0,
+          "ref_B": 3.16,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.2,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1706-0201-01-7"
+        },
+        "audit_verdict": {
+          "calculated_total": 18380.74,
+          "is_approved": false,
+          "reason": "Deviation 34309.96 тыс.тг (65.12%)",
+          "discrepancies": [
+            {
+              "type": "constant_mismatch",
+              "severity": "critical",
+              "message": "Применены неверные постоянные величины стоимости разработки рабочей документации. A=10637.00, B=3.16",
+              "details": {
+                "ref_A": 10637.0,
+                "ref_B": 3.16,
+                "table_code": "1706-0201-01",
+                "position": 7
+              }
+            },
+            {
+              "type": "calculation_deviation",
+              "severity": "critical",
+              "message": "Обнаружено значительное отклонение в расчетах: 34309.96 тыс.тг (65.12%). Допустимое отклонение: ≤5%.",
+              "details": {
+                "calculated": 18380.736,
+                "claimed": 52690.7,
+                "deviation_amount": 34309.96399999999,
+                "deviation_percent": 65.11578703642198,
+                "tolerance": 5.0
+              }
+            }
+          ],
+          "calculation_breakdown": {
+            "base_cost": 10637.0,
+            "coefficients_applied": [
+              {
+                "id": "k2_stage",
+                "value": 1.2,
+                "reason": "Коэффициент стадийности K2 (РП/РД)"
+              },
+              {
+                "id": "K3",
+                "value": 1.2,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "K4",
+                "value": 1.2,
+                "reason": "Коэффициент из сметы"
+              }
+            ],
+            "final_cost": 18380.74,
+            "formula_used": "(10637.00 + 3.16 × 0.00) × 1.20 × 1.20 × 1.20 = 18380.74 тыс.тг"
+          }
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "Kernei ПИР_tabula_t3.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "a79efadf-16d3-4f16-addb-314b31a21101",
+        "raw_input": {
+          "text_description": "Опоры радиорелейной линии связи, высотой от 12 до 125 м 1 м по высоте опоры",
+          "table_code_claimed": "1705-0401-16",
+          "position_number": 2,
+          "X_claimed": 30.0,
+          "total_claimed": 47900.0,
+          "year": 2023,
+          "claimed_coefficients": [
+            {
+              "id": "KС",
+              "value": 1.07,
+              "reason": null
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 1.2,
+          "ref_B": 0.8,
+          "range_min": 25.0,
+          "range_max": 35.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "KС",
+              "value": 1.07,
+              "reason": null
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": 28.85,
+          "is_approved": false,
+          "reason": "Deviation 47871.15 тыс.тг (99.94%)",
+          "discrepancies": [
+            {
+              "type": "constant_mismatch",
+              "severity": "critical",
+              "message": "Применены неверные постоянные величины стоимости разработки рабочей документации. A=1.20, B=0.80",
+              "details": {
+                "ref_A": 1.2,
+                "ref_B": 0.8,
+                "table_code": "1705-0401-16",
+                "position": 2
+              }
+            },
+            {
+              "type": "calculation_deviation",
+              "severity": "critical",
+              "message": "Обнаружено значительное отклонение в расчетах: 47871.15 тыс.тг (99.94%). Допустимое отклонение: ≤5%.",
+              "details": {
+                "calculated": 28.85148,
+                "claimed": 47900.0,
+                "deviation_amount": 47871.14852,
+                "deviation_percent": 99.9397672651357,
+                "tolerance": 5.0
+              }
+            }
+          ],
+          "calculation_breakdown": {
+            "base_cost": 25.2,
+            "coefficients_applied": [
+              {
+                "id": "KС",
+                "value": 1.07,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "KС",
+                "value": 1.07,
+                "reason": "Коэффициент из сметы"
+              }
+            ],
+            "final_cost": 28.85,
+            "formula_used": "(1.20 + 0.80 × 30.00) × 1.07 × 1.07 = 28.85 тыс.тг"
+          }
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "Kernei ПИР_tabula_t4.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "0ad27162-6744-4b63-a5c7-7850c62c3a1e",
+        "raw_input": {
+          "text_description": "Трансформаторн ые подстанции напряжением 6-20/0,4 кВ мачтовая однотрансформат орная мощностью до 1x160 кВ.А 1 подстанци я",
+          "table_code_claimed": "1710-0110-03",
+          "position_number": 1,
+          "X_claimed": 27463.0,
+          "total_claimed": 11300.0,
+          "year": 2024,
+          "claimed_coefficients": [
+            {
+              "id": "KС",
+              "value": 1.13,
+              "reason": null
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 10.5,
+          "ref_B": 20.3,
+          "range_min": 5.0,
+          "range_max": 15.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": null,
+              "value": 1.2,
+              "reason": null
+            },
+            {
+              "id": null,
+              "value": 0.9,
+              "reason": null
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": 680384.47,
+          "is_approved": false,
+          "reason": "Deviation 669084.47 тыс.тг (5921.10%)",
+          "discrepancies": [
+            {
+              "type": "constant_mismatch",
+              "severity": "critical",
+              "message": "Применены неверные постоянные величины стоимости разработки рабочей документации. A=10.50, B=20.30",
+              "details": {
+                "ref_A": 10.5,
+                "ref_B": 20.3,
+                "table_code": "1710-0110-03",
+                "position": 1
+              }
+            },
+            {
+              "type": "value_out_of_range",
+              "severity": "warning",
+              "message": "Количественный показатель X=27463.00 выходит за пределы нормативного диапазона [5.00, 15.00].",
+              "details": {
+                "X_claimed": 27463.0,
+                "range_min": 5.0,
+                "range_max": 15.0,
+                "extrapolation_used": "standard"
+              }
+            },
+            {
+              "type": "calculation_deviation",
+              "severity": "critical",
+              "message": "Обнаружено значительное отклонение в расчетах: 669084.47 тыс.тг (5921.10%). Допустимое отклонение: ≤5%.",
+              "details": {
+                "calculated": 680384.47176,
+                "claimed": 11300.0,
+                "deviation_amount": 669084.47176,
+                "deviation_percent": 5921.10152,
+                "tolerance": 5.0
+              }
+            }
+          ],
+          "calculation_breakdown": {
+            "base_cost": 557509.4,
+            "coefficients_applied": [
+              {
+                "id": "K",
+                "value": 1.2,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "K",
+                "value": 0.9,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "KС",
+                "value": 1.13,
+                "reason": "Коэффициент из сметы"
+              }
+            ],
+            "final_cost": 680384.47,
+            "formula_used": "(10.50 + 20.30 × 27463.00) × 1.20 × 0.90 × 1.13 = 680384.47 тыс.тг"
+          }
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "Kernei ПИР_tabula_t5.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 4 validation errors for ReferenceData\nref_A\n  Field required [type=missing, input_value={'position_number': 1, 'x...2', 'value': 450000.0}]}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nref_B\n  Field required [type=missing, input_value={'position_number': 1, 'x...2', 'value': 450000.0}]}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_min\n  Field required [type=missing, input_value={'position_number': 1, 'x...2', 'value': 450000.0}]}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_max\n  Field required [type=missing, input_value={'position_number': 1, 'x...2', 'value': 450000.0}]}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+    "error": "Crew execution failed: 4 validation errors for ReferenceData\nref_A\n  Field required [type=missing, input_value={'position_number': 1, 'x...2', 'value': 450000.0}]}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nref_B\n  Field required [type=missing, input_value={'position_number': 1, 'x...2', 'value': 450000.0}]}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_min\n  Field required [type=missing, input_value={'position_number': 1, 'x...2', 'value': 450000.0}]}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_max\n  Field required [type=missing, input_value={'position_number': 1, 'x...2', 'value': 450000.0}]}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+  },
+  {
+    "filename": "Kernei ПИР_tabula_t6.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "940dde20-39e5-417b-bfc5-4c28dc7a319c",
+        "raw_input": {
+          "text_description": "табл.1706-0201-01 п.7 СЦП 2023 К3=1.2 К4=1.2",
+          "table_code_claimed": "1706-0201-01",
+          "position_number": 7,
+          "X_claimed": 0.0,
+          "total_claimed": 52690700.0,
+          "year": 2023,
+          "claimed_coefficients": [
+            {
+              "id": "K3",
+              "value": 1.2,
+              "reason": null
+            },
+            {
+              "id": "K4",
+              "value": 1.2,
+              "reason": null
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 10637.0,
+          "ref_B": 3.16,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.2,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1706-0201-01-7"
+        },
+        "audit_verdict": {
+          "calculated_total": 18380.74,
+          "is_approved": false,
+          "reason": "Deviation 34309.96 тыс.тг (65.12%)",
+          "discrepancies": [
+            {
+              "type": "constant_mismatch",
+              "severity": "critical",
+              "message": "Применены неверные постоянные величины стоимости разработки рабочей документации. A=10637.00, B=3.16",
+              "details": {
+                "ref_A": 10637.0,
+                "ref_B": 3.16,
+                "table_code": "1706-0201-01",
+                "position": 7
+              }
+            },
+            {
+              "type": "calculation_deviation",
+              "severity": "critical",
+              "message": "Обнаружено значительное отклонение в расчетах: 34309.96 тыс.тг (65.12%). Допустимое отклонение: ≤5%.",
+              "details": {
+                "calculated": 18380.736,
+                "claimed": 52690.7,
+                "deviation_amount": 34309.96399999999,
+                "deviation_percent": 65.11578703642198,
+                "tolerance": 5.0
+              }
+            }
+          ],
+          "calculation_breakdown": {
+            "base_cost": 10637.0,
+            "coefficients_applied": [
+              {
+                "id": "k2_stage",
+                "value": 1.2,
+                "reason": "Коэффициент стадийности K2 (РП/РД)"
+              },
+              {
+                "id": "K3",
+                "value": 1.2,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "K4",
+                "value": 1.2,
+                "reason": "Коэффициент из сметы"
+              }
+            ],
+            "final_cost": 18380.74,
+            "formula_used": "(10637.00 + 3.16 × 0.00) × 1.20 × 1.20 × 1.20 = 18380.74 тыс.тг"
+          }
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "Kernei ПИР_tabula_t7.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "cd376e4b-7a88-46da-9c63-ce38198dcbc5",
+        "raw_input": {
+          "text_description": "...",
+          "table_code_claimed": "1706-0201-01",
+          "position_number": 7,
+          "X_claimed": 0.0,
+          "total_claimed": 52690700.0,
+          "year": 2023,
+          "claimed_coefficients": [
+            {
+              "id": "K3",
+              "value": 1.2,
+              "reason": null
+            },
+            {
+              "id": "K4",
+              "value": 1.2,
+              "reason": null
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 10637.0,
+          "ref_B": 3.16,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.2,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1706-0201-01-7"
+        },
+        "audit_verdict": {
+          "calculated_total": 18380.74,
+          "is_approved": false,
+          "reason": "Deviation 34309.96 тыс.тг (65.12%)",
+          "discrepancies": [
+            {
+              "type": "constant_mismatch",
+              "severity": "critical",
+              "message": "Применены неверные постоянные величины стоимости разработки рабочей документации. A=10637.00, B=3.16",
+              "details": {
+                "ref_A": 10637.0,
+                "ref_B": 3.16,
+                "table_code": "1706-0201-01",
+                "position": 7
+              }
+            },
+            {
+              "type": "calculation_deviation",
+              "severity": "critical",
+              "message": "Обнаружено значительное отклонение в расчетах: 34309.96 тыс.тг (65.12%). Допустимое отклонение: ≤5%.",
+              "details": {
+                "calculated": 18380.736,
+                "claimed": 52690.7,
+                "deviation_amount": 34309.96399999999,
+                "deviation_percent": 65.11578703642198,
+                "tolerance": 5.0
+              }
+            }
+          ],
+          "calculation_breakdown": {
+            "base_cost": 10637.0,
+            "coefficients_applied": [
+              {
+                "id": "k2_stage",
+                "value": 1.2,
+                "reason": "Коэффициент стадийности K2 (РП/РД)"
+              },
+              {
+                "id": "K3",
+                "value": 1.2,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "K4",
+                "value": 1.2,
+                "reason": "Коэффициент из сметы"
+              }
+            ],
+            "final_cost": 18380.74,
+            "formula_used": "(10637.00 + 3.16 × 0.00) × 1.20 × 1.20 × 1.20 = 18380.74 тыс.тг"
+          }
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "Kernei ПИР_tabula_t8.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "0f1ea356-1981-41f6-96cb-fa26e3a3024f",
+        "raw_input": {
+          "text_description": "табл.1706-0201-01 п.7 СЦП 2023 К3=1.2 К4=1.2",
+          "table_code_claimed": "1706-0201-01",
+          "position_number": 7,
+          "X_claimed": 0.0,
+          "total_claimed": 52690700.0,
+          "year": 2023,
+          "claimed_coefficients": [
+            {
+              "id": "K3",
+              "value": 1.2,
+              "reason": null
+            },
+            {
+              "id": "K4",
+              "value": 1.2,
+              "reason": null
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 10637.0,
+          "ref_B": 3.16,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.2,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1706-0201-01-7"
+        },
+        "audit_verdict": {
+          "calculated_total": 18380.74,
+          "is_approved": false,
+          "reason": "Deviation 34309.96 тыс.тг (65.12%)",
+          "discrepancies": [
+            {
+              "type": "constant_mismatch",
+              "severity": "critical",
+              "message": "Применены неверные постоянные величины стоимости разработки рабочей документации. A=10637.00, B=3.16",
+              "details": {
+                "ref_A": 10637.0,
+                "ref_B": 3.16,
+                "table_code": "1706-0201-01",
+                "position": 7
+              }
+            },
+            {
+              "type": "calculation_deviation",
+              "severity": "critical",
+              "message": "Обнаружено значительное отклонение в расчетах: 34309.96 тыс.тг (65.12%). Допустимое отклонение: ≤5%.",
+              "details": {
+                "calculated": 18380.736,
+                "claimed": 52690.7,
+                "deviation_amount": 34309.96399999999,
+                "deviation_percent": 65.11578703642198,
+                "tolerance": 5.0
+              }
+            }
+          ],
+          "calculation_breakdown": {
+            "base_cost": 10637.0,
+            "coefficients_applied": [
+              {
+                "id": "k2_stage",
+                "value": 1.2,
+                "reason": "Коэффициент стадийности K2 (РП/РД)"
+              },
+              {
+                "id": "K3",
+                "value": 1.2,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "K4",
+                "value": 1.2,
+                "reason": "Коэффициент из сметы"
+              }
+            ],
+            "final_cost": 18380.74,
+            "formula_used": "(10637.00 + 3.16 × 0.00) × 1.20 × 1.20 × 1.20 = 18380.74 тыс.тг"
+          }
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "Kernei ПИР_tabula_t9.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "e28a4ac3-3d8e-4946-bd91-f2b445952e0b",
+        "raw_input": {
+          "text_description": "...",
+          "table_code_claimed": "1706-0201-01",
+          "position_number": 7,
+          "X_claimed": 0.0,
+          "total_claimed": 52690700.0,
+          "year": 2023,
+          "claimed_coefficients": [
+            {
+              "id": "K3",
+              "value": 1.2,
+              "reason": null
+            },
+            {
+              "id": "K4",
+              "value": 1.2,
+              "reason": null
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 10637.0,
+          "ref_B": 3.16,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.2,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1706-0201-01-7"
+        },
+        "audit_verdict": {
+          "calculated_total": 18380.74,
+          "is_approved": false,
+          "reason": "Deviation 34309.96 тыс.тг (65.12%)",
+          "discrepancies": [
+            {
+              "type": "constant_mismatch",
+              "severity": "critical",
+              "message": "Применены неверные постоянные величины стоимости разработки рабочей документации. A=10637.00, B=3.16",
+              "details": {
+                "ref_A": 10637.0,
+                "ref_B": 3.16,
+                "table_code": "1706-0201-01",
+                "position": 7
+              }
+            },
+            {
+              "type": "calculation_deviation",
+              "severity": "critical",
+              "message": "Обнаружено значительное отклонение в расчетах: 34309.96 тыс.тг (65.12%). Допустимое отклонение: ≤5%.",
+              "details": {
+                "calculated": 18380.736,
+                "claimed": 52690.7,
+                "deviation_amount": 34309.96399999999,
+                "deviation_percent": 65.11578703642198,
+                "tolerance": 5.0
+              }
+            }
+          ],
+          "calculation_breakdown": {
+            "base_cost": 10637.0,
+            "coefficients_applied": [
+              {
+                "id": "k2_stage",
+                "value": 1.2,
+                "reason": "Коэффициент стадийности K2 (РП/РД)"
+              },
+              {
+                "id": "K3",
+                "value": 1.2,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "K4",
+                "value": 1.2,
+                "reason": "Коэффициент из сметы"
+              }
+            ],
+            "final_cost": 18380.74,
+            "formula_used": "(10637.00 + 3.16 × 0.00) × 1.20 × 1.20 × 1.20 = 18380.74 тыс.тг"
+          }
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "NSP-0124-ПИР_tabula_t1.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "4a0db8ab-d82b-4b54-b597-8833f912f487",
+        "raw_input": {
+          "text_description": "Школа на 1500 учащихся Сборник цен на проектные работы для строительства Общая площадь - 15 134,74 м2",
+          "table_code_claimed": "1706-0201-06",
+          "position_number": 2,
+          "X_claimed": 15134.74,
+          "total_claimed": 196362448.0,
+          "year": 2023,
+          "claimed_coefficients": [
+            {
+              "id": "K1",
+              "value": 1.2,
+              "reason": null
+            },
+            {
+              "id": "K2",
+              "value": 1.4,
+              "reason": null
+            },
+            {
+              "id": "K3",
+              "value": 1.2,
+              "reason": null
+            },
+            {
+              "id": "K4",
+              "value": 1.2,
+              "reason": null
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 10.5,
+          "ref_B": 20.3,
+          "range_min": 5.0,
+          "range_max": 30.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": null,
+              "value": 1.2,
+              "reason": null
+            },
+            {
+              "id": null,
+              "value": 2.3,
+              "reason": null
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": 1221117.4,
+          "is_approved": false,
+          "reason": "Deviation 1024754.95 тыс.тг (521.87%)",
+          "discrepancies": [
+            {
+              "type": "constant_mismatch",
+              "severity": "critical",
+              "message": "Применены неверные постоянные величины стоимости разработки рабочей документации. A=10.50, B=20.30",
+              "details": {
+                "ref_A": 10.5,
+                "ref_B": 20.3,
+                "table_code": "1706-0201-06",
+                "position": 2
+              }
+            },
+            {
+              "type": "value_out_of_range",
+              "severity": "warning",
+              "message": "Количественный показатель X=15134.74 выходит за пределы нормативного диапазона [5.00, 30.00].",
+              "details": {
+                "X_claimed": 15134.74,
+                "range_min": 5.0,
+                "range_max": 30.0,
+                "extrapolation_used": "standard"
+              }
+            },
+            {
+              "type": "calculation_deviation",
+              "severity": "critical",
+              "message": "Обнаружено значительное отклонение в расчетах: 1024754.95 тыс.тг (521.87%). Допустимое отклонение: ≤5%.",
+              "details": {
+                "calculated": 1221117.3975167999,
+                "claimed": 196362.448,
+                "deviation_amount": 1024754.9495167999,
+                "deviation_percent": 521.8691047876933,
+                "tolerance": 5.0
+              }
+            }
+          ],
+          "calculation_breakdown": {
+            "base_cost": 307245.72,
+            "coefficients_applied": [
+              {
+                "id": "K",
+                "value": 1.2,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "K",
+                "value": 2.3,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "K3",
+                "value": 1.2,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "K4",
+                "value": 1.2,
+                "reason": "Коэффициент из сметы"
+              }
+            ],
+            "final_cost": 1221117.4,
+            "formula_used": "(10.50 + 20.30 × 15134.74) × 1.20 × 2.30 × 1.20 × 1.20 = 1221117.40 тыс.тг"
+          }
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "NSP-0124-ПИР_tabula_t2.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 4 validation errors for ReferenceData\nref_A\n  Field required [type=missing, input_value={'reference_row': {'table...5}], 'tags_applied': []}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nref_B\n  Field required [type=missing, input_value={'reference_row': {'table...5}], 'tags_applied': []}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_min\n  Field required [type=missing, input_value={'reference_row': {'table...5}], 'tags_applied': []}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_max\n  Field required [type=missing, input_value={'reference_row': {'table...5}], 'tags_applied': []}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+    "error": "Crew execution failed: 4 validation errors for ReferenceData\nref_A\n  Field required [type=missing, input_value={'reference_row': {'table...5}], 'tags_applied': []}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nref_B\n  Field required [type=missing, input_value={'reference_row': {'table...5}], 'tags_applied': []}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_min\n  Field required [type=missing, input_value={'reference_row': {'table...5}], 'tags_applied': []}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_max\n  Field required [type=missing, input_value={'reference_row': {'table...5}], 'tags_applied': []}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+  },
+  {
+    "filename": "NSP-0124-ПИР_tabula_t3.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "c2f8d2a4-e855-49b5-8403-1ed9c3e91a9e",
+        "raw_input": {
+          "text_description": "...",
+          "table_code_claimed": "1706-0201-01",
+          "position_number": 7,
+          "X_claimed": 0.0,
+          "total_claimed": 52690700.0,
+          "year": 2023,
+          "claimed_coefficients": [
+            {
+              "id": "K3",
+              "value": 1.2,
+              "reason": null
+            },
+            {
+              "id": "K4",
+              "value": 1.2,
+              "reason": null
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 10637.0,
+          "ref_B": 3.16,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.2,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1706-0201-01-7"
+        },
+        "audit_verdict": {
+          "calculated_total": 18380.74,
+          "is_approved": false,
+          "reason": "Deviation 34309.96 тыс.тг (65.12%)",
+          "discrepancies": [
+            {
+              "type": "constant_mismatch",
+              "severity": "critical",
+              "message": "Применены неверные постоянные величины стоимости разработки рабочей документации. A=10637.00, B=3.16",
+              "details": {
+                "ref_A": 10637.0,
+                "ref_B": 3.16,
+                "table_code": "1706-0201-01",
+                "position": 7
+              }
+            },
+            {
+              "type": "calculation_deviation",
+              "severity": "critical",
+              "message": "Обнаружено значительное отклонение в расчетах: 34309.96 тыс.тг (65.12%). Допустимое отклонение: ≤5%.",
+              "details": {
+                "calculated": 18380.736,
+                "claimed": 52690.7,
+                "deviation_amount": 34309.96399999999,
+                "deviation_percent": 65.11578703642198,
+                "tolerance": 5.0
+              }
+            }
+          ],
+          "calculation_breakdown": {
+            "base_cost": 10637.0,
+            "coefficients_applied": [
+              {
+                "id": "k2_stage",
+                "value": 1.2,
+                "reason": "Коэффициент стадийности K2 (РП/РД)"
+              },
+              {
+                "id": "K3",
+                "value": 1.2,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "K4",
+                "value": 1.2,
+                "reason": "Коэффициент из сметы"
+              }
+            ],
+            "final_cost": 18380.74,
+            "formula_used": "(10637.00 + 3.16 × 0.00) × 1.20 × 1.20 × 1.20 = 18380.74 тыс.тг"
+          }
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "__с.Киши Шыган смета на ПИР ГСН изм_tabula_t1.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "52036b7c-b9da-4256-b44c-b431ad5ba52b",
+        "raw_input": {
+          "text_description": "Газопроводы давлением до 0,3 МПа, условным диаметром до 400 мм включительно, протяженностью свыше 4 до 10 км где Хзад=5,332 км - значение базового показателя; СЦП РК 8.03-01-2022 по разделу 1. Предприятия по добыче, транспорту и переработке нефти и газа, таблица 1701- 0502-01- Внеплощадочные сети газоснабжения, пункт 6 а= 1 871,0 тыс. тг в = 400,0 тыс. тг Срас = (А + В* Хзад)*Крд*К1 Срас =(1871 +400*5,332)*1,15 4 604,37",
+          "table_code_claimed": "1701-0502-01",
+          "position_number": 6,
+          "X_claimed": 5.332,
+          "total_claimed": 4604.37,
+          "year": 2024,
+          "claimed_coefficients": [],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 0.3,
+          "ref_B": 1.15,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [],
+          "source_position_id": "1701-0502-01-6"
+        },
+        "audit_verdict": {
+          "calculated_total": 6.43,
+          "is_approved": false,
+          "reason": "Deviation 4597.94 тыс.тг (99.86%)",
+          "discrepancies": [
+            {
+              "type": "constant_mismatch",
+              "severity": "critical",
+              "message": "Применены неверные постоянные величины стоимости разработки рабочей документации. A=0.30, B=1.15",
+              "details": {
+                "ref_A": 0.3,
+                "ref_B": 1.15,
+                "table_code": "1701-0502-01",
+                "position": 6
+              }
+            },
+            {
+              "type": "calculation_deviation",
+              "severity": "critical",
+              "message": "Обнаружено значительное отклонение в расчетах: 4597.94 тыс.тг (99.86%). Допустимое отклонение: ≤5%.",
+              "details": {
+                "calculated": 6.431799999999999,
+                "claimed": 4604.37,
+                "deviation_amount": 4597.9382,
+                "deviation_percent": 99.86031096545238,
+                "tolerance": 5.0
+              }
+            }
+          ],
+          "calculation_breakdown": {
+            "base_cost": 6.43,
+            "coefficients_applied": [],
+            "final_cost": 6.43,
+            "formula_used": "(0.30 + 1.15 × 5.33) = 6.43 тыс.тг"
+          }
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "__с.Киши Шыган смета на ПИР ГСН изм_tabula_t2.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "f2a67601-d80f-433b-b106-42a99800faca",
+        "raw_input": {
+          "text_description": "Коэффициенты: Крп=2,97 - Коэффициент отношения к стоимости разработки рабочей документации «Рабочий проект» СЦП РК 8.03-01-2022 по разделу 1. таблица 1701-0502-01 пункт 1.",
+          "table_code_claimed": "1701-0502-01",
+          "position_number": 1,
+          "X_claimed": 0.3645,
+          "total_claimed": 99587.0,
+          "year": 2024,
+          "claimed_coefficients": [],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 373.0,
+          "ref_B": 0.0,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.2,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1701-0502-01-1"
+        },
+        "audit_verdict": {
+          "calculated_total": 447.6,
+          "is_approved": false,
+          "reason": "Deviation 99139.40 тыс.тг (99.55%)",
+          "discrepancies": [
+            {
+              "type": "constant_mismatch",
+              "severity": "critical",
+              "message": "Применены неверные постоянные величины стоимости разработки рабочей документации. A=373.00, B=0.00",
+              "details": {
+                "ref_A": 373.0,
+                "ref_B": 0.0,
+                "table_code": "1701-0502-01",
+                "position": 1
+              }
+            },
+            {
+              "type": "calculation_deviation",
+              "severity": "critical",
+              "message": "Обнаружено значительное отклонение в расчетах: 99139.40 тыс.тг (99.55%). Допустимое отклонение: ≤5%.",
+              "details": {
+                "calculated": 447.59999999999997,
+                "claimed": 99587.0,
+                "deviation_amount": 99139.4,
+                "deviation_percent": 99.5505437456696,
+                "tolerance": 5.0
+              }
+            }
+          ],
+          "calculation_breakdown": {
+            "base_cost": 373.0,
+            "coefficients_applied": [
+              {
+                "id": "k2_stage",
+                "value": 1.2,
+                "reason": "Коэффициент стадийности K2 (РП/РД)"
+              }
+            ],
+            "final_cost": 447.6,
+            "formula_used": "(373.00 + 0.00 × 0.36) × 1.20 = 447.60 тыс.тг"
+          }
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "_ПИР Келес__tabula_t1.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "42a671fd-c802-4d64-83a7-22b3ec6e793f",
+        "raw_input": {
+          "text_description": "Инженерно-геодезические изыскания. Рабочий проект",
+          "table_code_claimed": "1706-0201-01",
+          "position_number": 1,
+          "X_claimed": 1.0,
+          "total_claimed": 794916.6,
+          "year": 2024,
+          "claimed_coefficients": [],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 1345.0,
+          "ref_B": 4.48,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.21,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1706-0201-01-2"
+        },
+        "audit_verdict": {
+          "calculated_total": 1632.87,
+          "is_approved": false,
+          "reason": "Deviation 793283.73 тыс.тг (99.79%)",
+          "discrepancies": [
+            {
+              "type": "constant_mismatch",
+              "severity": "critical",
+              "message": "Применены неверные постоянные величины стоимости разработки рабочей документации. A=1345.00, B=4.48",
+              "details": {
+                "ref_A": 1345.0,
+                "ref_B": 4.48,
+                "table_code": "1706-0201-01",
+                "position": 1
+              }
+            },
+            {
+              "type": "calculation_deviation",
+              "severity": "critical",
+              "message": "Обнаружено значительное отклонение в расчетах: 793283.73 тыс.тг (99.79%). Допустимое отклонение: ≤5%.",
+              "details": {
+                "calculated": 1632.8708,
+                "claimed": 794916.6,
+                "deviation_amount": 793283.7292,
+                "deviation_percent": 99.7945858974388,
+                "tolerance": 5.0
+              }
+            }
+          ],
+          "calculation_breakdown": {
+            "base_cost": 1349.48,
+            "coefficients_applied": [
+              {
+                "id": "k2_stage",
+                "value": 1.21,
+                "reason": "Коэффициент стадийности K2 (РП/РД)"
+              }
+            ],
+            "final_cost": 1632.87,
+            "formula_used": "(1345.00 + 4.48 × 1.00) × 1.21 = 1632.87 тыс.тг"
+          }
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "_ПИР Келес__tabula_t2.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "eb7b73bc-46c3-405f-9937-540c3da15d87",
+        "raw_input": {
+          "text_description": "специальность (квалификация) количество одного исполнител я Всего | 1 2 3 4 5 6 7 8 9.0 | Итого по расценке 10 1 664 3413,94 5 680 79 6,16 | Итого оплата труда 5 680 796,16 | Стоимость проектных работ (Спр с Кзп=0,40) 14 201 990,40",
+          "table_code_claimed": "",
+          "position_number": 1,
+          "X_claimed": 0.0,
+          "total_claimed": 14201990.4,
+          "year": 2024,
+          "claimed_coefficients": [],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 0.0,
+          "ref_B": 0.0,
+          "range_min": 0.0,
+          "range_max": 0.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": 0.0,
+          "is_approved": false,
+          "reason": "Deviation 14201.99 тыс.тг (100.00%)",
+          "discrepancies": [
+            {
+              "type": "constant_mismatch",
+              "severity": "critical",
+              "message": "Применены неверные постоянные величины стоимости разработки рабочей документации. A=0.00, B=0.00",
+              "details": {
+                "ref_A": 0.0,
+                "ref_B": 0.0,
+                "table_code": "",
+                "position": 1
+              }
+            },
+            {
+              "type": "calculation_deviation",
+              "severity": "critical",
+              "message": "Обнаружено значительное отклонение в расчетах: 14201.99 тыс.тг (100.00%). Допустимое отклонение: ≤5%.",
+              "details": {
+                "calculated": 0.0,
+                "claimed": 14201.9904,
+                "deviation_amount": 14201.9904,
+                "deviation_percent": 100.0,
+                "tolerance": 5.0
+              }
+            }
+          ],
+          "calculation_breakdown": {
+            "base_cost": 0.0,
+            "coefficients_applied": [],
+            "final_cost": 0.0,
+            "formula_used": "(0.00 + 0.00 × 0.00) = 0.00 тыс.тг"
+          }
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "_ПИР Келес__tabula_t3.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 4 validation errors for ReferenceData\nref_A\n  Field required [type=missing, input_value={'position_number_coeffic...coefficient': 8.4573726}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nref_B\n  Field required [type=missing, input_value={'position_number_coeffic...coefficient': 8.4573726}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_min\n  Field required [type=missing, input_value={'position_number_coeffic...coefficient': 8.4573726}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_max\n  Field required [type=missing, input_value={'position_number_coeffic...coefficient': 8.4573726}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+    "error": "Crew execution failed: 4 validation errors for ReferenceData\nref_A\n  Field required [type=missing, input_value={'position_number_coeffic...coefficient': 8.4573726}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nref_B\n  Field required [type=missing, input_value={'position_number_coeffic...coefficient': 8.4573726}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_min\n  Field required [type=missing, input_value={'position_number_coeffic...coefficient': 8.4573726}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nrange_max\n  Field required [type=missing, input_value={'position_number_coeffic...coefficient': 8.4573726}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"
+  },
+  {
+    "filename": "_ПИР Келес__tabula_t4.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "a8bdb858-b0f4-43e5-959c-eb0fae4e1793",
+        "raw_input": {
+          "text_description": "СЦИ РК 8.03-04-2023, раздел 1 табл.4 (св. 100 до 300 км, св. 1 до 2 мес.) Проц. расхода = 21 Расходы по внешнему транспорту Расстояние, км: 250 км. Продолжитель ость экспедиции изысканий, мес : 2 Стоимость полевых изысканий и расходов по внутреннему транспорту (СЦИ, раздел 1), тенге : 455 971,98 * 21 / 100 95 754,12 | 4К5о5м9а7н1д.9и8ровки производственн ого персонала 120 000 + 0 + 0 120 000,00 | Итого с учетом дополнительных начислений 794 916,60 | НДС 12% 794 916,6 * 0,12 95 389,99 | Итого по смете 890 306,59",
+          "table_code_claimed": "",
+          "position_number": 1,
+          "X_claimed": 250.0,
+          "total_claimed": 890306.59,
+          "year": 2024,
+          "claimed_coefficients": [],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 517.5,
+          "ref_B": -0.2,
+          "range_min": 200.0,
+          "range_max": 300.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": null,
+              "value": 517.5,
+              "reason": null
+            },
+            {
+              "id": null,
+              "value": -0.2,
+              "reason": null
+            }
+          ],
+          "source_position_id": "1"
+        },
+        "audit_verdict": {
+          "calculated_total": 467.5,
+          "is_approved": false,
+          "reason": "Deviation 889839.09 тыс.тг (99.95%)",
+          "discrepancies": [
+            {
+              "type": "constant_mismatch",
+              "severity": "critical",
+              "message": "Применены неверные постоянные величины стоимости разработки рабочей документации. A=517.50, B=-0.20",
+              "details": {
+                "ref_A": 517.5,
+                "ref_B": -0.2,
+                "table_code": "",
+                "position": 1
+              }
+            },
+            {
+              "type": "calculation_deviation",
+              "severity": "critical",
+              "message": "Обнаружено значительное отклонение в расчетах: 889839.09 тыс.тг (99.95%). Допустимое отклонение: ≤5%.",
+              "details": {
+                "calculated": 467.5,
+                "claimed": 890306.59,
+                "deviation_amount": 889839.09,
+                "deviation_percent": 99.94748999892273,
+                "tolerance": 5.0
+              }
+            }
+          ],
+          "calculation_breakdown": {
+            "base_cost": 467.5,
+            "coefficients_applied": [],
+            "final_cost": 467.5,
+            "formula_used": "(517.50 + -0.20 × 250.00) = 467.50 тыс.тг"
+          }
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "_ПИР Келес__tabula_t5.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 1 validation error for RawInput\n  Invalid JSON: trailing characters at line 11 column 1 [type=json_invalid, input_value='{\\n  \"text_description\":...\"extracted_tags\": []\\n}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid",
+    "error": "Crew execution failed: 1 validation error for RawInput\n  Invalid JSON: trailing characters at line 11 column 1 [type=json_invalid, input_value='{\\n  \"text_description\":...\"extracted_tags\": []\\n}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid"
+  },
+  {
+    "filename": "_ПИР Келес__tabula_t6.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 1 validation error for RawInput\n  Invalid JSON: trailing characters at line 11 column 1 [type=json_invalid, input_value='{\\n  \"text_description\":...\"extracted_tags\": []\\n}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid",
+    "error": "Crew execution failed: 1 validation error for RawInput\n  Invalid JSON: trailing characters at line 11 column 1 [type=json_invalid, input_value='{\\n  \"text_description\":...\"extracted_tags\": []\\n}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid"
+  },
+  {
+    "filename": "_ПИР Келес__tabula_t7.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 1 validation error for ReferenceData\n  Invalid JSON: key must be a string at line 1 column 2 [type=json_invalid, input_value='{Estimated Outcome} = 31...inal Estimated Outcome}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid",
+    "error": "Crew execution failed: 1 validation error for ReferenceData\n  Invalid JSON: key must be a string at line 1 column 2 [type=json_invalid, input_value='{Estimated Outcome} = 31...inal Estimated Outcome}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid"
+  },
+  {
+    "filename": "АГЗС ПИР_tabula_t1.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "66622787-e21e-45fd-96b9-3a8a13e00994",
+        "raw_input": {
+          "text_description": "...",
+          "table_code_claimed": "1706-0201-01",
+          "position_number": 7,
+          "X_claimed": 0.0,
+          "total_claimed": 52690700.0,
+          "year": 2023,
+          "claimed_coefficients": [
+            {
+              "id": "K3",
+              "value": 1.2,
+              "reason": null
+            },
+            {
+              "id": "K4",
+              "value": 1.2,
+              "reason": null
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 10637.0,
+          "ref_B": 3.16,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.2,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1706-0201-01-7"
+        },
+        "audit_verdict": {
+          "calculated_total": 18380.74,
+          "is_approved": false,
+          "reason": "Deviation 34309.96 тыс.тг (65.12%)",
+          "discrepancies": [
+            {
+              "type": "constant_mismatch",
+              "severity": "critical",
+              "message": "Применены неверные постоянные величины стоимости разработки рабочей документации. A=10637.00, B=3.16",
+              "details": {
+                "ref_A": 10637.0,
+                "ref_B": 3.16,
+                "table_code": "1706-0201-01",
+                "position": 7
+              }
+            },
+            {
+              "type": "calculation_deviation",
+              "severity": "critical",
+              "message": "Обнаружено значительное отклонение в расчетах: 34309.96 тыс.тг (65.12%). Допустимое отклонение: ≤5%.",
+              "details": {
+                "calculated": 18380.736,
+                "claimed": 52690.7,
+                "deviation_amount": 34309.96399999999,
+                "deviation_percent": 65.11578703642198,
+                "tolerance": 5.0
+              }
+            }
+          ],
+          "calculation_breakdown": {
+            "base_cost": 10637.0,
+            "coefficients_applied": [
+              {
+                "id": "k2_stage",
+                "value": 1.2,
+                "reason": "Коэффициент стадийности K2 (РП/РД)"
+              },
+              {
+                "id": "K3",
+                "value": 1.2,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "K4",
+                "value": 1.2,
+                "reason": "Коэффициент из сметы"
+              }
+            ],
+            "final_cost": 18380.74,
+            "formula_used": "(10637.00 + 3.16 × 0.00) × 1.20 × 1.20 × 1.20 = 18380.74 тыс.тг"
+          }
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "АГЗС ПИР_tabula_t2.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "2c056f0e-0d72-40d5-8e8f-a0be8c89593f",
+        "raw_input": {
+          "text_description": "Автомобильная газозаправочная станция производительностью свыше 10000 до 20000 тонн газа в год (А + B* (0.4 * Хмин + 0.6 * Х)) * КС * ПРОЦ",
+          "table_code_claimed": "1701-0503-01",
+          "position_number": 1,
+          "X_claimed": 580.0,
+          "total_claimed": 5507.4,
+          "year": 2024,
+          "claimed_coefficients": [
+            {
+              "id": "KС",
+              "value": 1.15,
+              "reason": null
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 4901.0,
+          "ref_B": 2.0,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.15,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1701-0503-01-1"
+        },
+        "audit_verdict": {
+          "calculated_total": 8015.67,
+          "is_approved": false,
+          "reason": "Deviation 2508.27 тыс.тг (45.54%)",
+          "discrepancies": [
+            {
+              "type": "constant_mismatch",
+              "severity": "critical",
+              "message": "Применены неверные постоянные величины стоимости разработки рабочей документации. A=4901.00, B=2.00",
+              "details": {
+                "ref_A": 4901.0,
+                "ref_B": 2.0,
+                "table_code": "1701-0503-01",
+                "position": 1
+              }
+            },
+            {
+              "type": "calculation_deviation",
+              "severity": "critical",
+              "message": "Обнаружено значительное отклонение в расчетах: 2508.27 тыс.тг (45.54%). Допустимое отклонение: ≤5%.",
+              "details": {
+                "calculated": 8015.672499999999,
+                "claimed": 5507.4,
+                "deviation_amount": 2508.272499999999,
+                "deviation_percent": 45.54367759741437,
+                "tolerance": 5.0
+              }
+            }
+          ],
+          "calculation_breakdown": {
+            "base_cost": 6061.0,
+            "coefficients_applied": [
+              {
+                "id": "k2_stage",
+                "value": 1.15,
+                "reason": "Коэффициент стадийности K2 (РП/РД)"
+              },
+              {
+                "id": "KС",
+                "value": 1.15,
+                "reason": "Коэффициент из сметы"
+              }
+            ],
+            "final_cost": 8015.67,
+            "formula_used": "(4901.00 + 2.00 × 580.00) × 1.15 × 1.15 = 8015.67 тыс.тг"
+          }
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "АГЗС ПИР_tabula_t3.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "493fe594-fc2b-42b9-92b2-3e0b9eb749e9",
+        "raw_input": {
+          "text_description": "...",
+          "table_code_claimed": "1706-0201-01",
+          "position_number": 7,
+          "X_claimed": 0.0,
+          "total_claimed": 52690700.0,
+          "year": 2023,
+          "claimed_coefficients": [
+            {
+              "id": "K3",
+              "value": 1.2,
+              "reason": null
+            },
+            {
+              "id": "K4",
+              "value": 1.2,
+              "reason": null
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 10637.0,
+          "ref_B": 3.16,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.2,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1706-0201-01-7"
+        },
+        "audit_verdict": {
+          "calculated_total": 18380.74,
+          "is_approved": false,
+          "reason": "Deviation 34309.96 тыс.тг (65.12%)",
+          "discrepancies": [
+            {
+              "type": "constant_mismatch",
+              "severity": "critical",
+              "message": "Применены неверные постоянные величины стоимости разработки рабочей документации. A=10637.00, B=3.16",
+              "details": {
+                "ref_A": 10637.0,
+                "ref_B": 3.16,
+                "table_code": "1706-0201-01",
+                "position": 7
+              }
+            },
+            {
+              "type": "calculation_deviation",
+              "severity": "critical",
+              "message": "Обнаружено значительное отклонение в расчетах: 34309.96 тыс.тг (65.12%). Допустимое отклонение: ≤5%.",
+              "details": {
+                "calculated": 18380.736,
+                "claimed": 52690.7,
+                "deviation_amount": 34309.96399999999,
+                "deviation_percent": 65.11578703642198,
+                "tolerance": 5.0
+              }
+            }
+          ],
+          "calculation_breakdown": {
+            "base_cost": 10637.0,
+            "coefficients_applied": [
+              {
+                "id": "k2_stage",
+                "value": 1.2,
+                "reason": "Коэффициент стадийности K2 (РП/РД)"
+              },
+              {
+                "id": "K3",
+                "value": 1.2,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "K4",
+                "value": 1.2,
+                "reason": "Коэффициент из сметы"
+              }
+            ],
+            "final_cost": 18380.74,
+            "formula_used": "(10637.00 + 3.16 × 0.00) × 1.20 × 1.20 × 1.20 = 18380.74 тыс.тг"
+          }
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "Жалгызагаш Расчет предел стоим_tabula_t1.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "cbab3456-ce28-40a6-a6cf-b08f833ebf2f",
+        "raw_input": {
+          "text_description": "объект-аналог (в стоимость включены прочие затраты заказчика, без НДС)",
+          "table_code_claimed": "1706-0201-01",
+          "position_number": 1,
+          "X_claimed": 0.0,
+          "total_claimed": 416197.321,
+          "year": 2024,
+          "claimed_coefficients": [],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 10.5,
+          "ref_B": 20.3,
+          "range_min": 0.0,
+          "range_max": 100.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": null,
+              "value": 1.5,
+              "reason": null
+            }
+          ],
+          "source_position_id": "1"
+        },
+        "audit_verdict": {
+          "calculated_total": 15.75,
+          "is_approved": false,
+          "reason": "Deviation 416181.57 тыс.тг (100.00%)",
+          "discrepancies": [
+            {
+              "type": "constant_mismatch",
+              "severity": "critical",
+              "message": "Применены неверные постоянные величины стоимости разработки рабочей документации. A=10.50, B=20.30",
+              "details": {
+                "ref_A": 10.5,
+                "ref_B": 20.3,
+                "table_code": "1706-0201-01",
+                "position": 1
+              }
+            },
+            {
+              "type": "calculation_deviation",
+              "severity": "critical",
+              "message": "Обнаружено значительное отклонение в расчетах: 416181.57 тыс.тг (100.00%). Допустимое отклонение: ≤5%.",
+              "details": {
+                "calculated": 15.75,
+                "claimed": 416197.321,
+                "deviation_amount": 416181.571,
+                "deviation_percent": 99.99621573729446,
+                "tolerance": 5.0
+              }
+            }
+          ],
+          "calculation_breakdown": {
+            "base_cost": 10.5,
+            "coefficients_applied": [
+              {
+                "id": "K",
+                "value": 1.5,
+                "reason": "Коэффициент из сметы"
+              }
+            ],
+            "final_cost": 15.75,
+            "formula_used": "(10.50 + 20.30 × 0.00) × 1.50 = 15.75 тыс.тг"
+          }
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "П5. Расчет стоимости проектных (проектно-изыскательных) работ_tabula_t1.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "fde5c7ba-4d2d-4182-aa2e-89f02aefca39",
+        "raw_input": {
+          "text_description": "Водозаборы из подземных источников (скважин), производительностью от 25,00 до 200,00 м3/ч Количество (N): 18",
+          "table_code_claimed": "1708-0101-02",
+          "position_number": 1,
+          "X_claimed": 21000.0,
+          "total_claimed": 982000.0,
+          "year": 2023,
+          "claimed_coefficients": [
+            {
+              "id": "KС1",
+              "value": 0.27,
+              "reason": null
+            },
+            {
+              "id": "KС2",
+              "value": 1.0,
+              "reason": null
+            },
+            {
+              "id": "KС3",
+              "value": 0.2,
+              "reason": null
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 2982.0,
+          "ref_B": 21.0,
+          "range_min": 0.0,
+          "range_max": 99999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.12,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1708-0101-02-1"
+        },
+        "audit_verdict": {
+          "calculated_total": 26852.03,
+          "is_approved": false,
+          "reason": "Deviation 955147.97 тыс.тг (97.27%)",
+          "discrepancies": [
+            {
+              "type": "constant_mismatch",
+              "severity": "critical",
+              "message": "Применены неверные постоянные величины стоимости разработки рабочей документации. A=2982.00, B=21.00",
+              "details": {
+                "ref_A": 2982.0,
+                "ref_B": 21.0,
+                "table_code": "1708-0101-02",
+                "position": 1
+              }
+            },
+            {
+              "type": "coefficient_unusual",
+              "severity": "warning",
+              "message": "Применен необычный коэффициент KС1=0.27. Стандартные значения находятся в диапазоне 0.5-3.0.",
+              "details": {
+                "coefficient_id": "KС1",
+                "value": 0.27,
+                "reason": null
+              }
+            },
+            {
+              "type": "coefficient_unusual",
+              "severity": "warning",
+              "message": "Применен необычный коэффициент KС3=0.2. Стандартные значения находятся в диапазоне 0.5-3.0.",
+              "details": {
+                "coefficient_id": "KС3",
+                "value": 0.2,
+                "reason": null
+              }
+            },
+            {
+              "type": "calculation_deviation",
+              "severity": "critical",
+              "message": "Обнаружено значительное отклонение в расчетах: 955147.97 тыс.тг (97.27%). Допустимое отклонение: ≤5%.",
+              "details": {
+                "calculated": 26852.031360000004,
+                "claimed": 982000.0,
+                "deviation_amount": 955147.96864,
+                "deviation_percent": 97.26557725458248,
+                "tolerance": 5.0
+              }
+            }
+          ],
+          "calculation_breakdown": {
+            "base_cost": 443982.0,
+            "coefficients_applied": [
+              {
+                "id": "k2_stage",
+                "value": 1.12,
+                "reason": "Коэффициент стадийности K2 (РП/РД)"
+              },
+              {
+                "id": "KС1",
+                "value": 0.27,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "KС2",
+                "value": 1.0,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "KС3",
+                "value": 0.2,
+                "reason": "Коэффициент из сметы"
+              }
+            ],
+            "final_cost": 26852.03,
+            "formula_used": "(2982.00 + 21.00 × 21000.00) × 1.12 × 0.27 × 1.00 × 0.20 = 26852.03 тыс.тг"
+          }
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "П5. Расчет стоимости проектных (проектно-изыскательных) работ_tabula_t2.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "05060f1d-77fc-40c5-84e5-d1d74d37ec2f",
+        "raw_input": {
+          "text_description": "Резервуары для воды емкостью от 2000,00 до 6000,00 м3",
+          "table_code_claimed": "1708-0101-05",
+          "position_number": 10,
+          "X_claimed": 5000.0,
+          "total_claimed": 906000.0,
+          "year": 2024,
+          "claimed_coefficients": [
+            {
+              "id": "KС1",
+              "value": 0.43,
+              "reason": null
+            },
+            {
+              "id": "KС2",
+              "value": 1.0,
+              "reason": null
+            },
+            {
+              "id": "KС3",
+              "value": 0.2,
+              "reason": null
+            },
+            {
+              "id": "P1",
+              "value": 1.2,
+              "reason": null
+            },
+            {
+              "id": "P2",
+              "value": 1.1,
+              "reason": null
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 2187.0,
+          "ref_B": 0.45,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.19,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1708-0101-05-10"
+        },
+        "audit_verdict": {
+          "calculated_total": 599.39,
+          "is_approved": false,
+          "reason": "Deviation 905400.61 тыс.тг (99.93%)",
+          "discrepancies": [
+            {
+              "type": "constant_mismatch",
+              "severity": "critical",
+              "message": "Применены неверные постоянные величины стоимости разработки рабочей документации. A=2187.00, B=0.45",
+              "details": {
+                "ref_A": 2187.0,
+                "ref_B": 0.45,
+                "table_code": "1708-0101-05",
+                "position": 10
+              }
+            },
+            {
+              "type": "coefficient_unusual",
+              "severity": "warning",
+              "message": "Применен необычный коэффициент KС1=0.43. Стандартные значения находятся в диапазоне 0.5-3.0.",
+              "details": {
+                "coefficient_id": "KС1",
+                "value": 0.43,
+                "reason": null
+              }
+            },
+            {
+              "type": "coefficient_unusual",
+              "severity": "warning",
+              "message": "Применен необычный коэффициент KС3=0.2. Стандартные значения находятся в диапазоне 0.5-3.0.",
+              "details": {
+                "coefficient_id": "KС3",
+                "value": 0.2,
+                "reason": null
+              }
+            },
+            {
+              "type": "calculation_deviation",
+              "severity": "critical",
+              "message": "Обнаружено значительное отклонение в расчетах: 905400.61 тыс.тг (99.93%). Допустимое отклонение: ≤5%.",
+              "details": {
+                "calculated": 599.3890055999999,
+                "claimed": 906000.0,
+                "deviation_amount": 905400.6109944,
+                "deviation_percent": 99.93384227311259,
+                "tolerance": 5.0
+              }
+            }
+          ],
+          "calculation_breakdown": {
+            "base_cost": 4437.0,
+            "coefficients_applied": [
+              {
+                "id": "k2_stage",
+                "value": 1.19,
+                "reason": "Коэффициент стадийности K2 (РП/РД)"
+              },
+              {
+                "id": "KС1",
+                "value": 0.43,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "KС2",
+                "value": 1.0,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "KС3",
+                "value": 0.2,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "P1",
+                "value": 1.2,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "P2",
+                "value": 1.1,
+                "reason": "Коэффициент из сметы"
+              }
+            ],
+            "final_cost": 599.39,
+            "formula_used": "(2187.00 + 0.45 × 5000.00) × 1.19 × 0.43 × 1.00 × 0.20 × 1.20 × 1.10 = 599.39 тыс.тг"
+          }
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "П5. Расчет стоимости проектных (проектно-изыскательных) работ_tabula_t3.json",
+    "status": "failed",
+    "http_code": 400,
+    "response": "Crew execution failed: 1 validation error for ReferenceData\n  Invalid JSON: key must be a string at line 1 column 2 [type=json_invalid, input_value='{Number of Reference Uni...stimated_cost\": 1092\\n}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid",
+    "error": "Crew execution failed: 1 validation error for ReferenceData\n  Invalid JSON: key must be a string at line 1 column 2 [type=json_invalid, input_value='{Number of Reference Uni...stimated_cost\": 1092\\n}', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid"
+  },
+  {
+    "filename": "П5. Расчет стоимости проектных (проектно-изыскательных) работ_tabula_t4.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "33ea1799-5f29-4a86-b603-22eab790a2dd",
+        "raw_input": {
+          "text_description": "Канализационна я насосная станция перекачки бытовых сточных вод или неагрессивных и невзрывоопасны х производственн ых сточных вод, производительн остью от 50,00 до 500,00 м3/ч",
+          "table_code_claimed": "1708-0101-09",
+          "position_number": 1,
+          "X_claimed": 1.0,
+          "total_claimed": 4040000.0,
+          "year": 2023,
+          "claimed_coefficients": [
+            {
+              "id": "P1",
+              "value": 1.2,
+              "reason": null
+            },
+            {
+              "id": "P2",
+              "value": 1.1,
+              "reason": null
+            },
+            {
+              "id": "KС1",
+              "value": 0.29,
+              "reason": null
+            },
+            {
+              "id": "KС2",
+              "value": 1.0,
+              "reason": null
+            },
+            {
+              "id": "KС3",
+              "value": 0.2,
+              "reason": null
+            },
+            {
+              "id": "K1",
+              "value": 1.1,
+              "reason": null
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 4404.0,
+          "ref_B": 5.91,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.13,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1708-0101-09-1"
+        },
+        "audit_verdict": {
+          "calculated_total": 381.51,
+          "is_approved": false,
+          "reason": "Deviation 3658.49 тыс.тг (90.56%)",
+          "discrepancies": [
+            {
+              "type": "constant_mismatch",
+              "severity": "critical",
+              "message": "Применены неверные постоянные величины стоимости разработки рабочей документации. A=4404.00, B=5.91",
+              "details": {
+                "ref_A": 4404.0,
+                "ref_B": 5.91,
+                "table_code": "1708-0101-09",
+                "position": 1
+              }
+            },
+            {
+              "type": "coefficient_unusual",
+              "severity": "warning",
+              "message": "Применен необычный коэффициент KС1=0.29. Стандартные значения находятся в диапазоне 0.5-3.0.",
+              "details": {
+                "coefficient_id": "KС1",
+                "value": 0.29,
+                "reason": null
+              }
+            },
+            {
+              "type": "coefficient_unusual",
+              "severity": "warning",
+              "message": "Применен необычный коэффициент KС3=0.2. Стандартные значения находятся в диапазоне 0.5-3.0.",
+              "details": {
+                "coefficient_id": "KС3",
+                "value": 0.2,
+                "reason": null
+              }
+            },
+            {
+              "type": "calculation_deviation",
+              "severity": "critical",
+              "message": "Обнаружено значительное отклонение в расчетах: 3658.49 тыс.тг (90.56%). Допустимое отклонение: ≤5%.",
+              "details": {
+                "calculated": 381.51366184799997,
+                "claimed": 4040.0,
+                "deviation_amount": 3658.486338152,
+                "deviation_percent": 90.55659252851484,
+                "tolerance": 5.0
+              }
+            }
+          ],
+          "calculation_breakdown": {
+            "base_cost": 4409.91,
+            "coefficients_applied": [
+              {
+                "id": "k2_stage",
+                "value": 1.13,
+                "reason": "Коэффициент стадийности K2 (РП/РД)"
+              },
+              {
+                "id": "P1",
+                "value": 1.2,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "P2",
+                "value": 1.1,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "KС1",
+                "value": 0.29,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "KС2",
+                "value": 1.0,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "KС3",
+                "value": 0.2,
+                "reason": "Коэффициент из сметы"
+              }
+            ],
+            "final_cost": 381.51,
+            "formula_used": "(4404.00 + 5.91 × 1.00) × 1.13 × 1.20 × 1.10 × 0.29 × 1.00 × 0.20 = 381.51 тыс.тг"
+          }
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "П5. Расчет стоимости проектных (проектно-изыскательных) работ_tabula_t5.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "a7432cad-2f1c-42ac-a1e8-ee840a976be9",
+        "raw_input": {
+          "text_description": "от 100 до 500 м3/ч (Коэф. на проект) KС2 = 1,00 (Коэф. на рабочую документацию) KС3 = 0,20 (Коэф. на предпроектные работы, НДЦС РК 8.01-08-2022, п.10.4) К1=1,10 (Общ.полож.по прим.цен на проектные работы для стр-ва, прил.Б, табл.Б.1). | Итого по смете 47 295 699 | НДС 12% 47 295 699,0 * 0,12 5 675 484 | Итого по смете 52 971 183",
+          "table_code_claimed": "",
+          "position_number": 0,
+          "X_claimed": 0.0,
+          "total_claimed": 52971183.0,
+          "year": 2024,
+          "claimed_coefficients": [
+            {
+              "id": "KС2",
+              "value": 1.0,
+              "reason": null
+            },
+            {
+              "id": "KС3",
+              "value": 0.2,
+              "reason": null
+            }
+          ],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 10.5,
+          "ref_B": 20.3,
+          "range_min": 0.0,
+          "range_max": 100.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": null,
+              "value": 1.5,
+              "reason": null
+            },
+            {
+              "id": null,
+              "value": 2.0,
+              "reason": null
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": 6.3,
+          "is_approved": false,
+          "reason": "Deviation 52964.88 тыс.тг (99.99%)",
+          "discrepancies": [
+            {
+              "type": "constant_mismatch",
+              "severity": "critical",
+              "message": "Применены неверные постоянные величины стоимости разработки рабочей документации. A=10.50, B=20.30",
+              "details": {
+                "ref_A": 10.5,
+                "ref_B": 20.3,
+                "table_code": "",
+                "position": 0
+              }
+            },
+            {
+              "type": "coefficient_unusual",
+              "severity": "warning",
+              "message": "Применен необычный коэффициент KС3=0.2. Стандартные значения находятся в диапазоне 0.5-3.0.",
+              "details": {
+                "coefficient_id": "KС3",
+                "value": 0.2,
+                "reason": null
+              }
+            },
+            {
+              "type": "calculation_deviation",
+              "severity": "critical",
+              "message": "Обнаружено значительное отклонение в расчетах: 52964.88 тыс.тг (99.99%). Допустимое отклонение: ≤5%.",
+              "details": {
+                "calculated": 6.300000000000001,
+                "claimed": 52971.183,
+                "deviation_amount": 52964.882999999994,
+                "deviation_percent": 99.98810674098027,
+                "tolerance": 5.0
+              }
+            }
+          ],
+          "calculation_breakdown": {
+            "base_cost": 10.5,
+            "coefficients_applied": [
+              {
+                "id": "K",
+                "value": 1.5,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "K",
+                "value": 2.0,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "KС2",
+                "value": 1.0,
+                "reason": "Коэффициент из сметы"
+              },
+              {
+                "id": "KС3",
+                "value": 0.2,
+                "reason": "Коэффициент из сметы"
+              }
+            ],
+            "final_cost": 6.3,
+            "formula_used": "(10.50 + 20.30 × 0.00) × 1.50 × 2.00 × 1.00 × 0.20 = 6.30 тыс.тг"
+          }
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "ПИР  оконч_tabula_t1.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "65fb996d-7815-479c-9cf0-f26850f6bc98",
+        "raw_input": {
+          "text_description": "1.0 СМЕТА No 2025/02 Проектные работы 18 976 572.030",
+          "table_code_claimed": "",
+          "position_number": 1,
+          "X_claimed": 0.0,
+          "total_claimed": 18976572.03,
+          "year": 2024,
+          "claimed_coefficients": [],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 1.0,
+          "ref_B": 0.0,
+          "range_min": 0.0,
+          "range_max": 18976572.03,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": null,
+              "value": null,
+              "reason": null
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": 1.0,
+          "is_approved": false,
+          "reason": "Deviation 18975.57 тыс.тг (99.99%)",
+          "discrepancies": [
+            {
+              "type": "constant_mismatch",
+              "severity": "critical",
+              "message": "Применены неверные постоянные величины стоимости разработки рабочей документации. A=1.00, B=0.00",
+              "details": {
+                "ref_A": 1.0,
+                "ref_B": 0.0,
+                "table_code": "",
+                "position": 1
+              }
+            },
+            {
+              "type": "calculation_deviation",
+              "severity": "critical",
+              "message": "Обнаружено значительное отклонение в расчетах: 18975.57 тыс.тг (99.99%). Допустимое отклонение: ≤5%.",
+              "details": {
+                "calculated": 1.0,
+                "claimed": 18976.572030000003,
+                "deviation_amount": 18975.572030000003,
+                "deviation_percent": 99.99473034435081,
+                "tolerance": 5.0
+              }
+            }
+          ],
+          "calculation_breakdown": {
+            "base_cost": 1.0,
+            "coefficients_applied": [],
+            "final_cost": 1.0,
+            "formula_used": "(1.00 + 0.00 × 0.00) = 1.00 тыс.тг"
+          }
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "ПИР  оконч_tabula_t2.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "cd70f66d-fb5b-4314-9af5-55b257ea2943",
+        "raw_input": {
+          "text_description": "Здания жилые многоквартирные: Шести- девятиэтажные Основной показатель: 3960.18 (1 м2 общей площади основных помещений и зданий) где Xзад=3960.18 м2 - значение показателя Общая площадь здания - 5537,66 м2 Общая площадь техподполья 666,8м2 Общая площадь технического этажа -705,6 м2",
+          "table_code_claimed": "1706-0201-01",
+          "position_number": 6,
+          "X_claimed": 3960.18,
+          "total_claimed": 18976.572,
+          "year": 2024,
+          "claimed_coefficients": [],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 8029.0,
+          "ref_B": 3.69,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.21,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1706-0201-01-6"
+        },
+        "audit_verdict": {
+          "calculated_total": 27396.9,
+          "is_approved": false,
+          "reason": "Deviation 8420.33 тыс.тг (44.37%)",
+          "discrepancies": [
+            {
+              "type": "constant_mismatch",
+              "severity": "critical",
+              "message": "Применены неверные постоянные величины стоимости разработки рабочей документации. A=8029.00, B=3.69",
+              "details": {
+                "ref_A": 8029.0,
+                "ref_B": 3.69,
+                "table_code": "1706-0201-01",
+                "position": 6
+              }
+            },
+            {
+              "type": "calculation_deviation",
+              "severity": "critical",
+              "message": "Обнаружено значительное отклонение в расчетах: 8420.33 тыс.тг (44.37%). Допустимое отклонение: ≤5%.",
+              "details": {
+                "calculated": 27396.897682,
+                "claimed": 18976.572,
+                "deviation_amount": 8420.325681999999,
+                "deviation_percent": 44.37221686825207,
+                "tolerance": 5.0
+              }
+            }
+          ],
+          "calculation_breakdown": {
+            "base_cost": 22642.06,
+            "coefficients_applied": [
+              {
+                "id": "k2_stage",
+                "value": 1.21,
+                "reason": "Коэффициент стадийности K2 (РП/РД)"
+              }
+            ],
+            "final_cost": 27396.9,
+            "formula_used": "(8029.00 + 3.69 × 3960.18) × 1.21 = 27396.90 тыс.тг"
+          }
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "ПИР (1)_tabula_t1.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "079fd540-8a6e-4d78-807b-ca105b3ec75f",
+        "raw_input": {
+          "text_description": "Капитальный ремонт здания судебно-медицинской экспертизы, морга 475 м3",
+          "table_code_claimed": "1706-0501-01",
+          "position_number": 5,
+          "X_claimed": 3582.0,
+          "total_claimed": 2570.067,
+          "year": 2024,
+          "claimed_coefficients": [],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 46194.0,
+          "ref_B": 3.34,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.15,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1706-0501-01-1"
+        },
+        "audit_verdict": {
+          "calculated_total": 66881.56,
+          "is_approved": false,
+          "reason": "Deviation 64311.49 тыс.тг (2502.33%)",
+          "discrepancies": [
+            {
+              "type": "constant_mismatch",
+              "severity": "critical",
+              "message": "Применены неверные постоянные величины стоимости разработки рабочей документации. A=46194.00, B=3.34",
+              "details": {
+                "ref_A": 46194.0,
+                "ref_B": 3.34,
+                "table_code": "1706-0501-01",
+                "position": 5
+              }
+            },
+            {
+              "type": "calculation_deviation",
+              "severity": "critical",
+              "message": "Обнаружено значительное отклонение в расчетах: 64311.49 тыс.тг (2502.33%). Допустимое отклонение: ≤5%.",
+              "details": {
+                "calculated": 66881.56199999999,
+                "claimed": 2570.067,
+                "deviation_amount": 64311.49499999999,
+                "deviation_percent": 2502.327565779413,
+                "tolerance": 5.0
+              }
+            }
+          ],
+          "calculation_breakdown": {
+            "base_cost": 58157.88,
+            "coefficients_applied": [
+              {
+                "id": "k2_stage",
+                "value": 1.15,
+                "reason": "Коэффициент стадийности K2 (РП/РД)"
+              }
+            ],
+            "final_cost": 66881.56,
+            "formula_used": "(46194.00 + 3.34 × 3582.00) × 1.15 = 66881.56 тыс.тг"
+          }
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "ПИР (10)_tabula_t1.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "0e046d0a-512e-427e-8ead-cd5104224fe6",
+        "raw_input": {
+          "text_description": "опоры радиорелейной линии связи, высотой от 12 до 125 м 1 м по высоте опоры",
+          "table_code_claimed": "1705-0401-16",
+          "position_number": 2,
+          "X_claimed": 60.0,
+          "total_claimed": 987.503,
+          "year": 2024,
+          "claimed_coefficients": [],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 1040.0,
+          "ref_B": 7.0,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.06,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1705-0401-16-1"
+        },
+        "audit_verdict": {
+          "calculated_total": 1547.6,
+          "is_approved": false,
+          "reason": "Deviation 560.10 тыс.тг (56.72%)",
+          "discrepancies": [
+            {
+              "type": "constant_mismatch",
+              "severity": "critical",
+              "message": "Применены неверные постоянные величины стоимости разработки рабочей документации. A=1040.00, B=7.00",
+              "details": {
+                "ref_A": 1040.0,
+                "ref_B": 7.0,
+                "table_code": "1705-0401-16",
+                "position": 2
+              }
+            },
+            {
+              "type": "calculation_deviation",
+              "severity": "critical",
+              "message": "Обнаружено значительное отклонение в расчетах: 560.10 тыс.тг (56.72%). Допустимое отклонение: ≤5%.",
+              "details": {
+                "calculated": 1547.6000000000001,
+                "claimed": 987.503,
+                "deviation_amount": 560.0970000000001,
+                "deviation_percent": 56.71851123490258,
+                "tolerance": 5.0
+              }
+            }
+          ],
+          "calculation_breakdown": {
+            "base_cost": 1460.0,
+            "coefficients_applied": [
+              {
+                "id": "k2_stage",
+                "value": 1.06,
+                "reason": "Коэффициент стадийности K2 (РП/РД)"
+              }
+            ],
+            "final_cost": 1547.6,
+            "formula_used": "(1040.00 + 7.00 × 60.00) × 1.06 = 1547.60 тыс.тг"
+          }
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "ПИР (10)_tabula_t2.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "a2fae0c0-7b24-4f88-b514-0a4d94e5a0c1",
+        "raw_input": {
+          "text_description": "Инженерно- геологические изыскания",
+          "table_code_claimed": "1706-0201-01",
+          "position_number": 1,
+          "X_claimed": 452.479,
+          "total_claimed": 1452479.0,
+          "year": 2024,
+          "claimed_coefficients": [],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 1345.0,
+          "ref_B": 4.48,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.21,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1706-0201-01-2"
+        },
+        "audit_verdict": {
+          "calculated_total": 4080.25,
+          "is_approved": false,
+          "reason": "Deviation 2627.77 тыс.тг (180.92%)",
+          "discrepancies": [
+            {
+              "type": "constant_mismatch",
+              "severity": "critical",
+              "message": "Применены неверные постоянные величины стоимости разработки рабочей документации. A=1345.00, B=4.48",
+              "details": {
+                "ref_A": 1345.0,
+                "ref_B": 4.48,
+                "table_code": "1706-0201-01",
+                "position": 1
+              }
+            },
+            {
+              "type": "calculation_deviation",
+              "severity": "critical",
+              "message": "Обнаружено значительное отклонение в расчетах: 2627.77 тыс.тг (180.92%). Допустимое отклонение: ≤5%.",
+              "details": {
+                "calculated": 4080.2481632,
+                "claimed": 1452.479,
+                "deviation_amount": 2627.7691631999996,
+                "deviation_percent": 180.91615529036906,
+                "tolerance": 5.0
+              }
+            }
+          ],
+          "calculation_breakdown": {
+            "base_cost": 3372.11,
+            "coefficients_applied": [
+              {
+                "id": "k2_stage",
+                "value": 1.21,
+                "reason": "Коэффициент стадийности K2 (РП/РД)"
+              }
+            ],
+            "final_cost": 4080.25,
+            "formula_used": "(1345.00 + 4.48 × 452.48) × 1.21 = 4080.25 тыс.тг"
+          }
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "ПИР (10)_tabula_t3.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "e1c39e2f-8c9a-4dc5-a216-a82706e45b96",
+        "raw_input": {
+          "text_description": "Опоры радиорелейной линии связи, высотой от 12 до 125 м",
+          "table_code_claimed": "1706-0201-01",
+          "position_number": 1,
+          "X_claimed": 987.503,
+          "total_claimed": 987503.0,
+          "year": 2024,
+          "claimed_coefficients": [],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 1345.0,
+          "ref_B": 4.48,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.21,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1706-0201-01-2"
+        },
+        "audit_verdict": {
+          "calculated_total": 6980.51,
+          "is_approved": false,
+          "reason": "Deviation 980522.49 тыс.тг (99.29%)",
+          "discrepancies": [
+            {
+              "type": "constant_mismatch",
+              "severity": "critical",
+              "message": "Применены неверные постоянные величины стоимости разработки рабочей документации. A=1345.00, B=4.48",
+              "details": {
+                "ref_A": 1345.0,
+                "ref_B": 4.48,
+                "table_code": "1706-0201-01",
+                "position": 1
+              }
+            },
+            {
+              "type": "calculation_deviation",
+              "severity": "critical",
+              "message": "Обнаружено значительное отклонение в расчетах: 980522.49 тыс.тг (99.29%). Допустимое отклонение: ≤5%.",
+              "details": {
+                "calculated": 6980.5062624,
+                "claimed": 987503.0,
+                "deviation_amount": 980522.4937376,
+                "deviation_percent": 99.29311543738095,
+                "tolerance": 5.0
+              }
+            }
+          ],
+          "calculation_breakdown": {
+            "base_cost": 5769.01,
+            "coefficients_applied": [
+              {
+                "id": "k2_stage",
+                "value": 1.21,
+                "reason": "Коэффициент стадийности K2 (РП/РД)"
+              }
+            ],
+            "final_cost": 6980.51,
+            "formula_used": "(1345.00 + 4.48 × 987.50) × 1.21 = 6980.51 тыс.тг"
+          }
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "ПИР (10)_tabula_t4.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "77b189da-dd49-4f99-8787-f7f2929676a5",
+        "raw_input": {
+          "text_description": "Архитектурно-строительная часть, генплан, дороги",
+          "table_code_claimed": "1706-0201-01",
+          "position_number": 1,
+          "X_claimed": 0.24,
+          "total_claimed": 875271.73,
+          "year": 2024,
+          "claimed_coefficients": [],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 1345.0,
+          "ref_B": 4.48,
+          "range_min": 0.0,
+          "range_max": 999999.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": "k2_stage",
+              "value": 1.21,
+              "reason": "Коэффициент стадийности K2 (РП/РД)"
+            }
+          ],
+          "source_position_id": "1706-0201-01-2"
+        },
+        "audit_verdict": {
+          "calculated_total": 1628.75,
+          "is_approved": false,
+          "reason": "Deviation 873642.98 тыс.тг (99.81%)",
+          "discrepancies": [
+            {
+              "type": "constant_mismatch",
+              "severity": "critical",
+              "message": "Применены неверные постоянные величины стоимости разработки рабочей документации. A=1345.00, B=4.48",
+              "details": {
+                "ref_A": 1345.0,
+                "ref_B": 4.48,
+                "table_code": "1706-0201-01",
+                "position": 1
+              }
+            },
+            {
+              "type": "calculation_deviation",
+              "severity": "critical",
+              "message": "Обнаружено значительное отклонение в расчетах: 873642.98 тыс.тг (99.81%). Допустимое отклонение: ≤5%.",
+              "details": {
+                "calculated": 1628.750992,
+                "claimed": 875271.73,
+                "deviation_amount": 873642.979008,
+                "deviation_percent": 99.81391481797316,
+                "tolerance": 5.0
+              }
+            }
+          ],
+          "calculation_breakdown": {
+            "base_cost": 1346.08,
+            "coefficients_applied": [
+              {
+                "id": "k2_stage",
+                "value": 1.21,
+                "reason": "Коэффициент стадийности K2 (РП/РД)"
+              }
+            ],
+            "final_cost": 1628.75,
+            "formula_used": "(1345.00 + 4.48 × 0.24) × 1.21 = 1628.75 тыс.тг"
+          }
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "filename": "ПИР (10)_tabula_t5.json",
+    "status": "success",
+    "http_code": 200,
+    "response": {
+      "output": {
+        "id": "187a1cea-ff3f-40c2-8c0a-8f27e7daa15e",
+        "raw_input": {
+          "text_description": "Ударно-канатное бурение скважин глубиной до 20 м в грунтах п.м. т.1602-0203-01 п.11",
+          "table_code_claimed": "1602-0203-01",
+          "position_number": 1,
+          "X_claimed": 18.0,
+          "total_claimed": 12702.0,
+          "year": 2024,
+          "claimed_coefficients": [],
+          "extracted_tags": []
+        },
+        "reference_data": {
+          "ref_A": 0.5,
+          "ref_B": 1.5,
+          "range_min": 1.0,
+          "range_max": 10.0,
+          "formula_strategy": "standard",
+          "valid_coefficients": [
+            {
+              "id": null,
+              "value": null,
+              "reason": null
+            }
+          ],
+          "source_position_id": null
+        },
+        "audit_verdict": {
+          "calculated_total": 27.5,
+          "is_approved": false,
+          "reason": "Deviation 12674.50 тыс.тг (99.78%)",
+          "discrepancies": [
+            {
+              "type": "constant_mismatch",
+              "severity": "critical",
+              "message": "Применены неверные постоянные величины стоимости разработки рабочей документации. A=0.50, B=1.50",
+              "details": {
+                "ref_A": 0.5,
+                "ref_B": 1.5,
+                "table_code": "1602-0203-01",
+                "position": 1
+              }
+            },
+            {
+              "type": "value_out_of_range",
+              "severity": "warning",
+              "message": "Количественный показатель X=18.00 выходит за пределы нормативного диапазона [1.00, 10.00].",
+              "details": {
+                "X_claimed": 18.0,
+                "range_min": 1.0,
+                "range_max": 10.0,
+                "extrapolation_used": "standard"
+              }
+            },
+            {
+              "type": "calculation_deviation",
+              "severity": "critical",
+              "message": "Обнаружено значительное отклонение в расчетах: 12674.50 тыс.тг (99.78%). Допустимое отклонение: ≤5%.",
+              "details": {
+                "calculated": 27.5,
+                "claimed": 12702.0,
+                "deviation_amount": 12674.5,
+                "deviation_percent": 99.78349866162809,
+                "tolerance": 5.0
+              }
+            }
+          ],
+          "calculation_breakdown": {
+            "base_cost": 27.5,
+            "coefficients_applied": [],
+            "final_cost": 27.5,
+            "formula_used": "(0.50 + 1.50 × 18.00) = 27.50 тыс.тг"
+          }
+        }
+      }
+    },
+    "error": null
+  }
+]

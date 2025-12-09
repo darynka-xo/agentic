@@ -1,0 +1,143 @@
+{
+  "output": {
+    "id": "test-2",
+    "raw_input": {
+      "text_description": "Водозаборы из подземных источников (скважин)",
+      "table_code_claimed": "1701-0503-01",
+      "position_number": 3,
+      "X_claimed": 114.0,
+      "total_claimed": 35688813.0,
+      "year": 2024,
+      "claimed_coefficients": [
+        {
+          "id": "KC1",
+          "value": 0.27,
+          "reason": "Коэф. на проект"
+        },
+        {
+          "id": "KC2",
+          "value": 1.0,
+          "reason": "Коэф. на рабочую документацию"
+        },
+        {
+          "id": "KC3",
+          "value": 0.2,
+          "reason": "Коэф. на предпроектные работы"
+        },
+        {
+          "id": "KH",
+          "value": 1.1,
+          "reason": "Общеполож.по прим.цен на проектные работы"
+        }
+      ],
+      "extracted_tags": []
+    },
+    "reference_data": {
+      "ref_A": 2982.0,
+      "ref_B": 21.0,
+      "range_min": 25.0,
+      "range_max": 200.0,
+      "formula_strategy": "standard",
+      "valid_coefficients": [
+        {
+          "id": "k2_stage",
+          "value": 1.1,
+          "reason": "Коэффициент стадийности K2 (РП/РД)"
+        }
+      ],
+      "source_position_id": "1701-0503-01-3-2023"
+    },
+    "audit_verdict": {
+      "calculated_total": 351.27,
+      "is_approved": false,
+      "reason": "Deviation 35337.55 тыс.тг (99.02%)",
+      "discrepancies": [
+        {
+          "type": "year_mismatch",
+          "severity": "critical",
+          "message": "Использован Сборник цен на проектные работы (СЦП) за неверный период. Указан 2024 год, но должен быть 2023 год.",
+          "details": {
+            "claimed_year": 2024,
+            "correct_year": 2023,
+            "source_table": "1701-0503-01"
+          }
+        },
+        {
+          "type": "constant_mismatch",
+          "severity": "critical",
+          "message": "Применены неверные постоянные величины стоимости разработки рабочей документации. A=2982.00, B=21.00",
+          "details": {
+            "ref_A": 2982.0,
+            "ref_B": 21.0,
+            "table_code": "1701-0503-01",
+            "position": 3
+          }
+        },
+        {
+          "type": "coefficient_unusual",
+          "severity": "warning",
+          "message": "Применен необычный коэффициент KC1=0.27. Стандартные значения находятся в диапазоне 0.5-3.0.",
+          "details": {
+            "coefficient_id": "KC1",
+            "value": 0.27,
+            "reason": "Коэф. на проект"
+          }
+        },
+        {
+          "type": "coefficient_unusual",
+          "severity": "warning",
+          "message": "Применен необычный коэффициент KC3=0.2. Стандартные значения находятся в диапазоне 0.5-3.0.",
+          "details": {
+            "coefficient_id": "KC3",
+            "value": 0.2,
+            "reason": "Коэф. на предпроектные работы"
+          }
+        },
+        {
+          "type": "calculation_deviation",
+          "severity": "critical",
+          "message": "Обнаружено значительное отклонение в расчетах: 35337.55 тыс.тг (99.02%). Допустимое отклонение: ≤5%.",
+          "details": {
+            "calculated": 351.26784000000004,
+            "claimed": 35688.813,
+            "deviation_amount": 35337.54516,
+            "deviation_percent": 99.01574804407196,
+            "tolerance": 5.0
+          }
+        }
+      ],
+      "calculation_breakdown": {
+        "base_cost": 5376.0,
+        "coefficients_applied": [
+          {
+            "id": "k2_stage",
+            "value": 1.1,
+            "reason": "Коэффициент стадийности K2 (РП/РД)"
+          },
+          {
+            "id": "KC1",
+            "value": 0.27,
+            "reason": "Коэф. на проект"
+          },
+          {
+            "id": "KC2",
+            "value": 1.0,
+            "reason": "Коэф. на рабочую документацию"
+          },
+          {
+            "id": "KC3",
+            "value": 0.2,
+            "reason": "Коэф. на предпроектные работы"
+          },
+          {
+            "id": "KH",
+            "value": 1.1,
+            "reason": "Общеполож.по прим.цен на проектные работы"
+          }
+        ],
+        "final_cost": 351.27,
+        "formula_used": "(2982.00 + 21.00 × 114.00) × 1.10 × 0.27 × 1.00 × 0.20 × 1.10 = 351.27 тыс.тг"
+      }
+    }
+  }
+}

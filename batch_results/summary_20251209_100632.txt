@@ -1,0 +1,165 @@
+============================================================
+BATCH TEST SUMMARY
+============================================================
+
+Timestamp: 2025-12-09T10:06:32.295132
+Total files: 50
+Success: 40
+Failed: 10
+Success rate: 80.00%
+
+============================================================
+FAILED FILES
+============================================================
+
+094 - ПИР_МЖК 18.03.2025_tabula_t3.json
+  HTTP Code: 400
+  Error: Crew execution failed: 4 validation errors for ReferenceData
+ref_A
+  Field required [type=missing, input_value={'position_number': 1, 'x...e row', 'value': 1000}]}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+ref_B
+  Field required [type=missing, input_value={'position_number': 1, 'x...e row', 'value': 1000}]}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+range_min
+  Field required [type=missing, input_value={'position_number': 1, 'x...e row', 'value': 1000}]}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+range_max
+  Field required [type=missing, input_value={'position_number': 1, 'x...e row', 'value': 1000}]}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+  Response: Crew execution failed: 4 validation errors for ReferenceData
+ref_A
+  Field required [type=missing, input_value={'position_number': 1, 'x...e row', 'value': 1000}]}, input_type=dict]
+    For further in
+
+12 Школа Актау_tabula_t1.json
+  HTTP Code: 400
+  Error: Crew execution failed: 4 validation errors for ReferenceData
+ref_A
+  Field required [type=missing, input_value={'reference_row': 1, 'coe...estimated_cost': 5428.7}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+ref_B
+  Field required [type=missing, input_value={'reference_row': 1, 'coe...estimated_cost': 5428.7}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+range_min
+  Field required [type=missing, input_value={'reference_row': 1, 'coe...estimated_cost': 5428.7}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+range_max
+  Field required [type=missing, input_value={'reference_row': 1, 'coe...estimated_cost': 5428.7}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+  Response: Crew execution failed: 4 validation errors for ReferenceData
+ref_A
+  Field required [type=missing, input_value={'reference_row': 1, 'coe...estimated_cost': 5428.7}, input_type=dict]
+    For further in
+
+12 Школа Актау_tabula_t2.json
+  HTTP Code: 400
+  Error: Crew execution failed: 4 validation errors for ReferenceData
+ref_A
+  Field required [type=missing, input_value={'position_number': 2, 'x...al_estimated_cost': 500}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+ref_B
+  Field required [type=missing, input_value={'position_number': 2, 'x...al_estimated_cost': 500}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+range_min
+  Field required [type=missing, input_value={'position_number': 2, 'x...al_estimated_cost': 500}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+range_max
+  Field required [type=missing, input_value={'position_number': 2, 'x...al_estimated_cost': 500}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+  Response: Crew execution failed: 4 validation errors for ReferenceData
+ref_A
+  Field required [type=missing, input_value={'position_number': 2, 'x...al_estimated_cost': 500}, input_type=dict]
+    For further in
+
+Kernei ПИР_tabula_t5.json
+  HTTP Code: 400
+  Error: Crew execution failed: 4 validation errors for ReferenceData
+ref_A
+  Field required [type=missing, input_value={'position_number': 1, 'x...2', 'value': 450000.0}]}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+ref_B
+  Field required [type=missing, input_value={'position_number': 1, 'x...2', 'value': 450000.0}]}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+range_min
+  Field required [type=missing, input_value={'position_number': 1, 'x...2', 'value': 450000.0}]}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+range_max
+  Field required [type=missing, input_value={'position_number': 1, 'x...2', 'value': 450000.0}]}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+  Response: Crew execution failed: 4 validation errors for ReferenceData
+ref_A
+  Field required [type=missing, input_value={'position_number': 1, 'x...2', 'value': 450000.0}]}, input_type=dict]
+    For further in
+
+NSP-0124-ПИР_tabula_t2.json
+  HTTP Code: 400
+  Error: Crew execution failed: 4 validation errors for ReferenceData
+ref_A
+  Field required [type=missing, input_value={'reference_row': {'table...5}], 'tags_applied': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+ref_B
+  Field required [type=missing, input_value={'reference_row': {'table...5}], 'tags_applied': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+range_min
+  Field required [type=missing, input_value={'reference_row': {'table...5}], 'tags_applied': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+range_max
+  Field required [type=missing, input_value={'reference_row': {'table...5}], 'tags_applied': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+  Response: Crew execution failed: 4 validation errors for ReferenceData
+ref_A
+  Field required [type=missing, input_value={'reference_row': {'table...5}], 'tags_applied': []}, input_type=dict]
+    For further in
+
+_ПИР Келес__tabula_t3.json
+  HTTP Code: 400
+  Error: Crew execution failed: 4 validation errors for ReferenceData
+ref_A
+  Field required [type=missing, input_value={'position_number_coeffic...coefficient': 8.4573726}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+ref_B
+  Field required [type=missing, input_value={'position_number_coeffic...coefficient': 8.4573726}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+range_min
+  Field required [type=missing, input_value={'position_number_coeffic...coefficient': 8.4573726}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+range_max
+  Field required [type=missing, input_value={'position_number_coeffic...coefficient': 8.4573726}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+  Response: Crew execution failed: 4 validation errors for ReferenceData
+ref_A
+  Field required [type=missing, input_value={'position_number_coeffic...coefficient': 8.4573726}, input_type=dict]
+    For further in
+
+_ПИР Келес__tabula_t5.json
+  HTTP Code: 400
+  Error: Crew execution failed: 1 validation error for RawInput
+  Invalid JSON: trailing characters at line 11 column 1 [type=json_invalid, input_value='{\n  "text_description":..."extracted_tags": []\n}', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid
+  Response: Crew execution failed: 1 validation error for RawInput
+  Invalid JSON: trailing characters at line 11 column 1 [type=json_invalid, input_value='{\n  "text_description":..."extracted_tags": []\n}', inp
+
+_ПИР Келес__tabula_t6.json
+  HTTP Code: 400
+  Error: Crew execution failed: 1 validation error for RawInput
+  Invalid JSON: trailing characters at line 11 column 1 [type=json_invalid, input_value='{\n  "text_description":..."extracted_tags": []\n}', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid
+  Response: Crew execution failed: 1 validation error for RawInput
+  Invalid JSON: trailing characters at line 11 column 1 [type=json_invalid, input_value='{\n  "text_description":..."extracted_tags": []\n}', inp
+
+_ПИР Келес__tabula_t7.json
+  HTTP Code: 400
+  Error: Crew execution failed: 1 validation error for ReferenceData
+  Invalid JSON: key must be a string at line 1 column 2 [type=json_invalid, input_value='{Estimated Outcome} = 31...inal Estimated Outcome}', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid
+  Response: Crew execution failed: 1 validation error for ReferenceData
+  Invalid JSON: key must be a string at line 1 column 2 [type=json_invalid, input_value='{Estimated Outcome} = 31...inal Estimated Outcome}'
+
+П5. Расчет стоимости проектных (проектно-изыскательных) работ_tabula_t3.json
+  HTTP Code: 400
+  Error: Crew execution failed: 1 validation error for ReferenceData
+  Invalid JSON: key must be a string at line 1 column 2 [type=json_invalid, input_value='{Number of Reference Uni...stimated_cost": 1092\n}', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid
+  Response: Crew execution failed: 1 validation error for ReferenceData
+  Invalid JSON: key must be a string at line 1 column 2 [type=json_invalid, input_value='{Number of Reference Uni...stimated_cost": 1092\n}'
