@@ -1,0 +1,147 @@
+# All-in-one Kubernetes manifest for LLM-Smeta-PIR service
+# Apply with: kubectl apply -f k8s-all-in-one.yaml
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: llm-smeta-pir
+  labels:
+    name: llm-smeta-pir
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: llm-smeta-pir-config
+  namespace: llm-smeta-pir
+data:
+  port: "8010"
+  mongo-db-name: "scp_verification_dev"
+  ollama-model: "ollama/qwen2.5:7b"
+  ollama-base-url: "http://127.0.0.1:11434"
+  llm-timeout: "600"
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: llm-smeta-pir-secrets
+  namespace: llm-smeta-pir
+type: Opaque
+stringData:
+  mongo-uri: "mongodb+srv://admin:3ZtOrKrs6YWiHfJq@scp-dev.osqjof9.mongodb.net/?appName=scp-dev"
+  ollama-api-key: "ollama"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: llm-smeta-pir
+  namespace: llm-smeta-pir
+  labels:
+    app: llm-smeta-pir
+    version: v1
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: llm-smeta-pir
+  template:
+    metadata:
+      labels:
+        app: llm-smeta-pir
+        version: v1
+    spec:
+      containers:
+      - name: llm-smeta-pir
+        image: llm-smeta-pir:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8010
+          name: http
+          protocol: TCP
+        env:
+        - name: PORT
+          valueFrom:
+            configMapKeyRef:
+              name: llm-smeta-pir-config
+              key: port
+        - name: MONGO_URI
+          valueFrom:
+            secretKeyRef:
+              name: llm-smeta-pir-secrets
+              key: mongo-uri
+        - name: MONGO_DB_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: llm-smeta-pir-config
+              key: mongo-db-name
+        - name: OLLAMA_MODEL
+          valueFrom:
+            configMapKeyRef:
+              name: llm-smeta-pir-config
+              key: ollama-model
+        - name: OLLAMA_BASE_URL
+          valueFrom:
+            configMapKeyRef:
+              name: llm-smeta-pir-config
+              key: ollama-base-url
+        - name: OLLAMA_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: llm-smeta-pir-secrets
+              key: ollama-api-key
+        - name: LLM_TIMEOUT
+          valueFrom:
+            configMapKeyRef:
+              name: llm-smeta-pir-config
+              key: llm-timeout
+        - name: PYTHONUNBUFFERED
+          value: "1"
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "250m"
+          limits:
+            memory: "2Gi"
+            cpu: "1000m"
+        livenessProbe:
+          httpGet:
+            path: /docs
+            port: 8010
+          initialDelaySeconds: 45
+          periodSeconds: 30
+          timeoutSeconds: 10
+          failureThreshold: 3
+        readinessProbe:
+          httpGet:
+            path: /docs
+            port: 8010
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          timeoutSeconds: 5
+          failureThreshold: 3
+        volumeMounts:
+        - name: batch-results
+          mountPath: /app/batch_results
+        - name: tabula-tables
+          mountPath: /app/tabula_tables
+      volumes:
+      - name: batch-results
+        emptyDir: {}
+      - name: tabula-tables
+        emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: llm-smeta-pir
+  namespace: llm-smeta-pir
+  labels:
+    app: llm-smeta-pir
+spec:
+  type: ClusterIP
+  ports:
+  - port: 8010
+    targetPort: 8010
+    protocol: TCP
+    name: http
+  selector:
+    app: llm-smeta-pir

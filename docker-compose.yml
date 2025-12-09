@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  llm-smeta-pir:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: llm-smeta-pir:latest
+    container_name: llm-smeta-pir
+    ports:
+      - "8010:8010"
+    environment:
+      - PORT=${PORT:-8010}
+      - MONGO_URI=${MONGO_URI}
+      - MONGO_DB_NAME=${MONGO_DB_NAME:-scp_verification_dev}
+      - OLLAMA_MODEL=${OLLAMA_MODEL:-ollama/qwen2.5:7b}
+      - OLLAMA_BASE_URL=${OLLAMA_BASE_URL:-http://127.0.0.1:11434}
+      - OLLAMA_API_KEY=${OLLAMA_API_KEY:-ollama}
+      - LLM_TIMEOUT=${LLM_TIMEOUT:-600}
+      - PYTHONUNBUFFERED=1
+    volumes:
+      # Mount batch results for persistence (optional)
+      - ./batch_results:/app/batch_results
+      - ./tabula_tables:/app/tabula_tables
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8010/docs"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - llm-smeta-pir-network
+
+networks:
+  llm-smeta-pir-network:
+    driver: bridge
+

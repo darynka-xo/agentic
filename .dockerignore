@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+server.log
+ollama.log
+batch_test.log
+
+# Test files
+tests/
+test_*.py
+
+# Batch results (will be generated in container)
+batch_results/*.json
+batch_results/*.txt
+
+# Scripts (not needed in container)
+scripts/
+
+# Documentation
+*.md
+README.md
+*.pdf
+
+# Git
+.git/
+.gitignore
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+tabula_tables/*
+
