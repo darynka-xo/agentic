@@ -17,6 +17,12 @@ services:
       - OLLAMA_BASE_URL=${OLLAMA_BASE_URL:-http://127.0.0.1:11434}
       - OLLAMA_API_KEY=${OLLAMA_API_KEY:-ollama}
       - LLM_TIMEOUT=${LLM_TIMEOUT:-600}
+      - MINIO_ENDPOINT=${MINIO_ENDPOINT:-}
+      - MINIO_ACCESS_KEY=${MINIO_ACCESS_KEY:-}
+      - MINIO_SECRET_KEY=${MINIO_SECRET_KEY:-}
+      - MINIO_BUCKET_NAME=${MINIO_BUCKET_NAME:-}
+      - MINIO_REGION=${MINIO_REGION:-}
+      - MINIO_SECURE=${MINIO_SECURE:-false}
       - PYTHONUNBUFFERED=1
     volumes:
       # Mount batch results for persistence (optional)

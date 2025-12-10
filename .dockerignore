@@ -29,6 +29,7 @@ batch_test.log
 # Test files
 tests/
 test_*.py
+test_minio_endpoint.py
 
 # Batch results (will be generated in container)
 batch_results/*.json
@@ -40,6 +41,8 @@ scripts/
 # Documentation
 *.md
 README.md
+MINIO_*.md
+QUICK_START*.md
 *.pdf
 
 # Git

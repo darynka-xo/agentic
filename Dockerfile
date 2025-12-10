@@ -40,6 +40,14 @@ ENV OLLAMA_BASE_URL=http://127.0.0.1:11434
 ENV OLLAMA_API_KEY=ollama
 ENV LLM_TIMEOUT=600
 
+# MinIO configuration (optional, can be overridden)
+ENV MINIO_ENDPOINT=""
+ENV MINIO_ACCESS_KEY=""
+ENV MINIO_SECRET_KEY=""
+ENV MINIO_BUCKET_NAME=""
+ENV MINIO_REGION=""
+ENV MINIO_SECURE=false
+
 # Health check
 HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
     CMD curl -f http://localhost:8010/docs || exit 1

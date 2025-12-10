@@ -4,6 +4,7 @@ uvicorn>=0.30.6
 pymongo>=4.9.0
 mongomock>=4.1.2
 pydantic>=2.9.0
+pydantic-settings>=2.0.0
 fuzzywuzzy>=0.18.0
 python-Levenshtein>=0.25.0
 requests>=2.32.0
@@ -11,3 +12,4 @@ tabula-py>=2.9.0
 python-multipart>=0.0.6
 tqdm>=4.66.0
 python-dotenv>=1.0.0
+minio==7.2.7

@@ -19,6 +19,11 @@ data:
   ollama-model: "ollama/qwen2.5:7b"
   ollama-base-url: "http://127.0.0.1:11434"
   llm-timeout: "600"
+  # MinIO Configuration (optional)
+  minio-endpoint: ""
+  minio-bucket-name: ""
+  minio-region: ""
+  minio-secure: "false"
 ---
 apiVersion: v1
 kind: Secret
@@ -29,6 +34,9 @@ type: Opaque
 stringData:
   mongo-uri: "mongodb+srv://admin:3ZtOrKrs6YWiHfJq@scp-dev.osqjof9.mongodb.net/?appName=scp-dev"
   ollama-api-key: "ollama"
+  # MinIO credentials (optional, update with your values)
+  minio-access-key: ""
+  minio-secret-key: ""
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -93,6 +101,42 @@ spec:
             configMapKeyRef:
               name: llm-smeta-pir-config
               key: llm-timeout
+        - name: MINIO_ENDPOINT
+          valueFrom:
+            configMapKeyRef:
+              name: llm-smeta-pir-config
+              key: minio-endpoint
+              optional: true
+        - name: MINIO_ACCESS_KEY
+          valueFrom:
+            secretKeyRef:
+              name: llm-smeta-pir-secrets
+              key: minio-access-key
+              optional: true
+        - name: MINIO_SECRET_KEY
+          valueFrom:
+            secretKeyRef:
+              name: llm-smeta-pir-secrets
+              key: minio-secret-key
+              optional: true
+        - name: MINIO_BUCKET_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: llm-smeta-pir-config
+              key: minio-bucket-name
+              optional: true
+        - name: MINIO_REGION
+          valueFrom:
+            configMapKeyRef:
+              name: llm-smeta-pir-config
+              key: minio-region
+              optional: true
+        - name: MINIO_SECURE
+          valueFrom:
+            configMapKeyRef:
+              name: llm-smeta-pir-config
+              key: minio-secure
+              optional: true
         - name: PYTHONUNBUFFERED
           value: "1"
         resources:
