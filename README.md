@@ -26,15 +26,22 @@ cd /workspace/agentic
 
 ### Загрузка PDF для проверки:
 ```bash
+# Traditional (tabula-based, fast)
 curl -X POST http://127.0.0.1:8000/predict_pdf \
+  -F "file=@your_smeta.pdf" \
+  -o result.json
+
+# OCR-based (VLM, higher accuracy)
+curl -X POST http://127.0.0.1:8000/predict_pdf_ocr \
   -F "file=@your_smeta.pdf" \
   -o result.json
 ```
 
 ## 📊 API Endpoints
 
-### 1. POST /predict_pdf (рекомендуется)
-Загрузка PDF файла для автоматической проверки.
+### 1. POST /predict_pdf (Traditional)
+Загрузка PDF файла для автоматической проверки через tabula.
+
 
 **Запрос:**
 ```bash
@@ -42,30 +49,38 @@ curl -X POST http://127.0.0.1:8000/predict_pdf \
   -F "file=@smeta.pdf"
 ```
 
+### 2. POST /predict_pdf_ocr (OCR-based, Recommended)
+Загрузка PDF для обработки через Vision Language Model (VLM).
+
+
+**Запрос:**
+```bash
+curl -X POST http://127.0.0.1:8000/predict_pdf_ocr \
+  -F "file=@smeta.pdf"
+```
+
 **Ответ:**
 ```json
 {
   "filename": "smeta.pdf",
-  "tables_processed": 3,
+  "processing_method": "vlm_ocr",
+  "tables_processed": 2,
   "results": [
     {
       "table_index": 1,
+      "page_number": 1,
       "status": "success",
-      "output": {
-        "raw_input": {...},
-        "reference_data": {...},
-        "audit_verdict": {
-          "calculated_total": 52690.70,
-          "is_approved": true,
-          "reason": "Match within 0.00% tolerance"
-        }
+      "output": {...},
+      "ocr_metadata": {
+        "processing_time_ms": 1234.5,
+        "raw_text": "..."
       }
     }
   ]
 }
 ```
 
-### 2. POST /predict
+### 3. POST /predict
 Проверка готовых JSON данных (формат tabula).
 
 ## 🗄️ База Данных
@@ -93,14 +108,18 @@ curl -X POST http://127.0.0.1:8000/predict_pdf \
 ## 🔧 Технологии
 
 - **LLM:** Ollama (qwen2.5:7b) - извлечение данных из текста
+- **VLM OCR:** Qwen2-VL / InternVL2 - высокоточное распознавание документов
 - **База:** MongoDB Atlas - СЦП 2019-2025
 - **API:** FastAPI - REST endpoints
 - **AI Framework:** CrewAI - мульти-агентная система
-- **PDF Processing:** tabula-py - извлечение таблиц
+- **PDF Processing:** 
+  - tabula-py - быстрое извлечение таблиц
+  - VLM OCR - высокоточное распознавание
 
 ## 📚 Документация
 
 - `README.md` - этот файл
+- `ocr_service/README.md` - документация OCR сервиса
 - `FINAL_REPORT.md` - детальный отчет о работе системы
 - `PDF_ENDPOINT_GUIDE.md` - руководство по загрузке PDF
 - `README_SETUP.md` - инструкция по запуску и настройке

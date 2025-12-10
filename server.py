@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import logging
 import os
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Tuple
 
 from fastapi import Body, FastAPI, HTTPException, File, UploadFile
 from pydantic import BaseModel, Field
@@ -11,6 +11,14 @@ from agents import build_crew
 from config import get_db
 from core.calculator import run_deterministic_calculator
 from pdf_processor import process_pdf_to_rows
+from ocr_pdf_processor import process_pdf_to_rows_with_ocr
+
+try:
+    import fitz  # PyMuPDF
+    FITZ_AVAILABLE = True
+except ImportError:
+    FITZ_AVAILABLE = False
+    logging.warning("PyMuPDF (fitz) not available, PDF text detection will be limited")
 from minio_storage import (
     get_minio_storage_service,
     is_minio_configured,
@@ -25,7 +33,55 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-app = FastAPI(title="LLM-Smeta-PIR API")
+def detect_pdf_type(pdf_content: bytes, text_threshold: int = 100) -> Tuple[bool, int]:
+    """
+    Определяет тип PDF: цифровой (digital) или отсканированный (scanned).
+    
+    Args:
+        pdf_content: Содержимое PDF файла в байтах
+        text_threshold: Минимальное количество символов для определения как цифровой PDF
+    
+    Returns:
+        Tuple[is_digital, total_chars]: (True если цифровой PDF, общее количество символов)
+    """
+    if not FITZ_AVAILABLE:
+        logger.warning("PyMuPDF (fitz) not available, assuming digital PDF")
+        return True, 0
+    
+    try:
+        # Открываем PDF напрямую из bytes
+        doc = fitz.open(stream=pdf_content, filetype="pdf")
+        
+        total_chars = 0
+        # Проверяем первые несколько страниц для оптимизации
+        pages_to_check = min(3, len(doc))
+        
+        for page_num in range(pages_to_check):
+            page = doc[page_num]
+            text = page.get_text()
+            
+            if text:
+                # Считаем только буквенно-цифровые символы
+                chars = len([c for c in text if c.isalnum()])
+                total_chars += chars
+        
+        doc.close()
+        
+        is_digital = total_chars >= text_threshold
+        
+        logger.info(
+            f"PDF type detection: {total_chars} characters found, "
+            f"classified as {'DIGITAL' if is_digital else 'SCANNED'}"
+        )
+        
+        return is_digital, total_chars
+        
+    except Exception as e:
+        logger.error(f"Error detecting PDF type: {e}, assuming digital PDF")
+        return True, 0
+
+
+app = FastAPI(title="Estimate Validator API")
 crew_cache = None
 
 
@@ -97,8 +153,10 @@ def predict(tabula_request: Dict[str, Any] = Body(...)) -> Dict[str, Any]:
 @app.post("/predict_pdf")
 async def predict_pdf(file: UploadFile = File(...)) -> Dict[str, Any]:
     """
-    Новый endpoint для загрузки PDF файла.
-    Автоматически извлекает таблицы и проверяет каждую строку.
+    Endpoint for uploading PDF files.
+    Automatically detects if PDF is digital or scanned and routes accordingly:
+    - Digital PDFs (>100 chars): Uses tabula for table extraction
+    - Scanned PDFs (<=100 chars): Uses VLM OCR for table extraction
     """
     logger.info(f"Received PDF upload: {file.filename}")
     
@@ -114,9 +172,19 @@ async def predict_pdf(file: UploadFile = File(...)) -> Dict[str, Any]:
         pdf_content = await file.read()
         logger.info(f"Read {len(pdf_content)} bytes from PDF")
         
-        # Извлекаем таблицы из PDF
-        logger.info("Extracting tables from PDF using tabula...")
-        tables = process_pdf_to_rows(pdf_content, file.filename)
+        # Определяем тип PDF
+        is_digital, char_count = detect_pdf_type(pdf_content)
+        
+        # Выбираем метод обработки
+        if is_digital:
+            logger.info(f"PDF is DIGITAL ({char_count} chars), using tabula...")
+            tables = process_pdf_to_rows(pdf_content, file.filename)
+            processing_method = "tabula"
+        else:
+            logger.info(f"PDF is SCANNED ({char_count} chars), using VLM OCR...")
+            tables = await process_pdf_to_rows_with_ocr(pdf_content, file.filename)
+            processing_method = "vlm_ocr"
+        
         logger.info(f"Extracted {len(tables)} tables from PDF")
         
         # Обрабатываем каждую таблицу
@@ -146,6 +214,9 @@ async def predict_pdf(file: UploadFile = File(...)) -> Dict[str, Any]:
         # Возвращаем результаты всех таблиц
         return {
             "filename": file.filename,
+            "pdf_type": "digital" if is_digital else "scanned",
+            "character_count": char_count,
+            "processing_method": processing_method,
             "tables_processed": len(tables),
             "results": results
         }
@@ -155,6 +226,14 @@ async def predict_pdf(file: UploadFile = File(...)) -> Dict[str, Any]:
         raise HTTPException(status_code=500, detail=f"PDF processing failed: {str(exc)}") from exc
 
 
+@app.post("/predict_pdf_ocr")
+async def predict_pdf_ocr(file: UploadFile = File(...)) -> Dict[str, Any]:
+    """
+    FORCE OCR-based PDF processing using VLM.
+    Use this endpoint to force OCR processing regardless of PDF type.
+    For automatic detection, use /predict_pdf instead.
+    """
+    logger.info(f"Received PDF upload for OCR processing: {file.filename}")
 @app.post("/predict_pdf_minio")
 async def predict_pdf_minio(request: MinioPathRequest) -> Dict[str, Any]:
     """
@@ -172,6 +251,19 @@ async def predict_pdf_minio(request: MinioPathRequest) -> Dict[str, Any]:
     if crew_cache is None:
         raise HTTPException(status_code=503, detail="Crew initialization pending.")
     
+    # Проверяем что это PDF
+    if not file.filename.endswith('.pdf'):
+        raise HTTPException(status_code=400, detail="Only PDF files are supported")
+    
+    try:
+        # Читаем содержимое файла
+        pdf_content = await file.read()
+        logger.info(f"Read {len(pdf_content)} bytes from PDF")
+        
+        # Извлекаем таблицы из PDF используя OCR
+        logger.info("Extracting tables from PDF using VLM OCR...")
+        tables = await process_pdf_to_rows_with_ocr(pdf_content, file.filename)
+        logger.info(f"Extracted {len(tables)} tables from PDF via OCR")
     # Проверяем что MinIO настроен
     if not is_minio_configured():
         raise HTTPException(
@@ -223,20 +315,25 @@ async def predict_pdf_minio(request: MinioPathRequest) -> Dict[str, Any]:
                 
                 results.append({
                     "table_index": i,
+                    "page_number": table_data.get("page_number", i),
                     "status": "success",
-                    "output": state.model_dump()
+                    "output": state.model_dump(),
+                    "ocr_metadata": table_data.get("ocr_metadata", {})
                 })
                 
             except Exception as e:
                 logger.error(f"Error processing table {i}: {str(e)}")
                 results.append({
                     "table_index": i,
+                    "page_number": table_data.get("page_number", i),
                     "status": "error",
                     "error": str(e)
                 })
         
         # Возвращаем результаты всех таблиц
         return {
+            "filename": file.filename,
+            "processing_method": "vlm_ocr",
             "source": "minio",
             "file_path": request.file_path,
             "bucket_name": request.bucket_name or minio_service.bucket_name,
@@ -245,6 +342,9 @@ async def predict_pdf_minio(request: MinioPathRequest) -> Dict[str, Any]:
             "results": results
         }
         
+    except Exception as exc:
+        logger.error(f"Error processing PDF with OCR: {str(exc)}", exc_info=True)
+        raise HTTPException(status_code=500, detail=f"OCR PDF processing failed: {str(exc)}") from exc
     except MinioServiceException as exc:
         logger.error(f"MinIO error: {exc.message}", exc_info=True)
         raise HTTPException(status_code=exc.status_code, detail=exc.message) from exc
